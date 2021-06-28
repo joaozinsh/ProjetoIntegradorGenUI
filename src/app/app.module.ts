@@ -11,7 +11,7 @@ import { ConcluirCompraComponent } from './concluir-compra/concluir-compra.compo
   declarations: [
     AppComponent,
     LoginCadastroComponent,
-    NavbarComponent
+    NavbarComponent,
     ConcluirCompraComponent
   ],
   imports: [
