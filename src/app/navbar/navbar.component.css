@@ -1,5 +1,4 @@
 .nav-bar{
-    position: fixed;
     width: 100%;
     padding-top: 0;
     padding-right: 0;
@@ -13,20 +12,35 @@
     font-size: 5rem;
 }
 
-.custom-button{
-    font-size: 14pt;
-    background-color: #E06767;
-    color: #ffff;
-    width: 100%;
-    border: none;
-    border-bottom-left-radius: 25px;
-}
+@media screen and (min-width: 0px) and (max-width: 990px) {
+    .icon { 
+        display: none; 
+    }  
+    .custom-button{
+        font-size: 14pt;
+        background-color: #E06767;
+        color: #ffff;
+        width: 100%;
+        border: none;
+        
+        
+    }
+  }
 
-@media screen and (min-width: 990) {
-    .icon{
-        display: hidden;
+
+@media screen and (min-width: 990px) and (max-width: 9998px) { 
+    .custom-button{
+
+        font-size: 14pt;
+        background-color: #E06767;
+        color: #ffff;
+        width: 100%;
+        border: none;
+        border-bottom-left-radius: 25px;
     }
 }
+
+
 
 /*Icone de pesquisa*/
 
