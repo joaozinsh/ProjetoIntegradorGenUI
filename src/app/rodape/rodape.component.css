@@ -1,0 +1,28 @@
+ul.redes-sociais {
+    list-style: none;
+    padding: 0;
+}
+
+ul.redes-sociais li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.fab{
+    font-size: 35pt;
+}
+
+.bg-footer{
+    background-color:rgba(96, 206, 241, 0.8);
+}
+
+.bg-footer-cp{
+    background-color: #33B3DC;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+   
+}
+.form-control{
+    border-radius: 15px;
+}
