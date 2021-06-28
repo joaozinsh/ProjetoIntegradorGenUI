@@ -1,0 +1,39 @@
+#bg-img {
+    background-image: url("../../assets/img/background.png");
+
+    min-height: 100vh;
+    min-width: 100vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-voltar {
+    background-color: #E06767;
+    border-radius: 0;
+    border-bottom-right-radius: 25px;
+}
+
+.btn-entrar {
+    background-color: #E06767;
+}
+
+.f-20 {
+    font-size: 20pt;
+}
+
+.blur{
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px;
+    border-radius: 15px;
+    border-color: rgb(0, 0, 0);
+}
+
+
+.linha-vertical {
+    height: 100%;
+    border-left: 3px solid grey;
+}
