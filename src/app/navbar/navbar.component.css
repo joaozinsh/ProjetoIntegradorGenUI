@@ -1,0 +1,51 @@
+.nav-bar{
+    position: fixed;
+    width: 100%;
+    padding-top: 0;
+    padding-right: 0;
+}
+
+.form-rounded {
+    border-radius: 2rem;
+}
+
+.size{
+    font-size: 5rem;
+}
+
+.custom-button{
+    font-size: 14pt;
+    background-color: #E06767;
+    color: #ffff;
+    width: 100%;
+    border: none;
+    border-bottom-left-radius: 25px;
+}
+
+@media screen and (min-width: 990) {
+    .icon{
+        display: hidden;
+    }
+}
+
+/*Icone de pesquisa*/
+
+
+.form-container{
+    position:relative;
+}
+
+.input{
+    height:auto;
+    margin:0;
+    padding-right: 30px;
+    width: 100%;
+}
+
+.input-icon{
+    position:absolute;
+    bottom:2px;
+    right:5px;
+    width:24px;
+    height:24px;
+}
