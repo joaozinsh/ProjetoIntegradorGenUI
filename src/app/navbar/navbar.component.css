@@ -6,6 +6,7 @@
   font-size: 5rem;
 }
 
+/*mobile*/
 @media screen and (min-width: 0px) and (max-width: 990px) {
   .nav-bar {
     width: 100%;
@@ -17,6 +18,12 @@
 
   .icon {
     display: none;
+    color: #b3b3b3;
+  }
+
+  .login {
+    display: flex;
+    justify-content: center;
   }
 
   .custom-button {
@@ -51,10 +58,10 @@
   }
 }
 
-
+/*desktop*/
 @media screen and (min-width: 990px) and (max-width: 9998px) {
 
-    /*corpo */
+  /*corpo */
   .nav-bar {
     width: 100%;
     padding-top: 0;
@@ -63,7 +70,18 @@
   }
 
   .icon {
+    color: #b3b3b3;
+    font-size: 18pt;
+  }
+
+  .icon:hover {
     display: hidden;
+    color: #000000;
+    cursor: pointer;
+  }
+
+  .fa-user-circle {
+    font-size: 18pt;
   }
 
   .custom-button {
@@ -108,7 +126,7 @@
 }
 
 /*font color*/
-.letter{
-    padding: 5px;
-    color: #33B3DC;
+.letter {
+  padding: 5px;
+  color: #33B3DC;
 }
