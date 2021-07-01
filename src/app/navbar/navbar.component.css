@@ -6,6 +6,22 @@
   font-size: 5rem;
 }
 
+.icon {
+  color: #b3b3b3;
+  font-size: 18pt;
+}
+
+
+.icon:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+
+
 /*mobile*/
 @media screen and (min-width: 0px) and (max-width: 990px) {
   .nav-bar {
@@ -16,15 +32,40 @@
 
   }
 
-  .icon {
+  .perfil {
     display: none;
-    color: #b3b3b3;
   }
 
   .login {
     display: flex;
     justify-content: center;
   }
+
+  .custom-cart {
+    font-size: 12pt;
+    background-color: #E06767;
+    color: #ffff;
+    width: 100%;
+    border: none;
+    margin-top: 10px;
+    margin-right: 2px;
+    border-radius: 12px;
+
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    color: #ffff;
+    padding: 2px;
+
+  }
+
+  .icon:hover {
+    color: #ffff;
+    cursor: pointer;
+  }
+
 
   .custom-button {
     font-size: 14pt;
@@ -33,6 +74,9 @@
     width: 100%;
     border: none;
     margin-top: 10px;
+    margin-left: 2px;
+    border-radius: 12px;
+    outline: none;
   }
 
   /*Icone de pesquisa*/
@@ -69,17 +113,6 @@
 
   }
 
-  .icon {
-    color: #b3b3b3;
-    font-size: 18pt;
-  }
-
-  .icon:hover {
-    display: hidden;
-    color: #000000;
-    cursor: pointer;
-  }
-
   .fa-user-circle {
     font-size: 18pt;
   }
@@ -90,11 +123,12 @@
     color: #ffff;
     border: none;
     border-bottom-left-radius: 25px;
-    width: 190px;
+    width: 200px;
     height: 60px;
     right: 0px;
     top: 0px;
     padding: 30px;
+    outline: none;
   }
 
   /*Icone de pesquisa*/
@@ -129,4 +163,5 @@
 .letter {
   padding: 5px;
   color: #33B3DC;
+  text-decoration: none;
 }
