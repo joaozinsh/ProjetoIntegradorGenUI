@@ -1,39 +1,56 @@
 #bg-img {
-    background-image: url("../../assets/img/background.png");
+    background-image: url(../../assets/img/background.png);
 
     min-height: 100vh;
-    min-width: 100vh;
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.btn-voltar {
+.btn {
     background-color: #E06767;
-    border-radius: 0;
+}
+
+#btn-voltar {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
     border-bottom-right-radius: 25px;
 }
 
-.btn-entrar {
-    background-color: #E06767;
+#p-voltar {
+    padding: 0;
+    margin: 0;
+    font-size: 24pt;
 }
 
-.f-20 {
-    font-size: 20pt;
+.fas {
+    font-size: 40px;
 }
 
-.blur{
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(20px);
-    background-color: rgba(255, 255, 255, 0.75);
-    border: 1px;
+.card {
     border-radius: 15px;
-    border-color: rgb(0, 0, 0);
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
+.blur {
+    background-color: rgba(241, 241, 241, 0.888);
+    border: 1px;
+}
 
 .linha-vertical {
     height: 100%;
     border-left: 3px solid grey;
+}
+
+.font-size {
+    font-size: 14pt;
+}
+
+input {
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: #ABABAB;
 }

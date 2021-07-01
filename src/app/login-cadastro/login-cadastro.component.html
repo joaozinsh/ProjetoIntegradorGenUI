@@ -1,65 +1,92 @@
 <div class="container-fluid" id="bg-img">
-
-    <div class="row">
+    <div class="row mb-4">
         <div class="col-md-12 pl-0">
-            <a type="button" class="btn btn-voltar btn-lg text-white f-20 px-5"><i
-                    class="fas fa-chevron-left pr-3"></i>Voltar</a>
+            <button id="btn-voltar" class="btn btn-danger px-4">
+                <p class="d-flex align-items-center" id="p-voltar">
+                    <i class="fas fa-angle-left pr-3"></i>
+                    Voltar
+                </p>
+            </button>
         </div>
     </div>
 
-    <div class="container blur">
-        <div class="row">
-            <div class="col-md-6 p-5">
-                <h1 class="text-center mt-5 pt-5 font-weight-bold">Já Sou Cliente</h1>
-                <p class="text-center">Acesse agora a sua conta para aproveitar as ofertas</p>
-                <div class="form-group p-5">
-                    <label class="pl-3" for="email">E-mail</label>
-                    <input class="form-control" type="email" nome="email" id="email" placeholder="Digite seu e-mail">
+    <div class="card blur mx-5 font-size">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6">
 
-                    <label class="pl-3 pt-3" for="password">Senha</label>
-                    <input class="form-control" type="password" nome="password" id="password"
-                        placeholder="Digite sua senha">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-6">
 
-                    <div class="d-flex justify-content-center p-5">
-                        <button type="button" class="btn btn-lg btn-entrar text-white px-5">Entrar</button>
+                        <h1 class="text-center font-weight-bold">Já Sou Cliente</h1>
+                        <p class="text-center mb-5">Acesse agora a sua conta para aproveitar as ofertas</p>
+
+                        <div class="form-group">
+                            <label class="pl-3" for="email">E-mail</label>
+                            <input class="form-control" type="text" name="email" id="email"
+                                placeholder="Digite seu e-mail">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="pl-3" for="password">Senha</label>
+                            <input class="form-control" type="password" name="password" id="password"
+                                placeholder="Digite sua senha">
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-5">
+                            <button class="btn btn-lg px-5 text-white">Enviar</button>
+                        </div>
                     </div>
                 </div>
 
             </div>
 
-            <div class="col-md-6 linha-vertical">
-                <h1 class="text-center pt-5 font-weight-bold">Sou um Novo Cliente</h1>
-                <div class="form-group p-5">
-                    <label class="pl-3" for="nome">Nome Completo</label>
-                    <input class="form-control" type="text" nome="nome" id="nome"
-                        placeholder="Digite seu nome completo">
+            <div class="col-md-6">
+                <div class="row d-flex justify-content-center linha-vertical">
+                    <div class="col-md-8">
 
-                    <label class="pl-3 pt-3" for="apelido">Apelido</label>
-                    <input class="form-control" type="text" nome="apelido" id="apelido"
-                        placeholder="Digite seu nome que deseja no sistema">
+                        <h1 class="text-center my-5 font-weight-bold">Sou um Novo Cliente</h1>
 
-                    <label class="pl-3 pt-3" for="email">E-mail</label>
-                    <input class="form-control" type="email" nome="email" id="email" placeholder="Digite seu e-mail">
+                        <div class="form-group">
+                            <label class="pl-3" for="nome">Nome Completo</label>
+                            <input class="form-control" type="text" name="nome" id="nome"
+                                placeholder="Digite seu nome completo">
+                        </div>
 
-                    <label class="pl-3 pt-3" for="password">Senha</label>
-                    <input class="form-control" type="password" nome="password" id="password"
-                        placeholder="Digite sua Senha">
+                        <div class="form-group">
+                            <label class="pl-3" for="apelido">Apelido</label>
+                            <input class="form-control" type="text" name="apelido" id="apelido"
+                                placeholder="Como você quer ser chamado no sistema?">
+                        </div>
 
-                    <label class="pl-3 pt-3" for="confirmPassword">Confirmar Senha</label>
-                    <input class="form-control" type="password" nome="confirmPassword" id="confirmPassword"
-                        placeholder="Confirme sua senha">
+                        <div class="form-group">
+                            <label class="pl-3" for="email">E-mail</label>
+                            <input class="form-control" type="text" name="email" id="email"
+                                placeholder="Digite seu e-mail">
+                        </div>
 
-                    <div class="form-check pt-4 pl-5">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                            Aceito o uso dos meus dados
-                        </label>
+                        <div class="form-group">
+                            <label class="pl-3" for="password">Senha</label>
+                            <input class="form-control" type="password" name="password" id="password"
+                                placeholder="Digite sua senha">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="pl-3" for="confirmPassword">Confirmar Senha</label>
+                            <input class="form-control" type="confirmPassword" name="confirmPassword"
+                                id="confirmPassword" placeholder="Confirme sua senha">
+                        </div>
+
+                        <div class="form-check mb-4 pl-4 d-flex align-items-center">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Aceito o uso dos meus dados
+                            </label>
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-5">
+                            <button class="btn btn-lg px-5 text-white">Cadastrar</button>
+                        </div>
                     </div>
-
-                    <div class="d-flex justify-content-center p-5">
-                        <button type="button" class="btn btn-lg btn-entrar text-white px-5">Cadastrar</button>
-                    </div>
-
                 </div>
             </div>
         </div>
