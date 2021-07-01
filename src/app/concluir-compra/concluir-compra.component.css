@@ -1,15 +1,27 @@
-.font-cart{
-    font-size: 150pt;
-    
-    
-   }
-.font-certo{
-    font-size: 90pt;
-    color: darkgreen;
-}
 .baseline {
-	align-self: baseline;
+  align-self: baseline;
 }
-.button {
-    font-size: 25px;
+
+/*mobile*/
+@media screen and (min-width: 0px) and (max-width: 990px) {
+    .button {
+        color: #ffffff;
+        background-color: #E06767;
+        font-size: 10pt;
+        border-radius: 50px;
+        width: 50%;
+        margin-bottom: 15px;
+      }
+}
+/*desktop*/
+@media screen and (min-width: 990px) and (max-width: 9998px) {
+    .button {
+        color: #ffffff;
+        background-color: #E06767;
+        font-size: 15pt;
+        border-radius: 50px;
+        width: 25%;
+        margin-bottom: 15px;
+      }
+      
 }

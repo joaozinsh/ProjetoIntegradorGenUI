@@ -76,6 +76,7 @@ a{
     margin-top: 10px;
     margin-left: 2px;
     border-radius: 12px;
+    outline: none;
   }
 
   /*Icone de pesquisa*/
@@ -127,6 +128,7 @@ a{
     right: 0px;
     top: 0px;
     padding: 30px;
+    outline: none;
   }
 
   /*Icone de pesquisa*/
