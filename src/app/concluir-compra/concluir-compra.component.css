@@ -1,5 +1,15 @@
 .font-cart{
-    font-size: 200pt;
+    font-size: 150pt;
+    
     
    }
-   
+.font-certo{
+    font-size: 90pt;
+    color: darkgreen;
+}
+.baseline {
+	align-self: baseline;
+}
+.button {
+    font-size: 25px;
+}
