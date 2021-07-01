@@ -7,7 +7,7 @@ import { LoginCadastroComponent } from './login-cadastro/login-cadastro.componen
 
 const routes: Routes = [
 
-  {path: "", redirectTo: "entrar", pathMatch: "full"},
+  {path: "", redirectTo: "home", pathMatch: "full"},
   {path: "login-cadastro", component: LoginCadastroComponent},
   {path: "home", component: HomeComponent},
   {path: "contato", component: ContatoComponent},
