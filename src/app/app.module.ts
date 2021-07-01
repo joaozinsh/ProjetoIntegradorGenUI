@@ -9,6 +9,7 @@ import { LoginCadastroComponent } from './login-cadastro/login-cadastro.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { ConcluirCompraComponent } from './concluir-compra/concluir-compra.component';
 import { ContatoComponent } from './contato/contato.component';
+import { ProdutosComponent } from './produtos/produtos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
     LoginCadastroComponent,
     NavbarComponent,
     ConcluirCompraComponent,
+    ProdutosComponent,
     PagamentoComponent
   ],
   imports: [
