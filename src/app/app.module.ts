@@ -9,6 +9,7 @@ import { LoginCadastroComponent } from './login-cadastro/login-cadastro.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { ConcluirCompraComponent } from './concluir-compra/concluir-compra.component';
 import { ContatoComponent } from './contato/contato.component';
+import { PagamentoComponent } from './pagamento/pagamento.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContatoComponent } from './contato/contato.component';
     ContatoComponent,
     LoginCadastroComponent,
     NavbarComponent,
-    ConcluirCompraComponent
+    ConcluirCompraComponent,
+    PagamentoComponent
   ],
   imports: [
     BrowserModule,
