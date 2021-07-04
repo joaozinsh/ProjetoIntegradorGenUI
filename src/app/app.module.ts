@@ -13,6 +13,7 @@ import { ConcluirCompraComponent } from './concluir-compra/concluir-compra.compo
 import { ContatoComponent } from './contato/contato.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
     NavbarComponent,
     ConcluirCompraComponent,
     ProdutosComponent,
-    PagamentoComponent
+    PagamentoComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,
