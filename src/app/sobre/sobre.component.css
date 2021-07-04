@@ -1,0 +1,31 @@
+@keyframes profanimation{
+    from{
+        padding:10%;
+        filter:saturate(30%);
+    }
+    to{
+        padding:0%;
+        filter:saturate(110%);
+    }
+}
+
+.profile{
+    padding:10%;
+    border-radius: 100%;
+    filter:saturate(30%);
+    border: 1px;
+}
+
+.profile:hover{
+    padding:0%;
+    border-radius: 100%;
+    animation:profanimation;
+    animation-duration:0.5s;
+    filter:saturate(110%);
+}
+
+.fab:hover{
+    padding:0%;
+    font-size: 32pt;
+    color: #3333ff;
+}
