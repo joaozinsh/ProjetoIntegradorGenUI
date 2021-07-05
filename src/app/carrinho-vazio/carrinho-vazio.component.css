@@ -1,0 +1,27 @@
+.font-cart{
+    font-size: 150pt;
+    
+    
+   }
+.font-certo{
+    font-size: 90pt;
+    color: red;
+}
+.baseline {
+	align-self: baseline;
+}
+.button {
+    font-size: 25px;
+}
+.borda {
+    
+    background-color: #E06767;
+    border-radius: 15px;
+    border-color:#E06767 (0, 0, 0);
+    align-self: center;
+}
+.container1 {
+    width: 100;
+    height: auto;
+    
+  }
