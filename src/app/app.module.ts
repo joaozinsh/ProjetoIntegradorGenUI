@@ -18,7 +18,11 @@ import { CarrinhoVazioComponent } from './carrinho-vazio/carrinho-vazio.componen
 import { ProdutosComponent } from './produtos/produtos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { SobreComponent } from './sobre/sobre.component';
+<<<<<<< HEAD
 >>>>>>> 9cfc58b2ad8b7dd2739b5b79df9dce87b71c201d
+=======
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+>>>>>>> b5bc15a63d0b4677c755bc7ca488b825cddf3089
 
 @NgModule({
   declarations: [
@@ -35,8 +39,13 @@ import { SobreComponent } from './sobre/sobre.component';
 =======
     ProdutosComponent,
     PagamentoComponent,
+<<<<<<< HEAD
     SobreComponent
 >>>>>>> 9cfc58b2ad8b7dd2739b5b79df9dce87b71c201d
+=======
+    SobreComponent,
+    CarrinhoComponent
+>>>>>>> b5bc15a63d0b4677c755bc7ca488b825cddf3089
   ],
   imports: [
     BrowserModule,
