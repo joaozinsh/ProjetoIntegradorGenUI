@@ -14,6 +14,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SobreComponent } from './sobre/sobre.component';
     ConcluirCompraComponent,
     ProdutosComponent,
     PagamentoComponent,
-    SobreComponent
+    SobreComponent,
+    CarrinhoComponent
   ],
   imports: [
     BrowserModule,
