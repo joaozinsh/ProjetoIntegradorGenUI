@@ -26,19 +26,21 @@
         <ul class="navbar-nav ml-auto mb-2">
             <li class="nav-item d-flex align-items-center">
 
-                <a class="p-2 custom-cart" routerLink='/carrinho'><i
+                <a class="p-2 custom-cart" routerLink='/carrinho-vazio'><i
                         class="ml-auto mr-3 fas fa-shopping-cart icon"></i></a>
                 <div class="dropdown">
-                    <button class="p-2 custom-button dropdown-toggle" type="button" id="dropdownMenuButton"
+                    <button class="p-2 custom-button" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <p class="login m-0 d-flex align-items-center">
                             <i class="pr-2 fas fa-user-circle perfil"></i>
                             Olá, {{apelido}}</p>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Alguma ação</a>
-                        <a class="dropdown-item" href="#">Outra ação</a>
-                        <a class="dropdown-item" href="#">Alguma coisa aqui</a>
+                        <a class="dropdown-item" href="#">Perfil</a>
+                        <a class="dropdown-item" routerLink='/carrinho-vazio'>Carrinho</a>
+                        <a class="dropdown-item" routerLink='/admin'>Admin</a>
+                        <a class="dropdown-item" href="#">Configurações</a>
+                        <a class="dropdown-item" href="#">Sair</a>
                     </div>
                 </div>
                 <!--
