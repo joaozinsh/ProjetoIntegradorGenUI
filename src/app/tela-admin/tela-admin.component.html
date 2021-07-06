@@ -2,7 +2,7 @@
   <div class="row d-flex justify-content-center">
     <h3 class="text-center">Adicionar Doença</h3>
   </div>
-  <!--<div class="row d-flex card m-2">
+  <div class="row d-flex card m-2">
     <div class="col-md-12">
       <form class="form-group p-2">
         <div class="row d-flex">
@@ -46,7 +46,7 @@
             <label for="selectdoencas" class="p-1">Doença: </label>
             <select
               [(ngModel)]="medicamento.doencas"
-              (change)='transformaJSON'
+              (change)="JSONify()"
               name="selectdoencas"
               id="selectdoencas"
             >
@@ -105,7 +105,7 @@
         </tbody>
       </table>
     </div>
-  </div>-->
+  </div>
   <div class="row d-flex justify-content-center">
     <div class="col-md-12">
         <div class="row d-flex">

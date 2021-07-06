@@ -5,6 +5,7 @@ import { Medicamento } from '../model/Medicamento';
 import { DoencaService } from '../service/doenca.service';
 import { MedicamentoService } from '../service/medicamento.service';
 
+
 @Component({
   selector: 'app-tela-admin',
   templateUrl: './tela-admin.component.html',
@@ -16,6 +17,8 @@ export class TelaAdminComponent implements OnInit {
   listaDoenca: Doenca[];
   doenca: Doenca = new Doenca();
   medPost: Medicamento;
+  i = document.getElementsByName("selectdoencas").value
+
 
   constructor(
     private medicamentoService: MedicamentoService,
@@ -49,15 +52,13 @@ export class TelaAdminComponent implements OnInit {
     })
   }
 
-  /*findDoencaByID(id:number){
-    this.doencaService.getDoencaById(id).subscribe((resp: Doenca) => {
-      this.doenca = resp;
-      )
-    }
-  }*/
+JSONify(){
+  JSON.stringify(this.i.value)
+}
 
 
   cadastrar() {
+    console.log(this.i)
     console.log(environment.token)
     this.doencaService
       .postDoenca(this.doenca)
