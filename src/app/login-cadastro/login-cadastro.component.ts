@@ -52,12 +52,13 @@ export class LoginCadastroComponent implements OnInit {
     this.auth.entrar(this.userLogin).subscribe((resp: UserLogin)=>{
       this.userLogin = resp
 
+     
+      console.log(this.userLogin.apelido) 
+
       environment.token = this.userLogin.token
       environment.apelido = this.userLogin.apelido
 
-      console.log(environment.token)
-      console.log(environment.apelido)
-
+      console.log(environment.apelido) 
       this.router.navigate(['/home'])
     })
   }
