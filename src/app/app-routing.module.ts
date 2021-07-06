@@ -8,6 +8,7 @@ import { LoginCadastroComponent } from './login-cadastro/login-cadastro.componen
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { TelaAdminComponent } from './tela-admin/tela-admin.component';
 
 const routes: Routes = [
 
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: "pagamento", component: PagamentoComponent},
   {path: "produtos", component: ProdutosComponent},
   {path: "sobre", component: SobreComponent},
-  {path: "carrinho", component: CarrinhoComponent}
+  {path: "carrinho", component: CarrinhoComponent},
+  {path: "admin", component: TelaAdminComponent}
 
 ];
 
