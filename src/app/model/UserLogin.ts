@@ -1,4 +1,5 @@
 export class UserLogin {
+    public id: number
     public apelido: string
     public email: string
     public nome: string
