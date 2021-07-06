@@ -15,6 +15,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { TelaAdminComponent } from './tela-admin/tela-admin.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     ProdutosComponent,
     PagamentoComponent,
     SobreComponent,
-    CarrinhoComponent
+    CarrinhoComponent,
+    TelaAdminComponent
   ],
   imports: [
     BrowserModule,
