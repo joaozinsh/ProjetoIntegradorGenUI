@@ -14,16 +14,18 @@ export class MedicamentoService {
     headers: new HttpHeaders().set('Authorization', environment.token),
   };
 
+  baseURL = "https://api-saudedobem.herokuapp.com"
+
   getAllMedicamentos(): Observable<Medicamento[]> {
     return this.http.get<Medicamento[]>(
-      'https://api-saudedobem.herokuapp.com/medicamentos',
+      `${this.baseURL}/medicamentos`,
       this.token
     );
   }
 
   postMedicamento(medicamento: Medicamento): Observable<Medicamento> {
     return this.http.post<Medicamento>(
-      'https://api-saudedobem.herokuapp.com/medicamentos/cadastrar',
+      `${this.baseURL}/medicamentos/cadastrar`,
       Medicamento,
       this.token
     );

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
+import { Doenca } from '../model/Doenca';
 import { Medicamento } from '../model/Medicamento';
+import { DoencaService } from '../service/doenca.service';
 import { MedicamentoService } from '../service/medicamento.service';
 
 @Component({
@@ -10,9 +13,27 @@ import { MedicamentoService } from '../service/medicamento.service';
 export class TelaAdminComponent implements OnInit {
   medicamento: Medicamento = new Medicamento();
   listaMedicamento: Medicamento[];
-  constructor(private medicamentoService: MedicamentoService) {}
+  listaDoenca: Doenca[];
+  doenca: Doenca = new Doenca();
+  medPost: Medicamento;
 
-  ngOnInit(): void {}
+  constructor(
+    private medicamentoService: MedicamentoService,
+    private doencaService: DoencaService
+  ) {}
+
+  ngOnInit() {
+    this.missingToken();
+    console.log(environment.token);
+    this.findAllDoencas();
+    this.findAllMedicamentos();
+  }
+
+  missingToken() {
+    if (environment.token == '') {
+      alert('Faltando Token!');
+    }
+  }
 
   findAllMedicamentos() {
     this.medicamentoService
@@ -22,13 +43,30 @@ export class TelaAdminComponent implements OnInit {
       });
   }
 
-  cadastrar(){
-    this.medicamentoService.postMedicamento(this.medicamento).subscribe((resp: Medicamento) => {
-      this.medicamento = resp;
-      alert('Medicamento criado!');
-      this.medicamento = new Medicamento();
-      this.findAllMedicamentos();
+  findAllDoencas() {
+    this.doencaService.getAllDoencas().subscribe((resp: Doenca[]) => {
+      this.listaDoenca = resp;
     })
-  this.findAllMedicamentos();
+  }
+
+  /*findDoencaByID(id:number){
+    this.doencaService.getDoencaById(id).subscribe((resp: Doenca) => {
+      this.doenca = resp;
+      )
+    }
+  }*/
+
+
+  cadastrar() {
+    this.doencaService
+      .postDoenca(this.doenca)
+      .subscribe((resp: Medicamento) => {
+        this.doenca = resp;
+        alert('Doenca criada!');
+        this.doenca = new Doenca();
+        this.findAllDoencas();
+      });
+    this.findAllDoencas();
+    console.log(this.listaDoenca)
   }
 }
