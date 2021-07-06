@@ -29,13 +29,9 @@
                 <a class="p-2 custom-cart" routerLink='/carrinho'><i class="ml-auto mr-3 fas fa-shopping-cart icon"></i></a>
 
                 <button routerLink='/login-cadastro' class="p-2 custom-button" id="btn-red">
-                    <p class="login m-0 d-flex align-items-center" *ngIf="auth.logado() == false">
+                    <p class="login m-0 d-flex align-items-center">
                         <i class="pr-2 fas fa-user-circle perfil"></i>
                         Login | Cadastro
-                    </p>
-                    <p class="login m-0 d-flex align-items-center" *ngIf="auth.logado() == true">
-                        <i class="pr-2 fas fa-user-circle perfil"></i>
-                        Olá, {{apelido}}
                     </p>
                 </button>
             </li>

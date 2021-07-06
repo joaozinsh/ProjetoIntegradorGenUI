@@ -9,13 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  apelido = environment.apelido
   constructor(
     public  auth: AuthService
   ) { }
   
   ngOnInit(){
-    console.log(this.apelido) 
+    
   }
 
 }

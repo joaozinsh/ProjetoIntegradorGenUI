@@ -16,6 +16,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     ProdutosComponent,
     PagamentoComponent,
     SobreComponent,
-    CarrinhoComponent
+    CarrinhoComponent,
+    NavbarLogadoComponent
   ],
   imports: [
     BrowserModule,
