@@ -15,11 +15,11 @@ export class AuthService {
   ) { }
 
   entrar(userLogin: UserLogin): Observable<UserLogin> {
-    return this.http.post<UserLogin>('https://saudedobem.herokuapp.com/usuarios/login', userLogin)
+    return this.http.post<UserLogin>('https://api-saudedobem.herokuapp.com/usuarios/login', userLogin)
   }
 
   cadastrar(user: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>('https://saudedobem.herokuapp.com/usuarios/cadastrar', user)
+    return this.http.post<Usuario>('https://api-saudedobem.herokuapp.com/usuarios/cadastrar', user)
   }
   
   logado(){

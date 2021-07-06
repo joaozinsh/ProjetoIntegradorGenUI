@@ -7,4 +7,5 @@ export class Medicamento {
     public id: number
     public nome: string
     public preco: string
+    public foto: string
 }

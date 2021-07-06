@@ -1,0 +1,146 @@
+<div class="container mt-4">
+  <div class="row d-flex justify-content-around">
+    <div class="col-md-8 card bg-light align-self-start">
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-around align-items-center p-3">
+          <div class="col-md-9 d-flex justify-content-start">
+            Total de items: X
+          </div>
+          <div class="col-md-3">
+            <button class="btn btn-danger btn-block">Remover Todos</button>
+          </div>
+        </div>
+        <!-- For de Produtos -->
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center py-2 order-1">
+            <div class="col-md-11 card">
+              <div class="row p-1 d-flex align-items-center">
+                <div class="col-md-2">
+                  <img
+                    src="../../assets/img/icon/cart.png"
+                    alt="Produto"
+                    class="img-fluid"
+                  />
+                </div>
+                <div
+                  class="
+                    col-md-3
+                    d-flex
+                    align-items-center
+                    p-0
+                    justify-content-center
+                  "
+                >
+                  <p class="align-items-center">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="col-md-2 d-flex justify-content-center">
+                  <p class="text-black-50">Preço Unitário</p>
+                </div>
+                <div class="col-md-2">
+                  <button class="btn btn-danger btn-block text-center">
+                    +
+                  </button>
+                  <input class="form-control text-center" value="0" />
+                  <button class="btn btn-danger btn-block text-center">
+                    -
+                  </button>
+                </div>
+                <div class="col-md-2 p-0 d-flex justify-content-center">
+                  <p class="text-black-50">Preço Total</p>
+                </div>
+                <div class="col-md-1 p-0 d-flex justify-content-center">
+                  <i class="far fa-trash-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fim do For de Produtos -->
+      </div>
+    </div>
+    <div class="col-md-3 d-flex justify-content-center align-self-start">
+      <div class="container-fluid p-0">
+        <div class="row d-flex card bg-light p-3">
+          <div class="col-md-12">
+            <div class="row d-flex justify-content-around">
+              <div class="col-md-12">
+                <h5 class="text-center">Calcular frete</h5>
+              </div>
+            </div>
+            <hr />
+            <div class="row d-flex justify-content-around">
+              <div class="col-md-9 p-0">
+                <input class="form-control pr-0" type="text" />
+              </div>
+              <div class="col-md-3 p-0">
+                <button class="btn btn-danger btn-block">OK</button>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-around">
+              <div class="col-md-8">
+                <p class="font-weight-bolder text-left">Prazo de entrega</p>
+              </div>
+              <div class="col-md-4"><p class="text-right">2 dias</p></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="
+            row
+            d-flex
+            card
+            bg-light
+            mt-3
+            p-3
+            text-center text-black-50
+            font-weight-bolder
+          "
+        >
+          Favor carregar a receita
+          <input class="form-control bg-light" type="file" />
+        </div>
+        <div class="row d-flex card bg-light mt-3 p-3">
+          <div class="col-md-12">
+            <div class="row d-flex justify-content-center">
+              <h5 class="text-center">Resumo do Pedido</h5>
+            </div>
+            <hr />
+            <div class="row d-flex justify-content-around">
+              <div class="col-6">
+                <p class="text-black font-weight-bold">Subtotal</p>
+              </div>
+              <div class="col-6">
+                <p class="text-black text-right">R$ 999,00</p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-around">
+              <div class="col-6">
+                <p class="text-black font-weight-bold">Frete</p>
+              </div>
+              <div class="col-6">
+                <p class="text-black text-right">Gratis</p>
+              </div>
+            </div>
+            <hr />
+            <div class="row d-flex justify-content-around">
+              <div class="col-6">
+                <p class="text-black font-weight-bold">Total (qtde de Itens)</p>
+              </div>
+              <div class="col-6">
+                <p class="text-black text-right">R$ 999,00</p>
+              </div>
+            </div>
+            <hr />
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-11">
+                <button routerLink='/pagamento' class="form-control btn btn-danger btn-block">
+                  Fechar carrinho!
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
