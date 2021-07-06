@@ -11,6 +11,7 @@ import { LoginCadastroComponent } from './login-cadastro/login-cadastro.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { ConcluirCompraComponent } from './concluir-compra/concluir-compra.component';
 import { ContatoComponent } from './contato/contato.component';
+import { CarrinhoVazioComponent } from './carrinho-vazio/carrinho-vazio.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { SobreComponent } from './sobre/sobre.component';
@@ -26,6 +27,7 @@ import { TelaAdminComponent } from './tela-admin/tela-admin.component';
     LoginCadastroComponent,
     NavbarComponent,
     ConcluirCompraComponent,
+    CarrinhoVazioComponent,
     ProdutosComponent,
     PagamentoComponent,
     SobreComponent,
