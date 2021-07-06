@@ -53,55 +53,10 @@
         </div>
 
         <div class="col-md-9 d-flex flex-wrap">
-            <div class="card m-2 " style="width: 13rem;">
-                <img class="card-img-top " src="https://i.imgur.com/jftJJdb.jpg" alt="Imagem de capa do card">
+            <div *ngFor='let medicamento of listaMedicamentos' class="card m-2 " style="width: 13rem;">
+                <img class="card-img-top" src={{medicamento.foto}} alt="Imagem de capa do card">
                 <div class="card-body">
-                    <h5 class="card-title">Título do card</h5>
-                    <p class="card-text"></p>
-                    <a href="#" class="btn btn-success">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card  m-2 " style="width: 13rem;">
-                <img class="card-img-top" src="https://i.imgur.com/jftJJdb.jpg" alt="Imagem de capa do card">
-                <div class="card-body">
-                    <h5 class="card-title">Título do card</h5>
-                    <p class="card-text"></p>
-                    <a href="#" class="btn btn-success">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card  m-2" style="width: 13rem;">
-                <img class="card-img-top" src="https://i.imgur.com/jftJJdb.jpg" alt="Imagem de capa do card">
-                <div class="card-body">
-                    <h5 class="card-title">Título do card</h5>
-                    <p class="card-text"></p>
-                    <a href="#" class="btn btn-success">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card  m-2" style="width: 13rem;">
-                <img class="card-img-top" src="https://i.imgur.com/jftJJdb.jpg" alt="Imagem de capa do card">
-                <div class="card-body">
-                    <h5 class="card-title">Título do card</h5>
-                    <p class="card-text"></p>
-                    <a href="#" class="btn btn-success">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card  m-2 " style="width: 13rem;">
-                <img class="card-img-top" src="https://i.imgur.com/jftJJdb.jpg" alt="Imagem de capa do card">
-                <div class="card-body">
-                    <h5 class="card-title">Título do card</h5>
-                    <p class="card-text"></p>
-                    <a href="#" class="btn btn-success">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card  m-2" style="width: 13rem;">
-                <img class="card-img-top" src="https://i.imgur.com/jftJJdb.jpg" alt="Imagem de capa do card">
-                <div class="card-body">
-                    <h5 class="card-title">Título do card</h5>
+                    <h5 class="card-title">{{medicamento.nome}}</h5>
                     <p class="card-text"></p>
                     <a href="#" class="btn btn-success">Comprar</a>
                 </div>

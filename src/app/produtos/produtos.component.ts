@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Medicamento } from '../model/Medicamento';
+import { ProdutosService } from '../service/produtos.service';
 
 @Component({
   selector: 'app-produtos',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutosComponent implements OnInit {
 
-  constructor() { }
+  medicamento: Medicamento = new Medicamento()
+  listaMedicamentos: Medicamento[]
 
-  ngOnInit(): void {
+  constructor(
+    private produtoService: ProdutosService
+  ) { }
+
+  ngOnInit(){
+    this.findAllMedicamentos()
+  }
+
+  findAllMedicamentos() {
+    this.produtoService.getAllMedicamentos().subscribe((resp: Medicamento[])=> {
+      this.listaMedicamentos = resp
+    })
   }
 
 }
