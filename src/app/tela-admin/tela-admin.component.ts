@@ -44,7 +44,7 @@ export class TelaAdminComponent implements OnInit {
   }
 
   findAllDoencas() {
-    this.doencaService.getAllDoencas().subscribe((resp: Doenca[]) => {
+    this.doencaService.getAllDoenca().subscribe((resp: Doenca[]) => {
       this.listaDoenca = resp;
     })
   }
@@ -58,15 +58,13 @@ export class TelaAdminComponent implements OnInit {
 
 
   cadastrar() {
+    console.log(environment.token)
     this.doencaService
       .postDoenca(this.doenca)
-      .subscribe((resp: Medicamento) => {
+      .subscribe((resp: Doenca) => {
         this.doenca = resp;
         alert('Doenca criada!');
-        this.doenca = new Doenca();
-        this.findAllDoencas();
       });
-    this.findAllDoencas();
-    console.log(this.listaDoenca)
+    console.log(this.doenca)
   }
 }

@@ -23,6 +23,6 @@ export class DoencaService {
   }
 
   postDoenca(doenca: Doenca): Observable<Doenca> {
-    return this.http.post<Doenca>(`${this.baseURL}/doencas/cadastrar`, this.token)
+    return this.http.post<Doenca>(`${this.baseURL}/doencas/cadastrar`, doenca, this.token)
   }
 }

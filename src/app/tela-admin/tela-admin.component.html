@@ -108,7 +108,6 @@
   </div>-->
   <div class="row d-flex justify-content-center">
     <div class="col-md-12">
-      <form class="form-group p-2">
         <div class="row d-flex">
           <div class="col-md-4">
             <label for="nome" class="no-gutter m-0">Nome:</label>
@@ -116,31 +115,45 @@
               [(ngModel)]="doenca.nome"
               type="text"
               class="form-control"
-              id="desc"
+              id="nome"
               name="nome"
               placeholder="Nome da Doenca"
             />
           </div>
           <div class="col-md-4">
-            <label for="foto" class="no-gutter m-0">Descricao:</label>
+            <label for="descricao" class="no-gutter m-0">Descricao:</label>
             <input
               [(ngModel)]="doenca.descricao"
               type="text"
               class="form-control"
-              name="desc"
-              id="desc"
+              name="descricao"
+              id="descricao"
               placeholder="Descricao da Doenca"
             />
           </div>
           <div class="col-md-4">
-            <label for="foto" class="no-gutter m-0">Transmissivel?</label>
-            <select [(ngModel)]="doenca.transmissivel" class="form-control">
-              <option value="1">Sim</option>
-              <option value="0">Não</option>
+            <label for="trasmissivel" class="no-gutter m-0">Transmissivel?</label>
+            <select [(ngModel)]="doenca.transmissivel" class="form-control" name="transmissivel" id="transmissivel">
+              <option value="true">Sim</option>
+              <option value="false">Não</option>
             </select>
           </div>
         </div>
-      </form>
+        <div class="row d-flex justify-content-center mt-3">
+          <div class="col-md-2">
+            <button
+              type="submit"
+              class="btn btn-success btn-block"
+              (click)="cadastrar()"
+            >
+              Enviar
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-danger btn-block">
+              Limpar
+            </button>
+          </div>
     </div>
   </div>
 </div>
