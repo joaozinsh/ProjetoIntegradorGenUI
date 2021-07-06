@@ -1,0 +1,159 @@
+<div class="container card bg-light mt-3 p-3">
+  <div class="row d-flex justify-content-center">
+    <h3 class="text-center">Adicionar Doença</h3>
+  </div>
+  <!--<div class="row d-flex card m-2">
+    <div class="col-md-12">
+      <form class="form-group p-2">
+        <div class="row d-flex">
+          <div class="col-md-6">
+            <label for="nome" class="no-gutter m-0">Produto:</label>
+            <input
+              [(ngModel)]="medicamento.nome"
+              type="text"
+              class="form-control"
+              id="nome"
+              name="nome"
+              placeholder="Nome do Produto"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="foto" class="no-gutter m-0">Foto:</label>
+            <input
+              [(ngModel)]="medicamento.foto"
+              type="text"
+              class="form-control"
+              name="foto"
+              id="foto"
+              placeholder="link do imgur"
+            />
+          </div>
+        </div>
+        <div class="row d-flex align-items-center">
+          <div class="col-md-3 my-3">
+            <label for="categoria" class="p-1">Categoria: </label>
+            <select
+              [(ngModel)]="medicamento.categoria"
+              name="categoria"
+              id="categoria"
+            >
+              <option>Referência</option>
+              <option>Genérico</option>
+              <option>Similar</option>
+            </select>
+          </div>
+          <div class="col-md-3 my-3">
+            <label for="selectdoencas" class="p-1">Doença: </label>
+            <select
+              [(ngModel)]="medicamento.doencas"
+              (change)='transformaJSON'
+              name="selectdoencas"
+              id="selectdoencas"
+            >
+              <option *ngFor='let i of listaDoenca' value="{{i}}">{{ i.nome }}</option>
+            </select>
+          </div>
+          <div class="col-md-3 my-3">
+            <label for="preco" class="no-gutter m-0">Preço: </label>
+            <input
+              [(ngModel)]="medicamento.preco"
+              type="text"
+              class="form-control"
+              id="preco"
+              name="preco"
+              placeholder="0,00"
+            />
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-2">
+            <button
+              type="submit"
+              class="btn btn-success btn-block"
+              (click)="cadastrar()"
+            >
+              Enviar
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-danger btn-block">
+              Limpar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row d-flex card m-2">
+    <div class="col-md-12 d-flex justify-content-center">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Medicamento</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Doença</th>
+            <th scope="col">Tipo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let i of listaMedicamento'>
+            <th scope="row">{{ i.nome }}</th>
+            <td>{{ i.preco }}</td>
+            <td>{{ i.doencas }}</td>
+            <td>{{ i.categoria }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>-->
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-12">
+        <div class="row d-flex">
+          <div class="col-md-4">
+            <label for="nome" class="no-gutter m-0">Nome:</label>
+            <input
+              [(ngModel)]="doenca.nome"
+              type="text"
+              class="form-control"
+              id="nome"
+              name="nome"
+              placeholder="Nome da Doenca"
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="descricao" class="no-gutter m-0">Descricao:</label>
+            <input
+              [(ngModel)]="doenca.descricao"
+              type="text"
+              class="form-control"
+              name="descricao"
+              id="descricao"
+              placeholder="Descricao da Doenca"
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="trasmissivel" class="no-gutter m-0">Transmissivel?</label>
+            <select [(ngModel)]="doenca.transmissivel" class="form-control" name="transmissivel" id="transmissivel">
+              <option value="true">Sim</option>
+              <option value="false">Não</option>
+            </select>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3">
+          <div class="col-md-2">
+            <button
+              type="submit"
+              class="btn btn-success btn-block"
+              (click)="cadastrar()"
+            >
+              Enviar
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-danger btn-block">
+              Limpar
+            </button>
+          </div>
+    </div>
+  </div>
+</div>
