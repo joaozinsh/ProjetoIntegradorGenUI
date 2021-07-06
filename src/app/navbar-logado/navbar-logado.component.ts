@@ -9,11 +9,13 @@ import { AuthService } from '../service/auth.service';
 })
 export class NavbarLogadoComponent implements OnInit {
   apelido = environment.apelido
+  
   constructor(
     public  auth: AuthService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    
   }
 
 }
