@@ -55,9 +55,6 @@ export class LoginCadastroComponent implements OnInit {
       environment.token = this.userLogin.token
       environment.apelido = this.userLogin.apelido
 
-      console.log(environment.token)
-      console.log(environment.apelido)
-
       this.router.navigate(['/home'])
     })
   }

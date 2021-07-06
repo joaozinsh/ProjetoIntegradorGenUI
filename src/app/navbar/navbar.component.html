@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light nav-bar">
-    <a class="navbar-brand" routerLink='/home'><img class="sb" src="../../assets/img/icon/sb.png"></a>
+    <a class="navbar-brand" routerLink='/home'><img class="sb" src="../../assets/img/icon/icon-sb.svg"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
         aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
@@ -26,12 +26,16 @@
         <ul class="navbar-nav ml-auto mb-2">
             <li class="nav-item d-flex align-items-center">
 
-                <a class="p-2 custom-cart" href=""><i class="ml-auto mr-3 fas fa-shopping-cart icon"></i></a>
+                <a class="p-2 custom-cart"><i class="ml-auto mr-2 fas fa-shopping-cart icon"></i></a>
 
                 <button routerLink='/login-cadastro' class="p-2 custom-button" id="btn-red">
-                    <p class="login m-0 d-flex align-items-center">
+                    <p class="login m-0 d-flex align-items-center" *ngIf="auth.logado() == false">
                         <i class="pr-2 fas fa-user-circle perfil"></i>
                         Login | Cadastro
+                    </p>
+                    <p class="login m-0 d-flex align-items-center" *ngIf="auth.logado() == true">
+                        <i class="pr-2 fas fa-user-circle perfil"></i>
+                        Olá, {{apelido}}
                     </p>
                 </button>
             </li>
