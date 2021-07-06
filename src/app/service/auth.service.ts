@@ -21,14 +21,22 @@ export class AuthService {
   cadastrar(user: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>('https://api-saudedobem.herokuapp.com/usuarios/cadastrar', user)
   }
-  
-  logado(){
+
+  logado() {
     let ok: boolean = false
 
-    if(environment.token != ''){
+    if (environment.token != '') {
       ok = true
     }
     return ok
+  }
+
+  admin() {
+    let adm: boolean = false
+    if (environment.tipo == "Administrador") {
+      adm = true
+    }
+    return adm
   }
 }
 
