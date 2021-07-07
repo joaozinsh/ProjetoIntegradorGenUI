@@ -123,36 +123,11 @@
   <hr>
   <div class="row d-flex justify-content-center">
     <div class="col-md-12">
-        <div class="row d-flex">
-          <div class="col-md-4">
-            <label for="nome" class="no-gutter m-0">Nome:</label>
-            <input
-              [(ngModel)]="doenca.nome"
-              type="text"
-              class="form-control"
-              id="nome"
-              name="nome"
-              placeholder="Nome da Doenca"
-            />
-          </div>
-          <div class="col-md-4">
-            <label for="descricao" class="no-gutter m-0">Descricao:</label>
-            <input
-              [(ngModel)]="doenca.descricao"
-              type="text"
-              class="form-control"
-              name="descricao"
-              id="descricao"
-              placeholder="Descricao da Doenca"
-            />
-          </div>
-          <div class="col-md-4">
-            <label for="trasmissivel" class="no-gutter m-0">Transmissivel?</label>
-            <select [(ngModel)]="doenca.transmissivel" class="form-control" name="transmissivel" id="transmissivel">
-              <option value="true">Sim</option>
-              <option value="false">Não</option>
-            </select>
-          </div>
+      <div class="row d-flex">
+        <div class="col-md-4">
+          <label for="nome" class="no-gutter m-0">Nome:</label>
+          <input [(ngModel)]="doenca.nome" type="text" class="form-control" id="nome" name="nome"
+            placeholder="Nome da Doenca" />
         </div>
         <div class="row d-flex justify-content-center mt-3">
           <div class="col-md-2">
@@ -171,4 +146,3 @@
           </div>
     </div>
   </div>
-</div>

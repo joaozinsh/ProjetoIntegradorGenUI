@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 import { Doenca } from '../model/Doenca';
@@ -19,7 +20,8 @@ export class TelaAdminComponent implements OnInit {
 
   constructor(
     private produtoService: ProdutosService,
-    private doencaService: DoencaService
+    private doencaService: DoencaService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -32,6 +34,7 @@ export class TelaAdminComponent implements OnInit {
   missingToken() {
     if (environment.token == '') {
       alert('Faltando Token!');
+      this.router.navigate(['/home'])
     }
   }
 

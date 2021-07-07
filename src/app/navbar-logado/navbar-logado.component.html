@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light nav-bar">
+    <a class="navbar-brand" routerLink='/home'><img class="sb" src="../../assets/img/icon/icon-sb.svg"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="letter" routerLink='/produtos'>Produtos</a>
+            </li>
+            <li class="nav-item">
+                <a class="letter" routerLink='/sobre'>Sobre</a>
+            </li>
+            <li class="nav-item">
+                <a class="letter" routerLink='/contato'>Contato</a>
+            </li>
+        </ul>
+
+        <form class="form-container">
+            <input class="form-control form-rounded input" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <i class="fas fa-search input-icon"></i>
+        </form>
+
+        <ul class="navbar-nav ml-auto mb-2">
+            <li class="nav-item d-flex align-items-center">
+
+                <a class="p-2 custom-cart" routerLink='/carrinho-vazio'><i
+                        class="ml-auto mr-3 fas fa-shopping-cart icon"></i></a>
+
+
+                <div class="dropdown">
+
+                    <button class="p-2 custom-button" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <p class="login m-0 d-flex align-items-center">
+                            <i class="pr-2 fas fa-user-circle perfil"></i>
+                            Olá, {{apelido}}
+                        </p>
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item">Perfil</a></li>
+
+                        <li class="dropdown-submenu" *ngIf="auth.admin() == true">
+                            <a class="dropdown-item dropdown-toggle">Admin</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" routerLink='/admin'>medicamento</a></li>
+                                <li><a class="dropdown-item" routerLink='/admin'>doença</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a class="dropdown-item" href="#">Sair</a></li>
+                    </ul>
+                </div>
+                <!--
+                <div class="dropdown">
+                    <button class="p-2 custom-button" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <p class="login m-0 d-flex align-items-center">
+                            <i class="pr-2 fas fa-user-circle perfil"></i>
+                            Olá, {{apelido}}
+                        </p>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>-->
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,3 +1,4 @@
+import { CarrinhoVazioComponent } from './carrinho-vazio/carrinho-vazio.component';
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
@@ -16,11 +17,12 @@ const routes: Routes = [
   {path: "login-cadastro", component: LoginCadastroComponent},
   {path: "home", component: HomeComponent},
   {path: "contato", component: ContatoComponent},
+  {path: "carrinho", component: CarrinhoComponent},
+  {path: "carrinho-vazio", component: CarrinhoVazioComponent},
   {path: "concluir-compra", component: ConcluirCompraComponent},
   {path: "pagamento", component: PagamentoComponent},
   {path: "produtos", component: ProdutosComponent},
   {path: "sobre", component: SobreComponent},
-  {path: "carrinho", component: CarrinhoComponent},
   {path: "admin", component: TelaAdminComponent}
 
 ];
