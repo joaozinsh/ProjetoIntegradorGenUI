@@ -42,15 +42,15 @@
               <option>Similar</option>
             </select>
           </div>
-          <div class="col-md-3 my-3">
-            <label for="selectdoencas" class="p-1">Doença: </label>
+          <div class="col-md-3 my-3 d-flex align-items-start">
+            <label for="selectdoencas" class="p-1 d-flex align-items-start">Doença: </label>
             <select
               [(ngModel)]="medicamento.doencas"
-              (change)="JSONify()"
               name="selectdoencas"
               id="selectdoencas"
+              multiple
             >
-              <option *ngFor='let i of listaDoenca' value="{{i}}">{{ i.nome }}</option>
+              <option *ngFor='let i of listaDoenca' [ngValue]="i">{{ i.nome }}</option>
             </select>
           </div>
           <div class="col-md-3 my-3">
@@ -63,6 +63,14 @@
               name="preco"
               placeholder="0,00"
             />
+            <input
+            [(ngModel)]="medicamento.descricao"
+            type="text"
+            class="form-control"
+            id="desc"
+            name="desc"
+            placeholder="desc"
+          />
           </div>
         </div>
         <div class="row d-flex justify-content-center">
@@ -70,7 +78,7 @@
             <button
               type="submit"
               class="btn btn-success btn-block"
-              (click)="cadastrar()"
+              (click)="cadastrarProd()"
             >
               Enviar
             </button>
@@ -106,6 +114,7 @@
       </table>
     </div>
   </div>
+  <hr>
   <div class="row d-flex justify-content-center">
     <div class="col-md-12">
         <div class="row d-flex">
@@ -144,7 +153,7 @@
             <button
               type="submit"
               class="btn btn-success btn-block"
-              (click)="cadastrar()"
+              (click)="cadastrarDoenca()"
             >
               Enviar
             </button>
