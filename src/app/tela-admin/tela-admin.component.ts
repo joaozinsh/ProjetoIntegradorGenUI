@@ -69,5 +69,7 @@ export class TelaAdminComponent implements OnInit {
         alert('Medicamento criado!');
       });
     console.log(this.medicamento);
+    this.findAllDoencas();
+    this.findAllMedicamentos();
   }
 }

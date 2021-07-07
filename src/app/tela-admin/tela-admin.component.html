@@ -31,16 +31,16 @@
         </div>
         <div class="row d-flex align-items-center">
           <div class="col-md-3 my-3">
-            <label for="categoria" class="p-1">Categoria: </label>
-            <select
-              [(ngModel)]="medicamento.categoria"
-              name="categoria"
-              id="categoria"
-            >
-              <option>Referência</option>
-              <option>Genérico</option>
-              <option>Similar</option>
-            </select>
+            <label for="desc" class="no-gutter m-0">Descrição:</label>
+            <textarea
+            [(ngModel)]="medicamento.descricao"
+            type="text"
+            class="form-control"
+            id="desc"
+            name="desc"
+            placeholder="Insira a descrição do produto"
+            rows=3
+          ></textarea>
           </div>
           <div class="col-md-3 my-3 d-flex align-items-start">
             <label for="selectdoencas" class="p-1 d-flex align-items-start">Doença: </label>
@@ -48,6 +48,7 @@
               [(ngModel)]="medicamento.doencas"
               name="selectdoencas"
               id="selectdoencas"
+              class="form-control"
               multiple
             >
               <option *ngFor='let i of listaDoenca' [ngValue]="i">{{ i.nome }}</option>
@@ -61,16 +62,21 @@
               class="form-control"
               id="preco"
               name="preco"
-              placeholder="0,00"
+              placeholder="0.00"
             />
-            <input
-            [(ngModel)]="medicamento.descricao"
-            type="text"
-            class="form-control"
-            id="desc"
-            name="desc"
-            placeholder="desc"
-          />
+          </div>
+          <div class="col-md-3">
+            <label for="categoria" class="no-gutter m-0">Categoria: </label>
+            <select
+              [(ngModel)]="medicamento.categoria"
+              name="categoria"
+              id="categoria"
+              class="form-control"
+            >
+              <option class="form-control">Referência</option>
+              <option class="form-control">Genérico</option>
+              <option class="form-control">Similar</option>
+            </select>
           </div>
         </div>
         <div class="row d-flex justify-content-center">
