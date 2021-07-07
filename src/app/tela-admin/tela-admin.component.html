@@ -2,7 +2,7 @@
   <div class="row d-flex justify-content-center">
     <h3 class="text-center">Adicionar Doença</h3>
   </div>
-  <!--<div class="row d-flex card m-2">
+  <div class="row d-flex card m-2">
     <div class="col-md-12">
       <form class="form-group p-2">
         <div class="row d-flex">
@@ -31,26 +31,27 @@
         </div>
         <div class="row d-flex align-items-center">
           <div class="col-md-3 my-3">
-            <label for="categoria" class="p-1">Categoria: </label>
-            <select
-              [(ngModel)]="medicamento.categoria"
-              name="categoria"
-              id="categoria"
-            >
-              <option>Referência</option>
-              <option>Genérico</option>
-              <option>Similar</option>
-            </select>
+            <label for="desc" class="no-gutter m-0">Descrição:</label>
+            <textarea
+            [(ngModel)]="medicamento.descricao"
+            type="text"
+            class="form-control"
+            id="desc"
+            name="desc"
+            placeholder="Insira a descrição do produto"
+            rows=3
+          ></textarea>
           </div>
-          <div class="col-md-3 my-3">
-            <label for="selectdoencas" class="p-1">Doença: </label>
+          <div class="col-md-3 my-3 d-flex align-items-start">
+            <label for="selectdoencas" class="p-1 d-flex align-items-start">Doença: </label>
             <select
               [(ngModel)]="medicamento.doencas"
-              (change)='transformaJSON'
               name="selectdoencas"
               id="selectdoencas"
+              class="form-control"
+              multiple
             >
-              <option *ngFor='let i of listaDoenca' value="{{i}}">{{ i.nome }}</option>
+              <option *ngFor='let i of listaDoenca' [ngValue]="i">{{ i.nome }}</option>
             </select>
           </div>
           <div class="col-md-3 my-3">
@@ -61,8 +62,21 @@
               class="form-control"
               id="preco"
               name="preco"
-              placeholder="0,00"
+              placeholder="0.00"
             />
+          </div>
+          <div class="col-md-3">
+            <label for="categoria" class="no-gutter m-0">Categoria: </label>
+            <select
+              [(ngModel)]="medicamento.categoria"
+              name="categoria"
+              id="categoria"
+              class="form-control"
+            >
+              <option class="form-control">Referência</option>
+              <option class="form-control">Genérico</option>
+              <option class="form-control">Similar</option>
+            </select>
           </div>
         </div>
         <div class="row d-flex justify-content-center">
@@ -70,7 +84,7 @@
             <button
               type="submit"
               class="btn btn-success btn-block"
-              (click)="cadastrar()"
+              (click)="cadastrarProd()"
             >
               Enviar
             </button>
@@ -105,46 +119,22 @@
         </tbody>
       </table>
     </div>
-  </div>-->
+  </div>
+  <hr>
   <div class="row d-flex justify-content-center">
     <div class="col-md-12">
-        <div class="row d-flex">
-          <div class="col-md-4">
-            <label for="nome" class="no-gutter m-0">Nome:</label>
-            <input
-              [(ngModel)]="doenca.nome"
-              type="text"
-              class="form-control"
-              id="nome"
-              name="nome"
-              placeholder="Nome da Doenca"
-            />
-          </div>
-          <div class="col-md-4">
-            <label for="descricao" class="no-gutter m-0">Descricao:</label>
-            <input
-              [(ngModel)]="doenca.descricao"
-              type="text"
-              class="form-control"
-              name="descricao"
-              id="descricao"
-              placeholder="Descricao da Doenca"
-            />
-          </div>
-          <div class="col-md-4">
-            <label for="trasmissivel" class="no-gutter m-0">Transmissivel?</label>
-            <select [(ngModel)]="doenca.transmissivel" class="form-control" name="transmissivel" id="transmissivel">
-              <option value="true">Sim</option>
-              <option value="false">Não</option>
-            </select>
-          </div>
+      <div class="row d-flex">
+        <div class="col-md-4">
+          <label for="nome" class="no-gutter m-0">Nome:</label>
+          <input [(ngModel)]="doenca.nome" type="text" class="form-control" id="nome" name="nome"
+            placeholder="Nome da Doenca" />
         </div>
         <div class="row d-flex justify-content-center mt-3">
           <div class="col-md-2">
             <button
               type="submit"
               class="btn btn-success btn-block"
-              (click)="cadastrar()"
+              (click)="cadastrarDoenca()"
             >
               Enviar
             </button>
@@ -156,4 +146,3 @@
           </div>
     </div>
   </div>
-</div>

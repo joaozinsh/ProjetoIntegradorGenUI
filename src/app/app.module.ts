@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { HomeComponent } from './home/home.component';
@@ -16,6 +16,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
 import { TelaAdminComponent } from './tela-admin/tela-admin.component';
 
 @NgModule({
@@ -32,6 +33,7 @@ import { TelaAdminComponent } from './tela-admin/tela-admin.component';
     PagamentoComponent,
     SobreComponent,
     CarrinhoComponent,
+    NavbarLogadoComponent,
     TelaAdminComponent
   ],
   imports: [

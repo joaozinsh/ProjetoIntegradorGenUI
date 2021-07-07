@@ -1,3 +1,5 @@
+import { environment } from './../../environments/environment.prod';
+import { AuthService } from './../service/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(
+    public  auth: AuthService
+  ) { }
+  
+  ngOnInit(){
+    
   }
 
 }
