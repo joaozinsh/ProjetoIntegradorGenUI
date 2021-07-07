@@ -4,7 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Doenca } from '../model/Doenca';
 import { Medicamento } from '../model/Medicamento';
 import { DoencaService } from '../service/doenca.service';
-import { MedicamentoService } from '../service/medicamento.service';
+import { ProdutosService } from '../service/produtos.service';
 
 @Component({
   selector: 'app-tela-admin',
@@ -19,7 +19,7 @@ export class TelaAdminComponent implements OnInit {
   medPost: Medicamento;
 
   constructor(
-    private medicamentoService: MedicamentoService,
+    private produtoService: ProdutosService,
     private doencaService: DoencaService,
     private router: Router
   ) {}
@@ -39,7 +39,7 @@ export class TelaAdminComponent implements OnInit {
   }
 
   findAllMedicamentos() {
-    this.medicamentoService
+    this.produtoService
       .getAllMedicamentos()
       .subscribe((resp: Medicamento[]) => {
         this.listaMedicamento = resp;
@@ -49,25 +49,30 @@ export class TelaAdminComponent implements OnInit {
   findAllDoencas() {
     this.doencaService.getAllDoenca().subscribe((resp: Doenca[]) => {
       this.listaDoenca = resp;
-    })
+    });
   }
 
-  /*findDoencaByID(id:number){
-    this.doencaService.getDoencaById(id).subscribe((resp: Doenca) => {
+  cadastrarDoenca() {
+    console.log(environment.token);
+    this.doencaService.postDoenca(this.doenca).subscribe((resp: Doenca) => {
       this.doenca = resp;
-      )
-    }
-  }*/
+      alert('Doenca criada!');
+    });
+    console.log(this.doenca);
+  }
 
-
-  cadastrar() {
-    console.log(environment.token)
-    this.doencaService
-      .postDoenca(this.doenca)
-      .subscribe((resp: Doenca) => {
-        this.doenca = resp;
-        alert('Doenca criada!');
+  cadastrarProd() {
+    console.log(this.listaDoenca);
+    console.log(environment.token);
+    console.log(this.medicamento);
+    this.produtoService
+      .postMedicamentos(this.medicamento)
+      .subscribe((resp: Medicamento) => {
+        this.medicamento = resp;
+        alert('Medicamento criado!');
       });
-    console.log(this.doenca)
+    console.log(this.medicamento);
+    this.findAllDoencas();
+    this.findAllMedicamentos();
   }
 }
