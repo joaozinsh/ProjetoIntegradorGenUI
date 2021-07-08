@@ -15,9 +15,12 @@ export class DoencaAdminComponent implements OnInit {
 
   medicamento: Medicamento = new Medicamento();
   listaMedicamento: Medicamento[];
-  listaDoenca: Doenca[];
-  doenca: Doenca = new Doenca();
   medPost: Medicamento;
+
+  listaDoenca: Doenca[];
+  idDoenca: number
+  doenca: Doenca = new Doenca();
+
 
   constructor(
     private produtoService: ProdutosService,
@@ -26,14 +29,14 @@ export class DoencaAdminComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.missingToken();
+    /*this.missingToken();*/
     console.log(environment.token);
     this.findAllDoencas();
   }
 
   missingToken() {
     if (environment.token == '') {
-      alert('Faltando Token!');
+      /*alert('Faltando Token!');*/
       this.router.navigate(['/home'])
     }
   }
@@ -44,12 +47,37 @@ export class DoencaAdminComponent implements OnInit {
     });
   }
 
+  findByIdDoenca(id: number) {
+    this.doencaService.getByIdDoenca(id).subscribe((resp: Doenca) => {
+      this.doenca = resp
+    })
+  }
+
   cadastrarDoenca() {
     console.log(environment.token);
     this.doencaService.postDoenca(this.doenca).subscribe((resp: Doenca) => {
       this.doenca = resp;
-      alert('Doenca criada!');
+      alert('Categoria Doença criada!');
     });
     console.log(this.doenca);
+  }
+
+  atualizarDoenca(doenca: Doenca) {
+    this.doencaService.putDoenca(doenca).subscribe((resp: Doenca) => {
+      this.doenca = resp;
+      alert('Categoria Doença atualizada!')
+      this.findAllDoencas()
+    })
+  }
+
+  apagarDoenca(id: number) {
+    this.doencaService.deleteDoenca(id).subscribe(() => {
+      alert("Categoria Doença apagada!")
+      this.findAllDoencas()
+    }, erro => {
+      if (erro.status == 500) {
+        alert('Não é Possivel Apagar uma Doença com Medicamentos Atribulos a Ela!')
+      }
+    })
   }
 }

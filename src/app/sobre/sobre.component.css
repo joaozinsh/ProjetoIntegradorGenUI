@@ -29,3 +29,13 @@
     font-size: 32pt;
     color: #3333ff;
 }
+.img-m{
+    width: 170px;
+}
+.img-qs{
+    width: 135px; 
+}
+.back{
+	transform: rotateY(180deg);
+}
+
