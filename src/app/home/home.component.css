@@ -1,7 +1,7 @@
 
 /* Jumbotron */
 #imagem1 {
-    background-image: url("https://i.imgur.com/KizUABz.png");
+    background-image: url("https://i.imgur.com/dfTDjV4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     -webkit-background-size: 100% 100%;
@@ -21,3 +21,18 @@
         width: 80%;
         margin: auto;
     }
+
+    .borda{
+        border-radius: 15px;
+    }
+
+    /*Card */
+
+    #modelo{
+        margin-right: 0px;
+        
+    }
+
+    /* Carrosel */
+
+  

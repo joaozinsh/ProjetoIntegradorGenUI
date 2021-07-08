@@ -8,16 +8,16 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="https://i.imgur.com/L5FCaG4.jpg?2" alt="Primeiro Slide">
+            <img class="d-block w-100 height: auto;" src="https://i.imgur.com/S8gEW0h.jpg?1" alt="Primeiro Slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="https://i.imgur.com/qKxiTST.jpg?1" alt="Segundo Slide">
+            <img class="d-block w-100 height: auto;" src="https://i.imgur.com/qKxiTST.jpg?1" alt="Segundo Slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="https://i.imgur.com/4hgeOeR.png?1" alt="Terceiro Slide">
+            <img class="d-block w-100 height: auto;" src="https://i.imgur.com/4hgeOeR.png?1" alt="Terceiro Slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="https://i.imgur.com/ZUh9t0e.png?1" alt="Terceiro Slide">
+            <img class="d-block w-100 height: auto;" src="https://i.imgur.com/ZUh9t0e.png?1" alt="Terceiro Slide">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -43,15 +43,38 @@
 
 <!--Card 1-->
 
-<div class="card-deck">
+<div class="card-deck" id="modelo">
     <div class="card">
         <img class="card-img-top"
             src="https://d1kvbg99uxpcu.cloudfront.net/Custom/Content/Products/10/74/1074560_maleato-de-dexclorfeniramina-sol-oral-fr-120ml-ems-generico-generico_m1_637387915723029964.jpg"
             alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Título do card</h5>
-            <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um
-                conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+                Detalhe
+            </button>
+            <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um
+                conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p> -->
         </div>
         <div class="card-footer">
             <small class="text-muted">Atualizados 3 minutos atrás</small>
@@ -133,7 +156,7 @@
 
 <br>
 <!--Card 2-->
-<div class="card-deck">
+<div class="card-deck" id="modelo">
     <div class="card">
         <img class="card-img-top"
             src="https://www.princesadonorteonline.com.br/media/catalog/product/cache/2/image/400x400/85e4522595efc69f496374d01ef2bf13/1/2/12247_original.jpg"
@@ -209,17 +232,23 @@
 <!--Jumbotrom 3-->
 <div class="jumbotron3">
     <h1 class="display-4 text-light font-weight-bold "> Gostaria de receber mais novidade</h1>
-    <form class="container col-md-6">
-        <div class="form-group">
-            <label for="exampleInputEmail1"> Nome</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+
+    <form class="container col-md-5">
+
+       
+        <div class="form-row ">
+
+            <div class="form-group ">
+            <label for="InputNome"></label>
+            <input type="nome" class="form-control borda" id="InputNome" aria-describedby="nomeHelp"
                 placeholder="Nome">
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Email</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Email">
+            <div class="form-group mx-sm-5 mb-2 md-6 ">
+                <label for="exampleEmail"></label>
+                <input type="email" class="form-control borda " id="exampleEmail" placeholder="Email">
+            </div>
+            <button type="submit" class="btn btn-primary">Increver</button>
         </div>
-        <button type="submit" class="btn btn-primary">Increver</button>
     </form>
 
 </div>
