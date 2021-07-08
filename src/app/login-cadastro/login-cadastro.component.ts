@@ -15,13 +15,14 @@ export class LoginCadastroComponent implements OnInit {
   user: Usuario = new Usuario
   userLogin: UserLogin = new UserLogin
 
-  confirmarSenha: string
+  confirmarSenha: string = ''
   isChecked: boolean
 
   constructor(
     private auth: AuthService,
     private router: Router
-  ) { }
+  ) { 
+   }
 
   ngOnInit() {
     window.scroll(0, 0)
@@ -38,7 +39,15 @@ export class LoginCadastroComponent implements OnInit {
       if (this.isChecked == true) {
         this.auth.cadastrar(this.user).subscribe((resp: Usuario) => {
           this.user = resp
-          alert("Usuário cadastrado com sucesso! Faça login ao lado")
+
+          alert("Usuário cadastrado com sucesso! Faça login ao lado") 
+           
+          this.user.apelido = ''   
+          this.user.tipo = ''  
+          this.user.email = ''  
+          this.user.senha = ''  
+          this.user.nome = '' 
+
         })
       } else {
         alert("Por favor, marque a opção de permissão de uso dos dados.")
@@ -62,9 +71,9 @@ export class LoginCadastroComponent implements OnInit {
       console.log(environment.apelido)
       this.router.navigate(['/home'])
     }, erro => {
-      if(this.userLogin.email == ""){
+      if (this.userLogin.email == "") {
         alert("Faltou o email")
-      }else if(this.userLogin.senha == ""){
+      } else if (this.userLogin.senha == "") {
         alert("Faltou a senha")
       }
     })
