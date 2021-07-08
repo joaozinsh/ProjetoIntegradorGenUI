@@ -39,15 +39,8 @@ export class LoginCadastroComponent implements OnInit {
       if (this.isChecked == true) {
         this.auth.cadastrar(this.user).subscribe((resp: Usuario) => {
           this.user = resp
-
-          alert("Usuário cadastrado com sucesso! Faça login ao lado") 
-           
-          this.user.apelido = ''   
-          this.user.tipo = ''  
-          this.user.email = ''  
-          this.user.senha = ''  
-          this.user.nome = '' 
-
+        
+          this.user = new Usuario()
         })
       } else {
         alert("Por favor, marque a opção de permissão de uso dos dados.")
