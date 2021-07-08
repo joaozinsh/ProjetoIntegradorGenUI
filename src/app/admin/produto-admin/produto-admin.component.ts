@@ -1,17 +1,17 @@
-import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Doenca } from 'src/app/model/Doenca';
+import { Medicamento } from 'src/app/model/Medicamento';
+import { DoencaService } from 'src/app/service/doenca.service';
+import { ProdutosService } from 'src/app/service/produtos.service';
 import { environment } from 'src/environments/environment.prod';
-import { Doenca } from '../model/Doenca';
-import { Medicamento } from '../model/Medicamento';
-import { DoencaService } from '../service/doenca.service';
-import { ProdutosService } from '../service/produtos.service';
 
 @Component({
-  selector: 'app-tela-admin',
-  templateUrl: './tela-admin.component.html',
-  styleUrls: ['./tela-admin.component.css'],
+  selector: 'app-produto-admin',
+  templateUrl: './produto-admin.component.html',
+  styleUrls: ['./produto-admin.component.css'],
 })
-export class TelaAdminComponent implements OnInit {
+export class ProdutoAdminComponent implements OnInit {
   medicamento: Medicamento = new Medicamento();
   listaMedicamento: Medicamento[];
   listaDoenca: Doenca[];
@@ -34,7 +34,7 @@ export class TelaAdminComponent implements OnInit {
   missingToken() {
     if (environment.token == '') {
       alert('Faltando Token!');
-      this.router.navigate(['/home'])
+      this.router.navigate(['/home']);
     }
   }
 
@@ -50,15 +50,6 @@ export class TelaAdminComponent implements OnInit {
     this.doencaService.getAllDoenca().subscribe((resp: Doenca[]) => {
       this.listaDoenca = resp;
     });
-  }
-
-  cadastrarDoenca() {
-    console.log(environment.token);
-    this.doencaService.postDoenca(this.doenca).subscribe((resp: Doenca) => {
-      this.doenca = resp;
-      alert('Doenca criada!');
-    });
-    console.log(this.doenca);
   }
 
   cadastrarProd() {
