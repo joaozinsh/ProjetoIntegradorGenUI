@@ -38,4 +38,10 @@
 .back{
 	transform: rotateY(180deg);
 }
+.valores {
+    margin-left: 6%;
+    margin-right: auto 
+}
+
+
 
