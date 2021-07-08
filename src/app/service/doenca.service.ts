@@ -22,7 +22,19 @@ export class DoencaService {
     return this.http.get<Doenca[]>(`${this.baseURL}/doencas`, this.token)
   }
 
+  getByIdDoenca(id: number): Observable<Doenca> {
+    return this.http.get<Doenca>(`${this.baseURL}/doencas/buscar-id/${id}`, this.token)
+  }
+
   postDoenca(doenca: Doenca): Observable<Doenca> {
     return this.http.post<Doenca>(`${this.baseURL}/doencas/cadastrar`, doenca, this.token)
+  }
+
+  putDoenca(doenca: Doenca): Observable<Doenca> {
+    return this.http.put<Doenca>(`${this.baseURL}/doencas/alterar`, doenca, this.token)
+  }
+
+  deleteDoenca(id: number) {
+    return this.http.delete(`${this.baseURL}/doencas/deletar/${id}`, this.token)
   }
 }
