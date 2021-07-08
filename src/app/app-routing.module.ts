@@ -9,26 +9,26 @@ import { LoginCadastroComponent } from './login-cadastro/login-cadastro.componen
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { SobreComponent } from './sobre/sobre.component';
-import { TelaAdminComponent } from './tela-admin/tela-admin.component';
+import { DoencaAdminComponent } from './admin/doenca-admin/doenca-admin.component';
+import { ProdutoAdminComponent } from './admin/produto-admin/produto-admin.component';
 
 const routes: Routes = [
-
-  {path: "", redirectTo: "home", pathMatch: "full"},
-  {path: "login-cadastro", component: LoginCadastroComponent},
-  {path: "home", component: HomeComponent},
-  {path: "contato", component: ContatoComponent},
-  {path: "carrinho", component: CarrinhoComponent},
-  {path: "carrinho-vazio", component: CarrinhoVazioComponent},
-  {path: "concluir-compra", component: ConcluirCompraComponent},
-  {path: "pagamento", component: PagamentoComponent},
-  {path: "produtos", component: ProdutosComponent},
-  {path: "sobre", component: SobreComponent},
-  {path: "admin", component: TelaAdminComponent}
-
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'login-cadastro', component: LoginCadastroComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'contato', component: ContatoComponent },
+  { path: 'carrinho', component: CarrinhoComponent },
+  { path: 'carrinho-vazio', component: CarrinhoVazioComponent },
+  { path: 'concluir-compra', component: ConcluirCompraComponent },
+  { path: 'pagamento', component: PagamentoComponent },
+  { path: 'produtos', component: ProdutosComponent },
+  { path: 'sobre', component: SobreComponent },
+  { path: 'admin-doenca', component: DoencaAdminComponent },
+  { path: 'admin-produto', component: ProdutoAdminComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

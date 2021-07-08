@@ -17,7 +17,8 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
-import { TelaAdminComponent } from './tela-admin/tela-admin.component';
+import { DoencaAdminComponent } from './admin/doenca-admin/doenca-admin.component';
+import { ProdutoAdminComponent } from './admin/produto-admin/produto-admin.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { TelaAdminComponent } from './tela-admin/tela-admin.component';
     SobreComponent,
     CarrinhoComponent,
     NavbarLogadoComponent,
-    TelaAdminComponent
+    DoencaAdminComponent,
+    ProdutoAdminComponent
   ],
   imports: [
     BrowserModule,
