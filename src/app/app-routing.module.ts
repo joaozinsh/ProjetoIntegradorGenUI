@@ -1,6 +1,6 @@
 import { CarrinhoVazioComponent } from './carrinho-vazio/carrinho-vazio.component';
 import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ConcluirCompraComponent } from './concluir-compra/concluir-compra.component';
 import { ContatoComponent } from './contato/contato.component';
@@ -26,6 +26,10 @@ const routes: Routes = [
   { path: 'admin-doenca', component: DoencaAdminComponent },
   { path: 'admin-produto', component: ProdutoAdminComponent },
 ];
+
+const routerOptions: ExtraOptions = {
+  anchorScrolling: 'enabled',
+};
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
