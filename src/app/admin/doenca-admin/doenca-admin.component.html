@@ -23,12 +23,12 @@
       </div>
       <div class="row d-flex justify-content-center mt-4">
         <div class="col-md-2">
-          <button type="submit" class="btn btn-success btn-block" (click)="cadastrarDoenca(); findAllDoencas()">
+          <button class="btn btn-success btn-block" (click)="cadastrarDoenca()">
             Cadastrar
           </button>
         </div>
         <div class="col-md-2">
-          <button type="submit" class="btn btn-danger btn-block">Limpar</button>
+          <button class="btn btn-danger btn-block" (click)="limparCampos()">Limpar</button>
         </div>
       </div>
     </div>
@@ -96,7 +96,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button (click)='atualizarDoenca(doenca)' type="button" class="btn btn-primary">Salvar mudanças</button>
+        <button (click)='atualizarDoenca(doenca)' type="button" class="btn btn-primary" data-dismiss="modal">Salvar mudanças</button>
       </div>
     </div>
   </div>
