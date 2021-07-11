@@ -39,8 +39,8 @@
               placeholder="0.00" />
           </div>
           <div class="col-md-3">
-            <label for="categoria" class="no-gutter m-0">Categoria: </label>
-            <select [(ngModel)]="medicamento.categoria" name="categoria" id="categoria" class="form-control">
+            <label for="tipo" class="no-gutter m-0">Tipo: </label>
+            <select [(ngModel)]="medicamento.tipo" name="tipo" id="tipo" class="form-control">
               <option class="form-control">Referência</option>
               <option class="form-control">Genérico</option>
               <option class="form-control">Similar</option>
@@ -80,7 +80,7 @@
             <td> <p *ngFor=" let doenca of medicamento.doencas">
               {{ doenca.nome }}</p> 
             </td>
-            <td>{{ medicamento.categoria }}</td>
+            <td>{{ medicamento.tipo }}</td>
           </tr>
         </tbody>
       </table>

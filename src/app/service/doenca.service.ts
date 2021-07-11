@@ -23,7 +23,7 @@ export class DoencaService {
   }
 
   getByIdDoenca(id: number): Observable<Doenca> {
-    return this.http.get<Doenca>(`${this.baseURL}/doencas/buscar-id/${id}`, this.token)
+    return this.http.get<Doenca>(`${this.baseURL}/doencas/id/${id}`, this.token)
   }
 
   postDoenca(doenca: Doenca): Observable<Doenca> {
