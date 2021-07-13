@@ -42,7 +42,7 @@
 
 .linha-vertical {
     height: 100%;
-    border-left: 3px solid grey;
+    border-left: 2px solid rgba(128, 128, 128, 0.404);
 }
 
 .font-size {

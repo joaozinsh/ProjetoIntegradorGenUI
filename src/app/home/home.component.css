@@ -1,47 +1,49 @@
-
 /* Jumbotron */
 #imagem1 {
-    background-image: url("https://i.imgur.com/dfTDjV4.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
-  }
+  background-image: url("https://i.imgur.com/dfTDjV4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
 
-    .jumbotron{
-        background-color: #A0E2F7;
-    }
+.jumbotron {
+  background-color: #A0E2F7;
+}
 
-    .jumbotron3{
-        
-        align-self: center;
-        background-color: #e06767;
-        width: 80%;
-        margin: auto;
-    }
+.jumbotron3 {
+  align-self: center;
+  background-color: #e06767;
+  width: 80%;
+  margin: auto;
+}
 
-    .borda{
-        border-radius: 15px;
-    }
+.borda {
+  border-radius: 15px;
+}
 
-    /*Card */
+/*Card */
 
-    #modelo{
-        margin-right: 0px;
-        
-    }
+#modelo {
+  margin-right: 0px;
 
-    .carta{
-        /* opacity: 0; */
-        /* visibility: hidden; */
-        /* position: absolute; */
-        padding: 2rem;
-        
-        transition: all .5s;
-    }
+}
 
-    /* Carrosel */
+.carta {
+  /* opacity: 0; */
+  /* visibility: hidden; */
+  /* position: absolute; */
+  padding: 2rem;
 
-  
+  transition: all .5s;
+}
+
+/* Carrosel */
+
+.card-deck {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: .5rem;
+}
