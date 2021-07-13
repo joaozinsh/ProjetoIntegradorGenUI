@@ -56,18 +56,23 @@ export class DoencaAdminComponent implements OnInit {
   cadastrarDoenca() {
     console.log(environment.token);
     this.doencaService.postDoenca(this.doenca).subscribe((resp: Doenca) => {
-      this.doenca = resp;
+      this.doenca = new Doenca()
       alert('Categoria Doença criada!');
+      this.findAllDoencas()
     });
     console.log(this.doenca);
   }
 
   atualizarDoenca(doenca: Doenca) {
     this.doencaService.putDoenca(doenca).subscribe((resp: Doenca) => {
-      this.doenca = resp;
+      this.doenca = new Doenca()
       alert('Categoria Doença atualizada!')
       this.findAllDoencas()
     })
+  }
+
+  limparCampos() {
+    this.doenca = new Doenca()
   }
 
   apagarDoenca(id: number) {

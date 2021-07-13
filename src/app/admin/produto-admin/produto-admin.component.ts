@@ -22,7 +22,7 @@ export class ProdutoAdminComponent implements OnInit {
     private produtoService: ProdutosService,
     private doencaService: DoencaService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.missingToken();
