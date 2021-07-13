@@ -1,11 +1,14 @@
 #bg-img {
   background-image: url(../../assets/img/background.png);
-
   min-height: 100vh;
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position:50% 50%;
+}
+
+button{
+  border-radius: 15px;
 }
 
 /*desktop*/
@@ -44,7 +47,7 @@
 
   .linha-vertical {
     height: 100%;
-    border-left: 3px solid grey;
+    border-left: 3px solid rgba(128, 128, 128, 0.61);
   }
 
   .font-size {

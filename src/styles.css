@@ -1,10 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
 body {
     min-height: 100vh;
 }
 
-@font-face {
-    font-family: Arimo;
-    src: url("/assets/fonts/Arimo") format("opentype");
-  }
+div{
+    font-family: 'Arimo', sans-serif;
+}

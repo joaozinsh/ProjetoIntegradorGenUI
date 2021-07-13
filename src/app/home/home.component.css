@@ -1,4 +1,8 @@
 /* Jumbotron */
+button{
+  border-radius: 15px;
+}
+
 #imagem1 {
   background-image: url("https://i.imgur.com/dfTDjV4.jpg");
   background-size: cover;
