@@ -1,3 +1,5 @@
+import { Doenca } from './../model/Doenca';
+import { DoencaService } from './../service/doenca.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CarrinhoComponent } from '../carrinho/carrinho.component';
@@ -17,17 +19,21 @@ export class ProdutosComponent implements OnInit {
   medicamento: Medicamento = new Medicamento()
   listaMedicamentos: Medicamento[]
 
+  doencas: Doenca = new Doenca()
+  listaDoenca: Doenca[]
   item: MedicamentoItem = new MedicamentoItem()
   qtd: number = 1
 
   constructor(
     private produtoService: ProdutosService,
     private carrinhoService: CarrinhoService,
+    private doencaService: DoencaService,
     private router: Router
   ) { }
 
   ngOnInit() {
     this.findAllMedicamentos()
+    this.findAllDoenca()
   }
 
   findAllMedicamentos() {
@@ -36,6 +42,19 @@ export class ProdutosComponent implements OnInit {
     })
   }
 
+  findAllDoenca(){
+    this.doencaService.getAllDoenca().subscribe((resp: Doenca[])=>{
+      this.listaDoenca = resp
+    })
+  }
+
+  findByTipo(tipo: string){
+    console.log("oi")
+    this.produtoService.getTipoMedicamento(tipo).subscribe((resp: Medicamento[])=>{
+      this.listaMedicamentos = resp
+    })
+  }
+  
   findByIdMedicamento(id: number){
     this.produtoService.getByIdMedicamento(id).subscribe((resp: Medicamento) => {
       this.medicamento = resp
