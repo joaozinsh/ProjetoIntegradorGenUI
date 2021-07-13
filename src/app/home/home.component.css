@@ -14,7 +14,6 @@
 }
 
 .jumbotron3 {
-
   align-self: center;
   background-color: #e06767;
   width: 80%;
@@ -75,5 +74,9 @@
   }
 
 
+.card-deck {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: .5rem;
 
 }
