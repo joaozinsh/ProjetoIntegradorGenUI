@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CarrinhoComponent } from '../carrinho/carrinho.component';
 import { Medicamento } from '../model/Medicamento';
 import { MedicamentoItem } from '../model/MedicamentoItem';
@@ -17,10 +18,12 @@ export class ProdutosComponent implements OnInit {
   listaMedicamentos: Medicamento[]
 
   item: MedicamentoItem = new MedicamentoItem()
+  qtd: number = 1
 
   constructor(
     private produtoService: ProdutosService,
-    private carrinhoService: CarrinhoService
+    private carrinhoService: CarrinhoService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -33,19 +36,28 @@ export class ProdutosComponent implements OnInit {
     })
   }
 
+  findByIdMedicamento(id: number){
+    this.produtoService.getByIdMedicamento(id).subscribe((resp: Medicamento) => {
+      this.medicamento = resp
+    })
+  }
+
   addCarrinho(id: number) {
 
+    console.log(this.qtd)
     this.produtoService.getByIdMedicamento(id).subscribe((resp: Medicamento) => {
       this.medicamento = resp
 
       this.item.foto = this.medicamento.foto
       this.item.nome = this.medicamento.nome
       this.item.precoUni = this.medicamento.preco
-      this.item.precoTotal = this.item.precoUni
-      this.item.qtd = 1
+      this.item.qtd = this.qtd
+      this.item.precoTotal = this.item.precoUni * this.item.qtd
 
       console.log(this.item)
       this.carrinhoService.add(this.item)
+
+      this.router.navigate(['/carrinho'])
     })
   }
 

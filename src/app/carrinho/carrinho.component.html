@@ -6,7 +6,7 @@
       <div class="container-fluid">
         <div class="row d-flex justify-content-around align-items-center p-3">
           <div class="col-md-9 d-flex justify-content-start">
-            Total de items: X
+            Total de items: {{totalMedicamento}}
           </div>
           <div class="col-md-2">
             <button class="btn btn-danger btn-block" (click)='clear()'>Remover Todos</button>
@@ -19,7 +19,7 @@
             <div class="col-md-11 card">
               <div class="row p-1 d-flex align-items-center">
                 <div class="col-md-2">
-                  <img src="{{med.foto}}" alt="Produto" height="100px" />
+                  <img src="{{med.foto}}" alt="Produto" height="100px" width="auto" />
                 </div>
                 <div class="col-md-3 d-flex align-items-center p-0 ustify-content-center">
                   <p class="align-items-center">{{med.nome}}</p>
@@ -28,11 +28,11 @@
                   <p class="text-black-50">{{med.precoUni}}</p>
                 </div>
                 <div class="col-md-2 d-flex">
-                  <button class="btn btn-danger btn-block text-center p-0">
+                  <button class="btn btn-danger btn-block text-center p-0 btnMenos" (click)='dec(med.nome, med.qtd)'>
                     -
                   </button>
-                  <input class="form-control text-center" value="{{med.qtd}}" />
-                  <button class="btn btn-danger btn-block text-center p-0">
+                  <input class="form-control text-center rounded-0" value="{{med.qtd}}" disabled/>
+                  <button class="btn btn-danger btn-block text-center p-0 btnMais" (click)='inc(med.nome, med.qtd)'>
                     +
                   </button>
                 </div>
@@ -40,7 +40,10 @@
                   <p class="text-black-50">{{med.precoTotal}}</p>
                 </div>
                 <div class="col-md-1 p-0 d-flex justify-content-center">
-                  <i class="far fa-trash-alt"></i>
+                  <a (click)='delete(med.nome)'>
+                    <i class="far fa-trash-alt"></i>
+                  </a>
+                  
                 </div>
               </div>
             </div>
@@ -73,15 +76,21 @@
                 <p class="font-weight-bolder text-left">Prazo de entrega</p>
               </div>
               <div class="col-md-4">
-                <p class="text-right">2 dias</p>
+                <p class="text-right">5 horas</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row d-flex card bg-light mt-3 p-3 text-center text-black-50 font-weight-bolder">
-          Favor carregar a receita
-          <input class="form-control bg-light" type="file" />
+        <div class="row d-flex card bg-light mt-3 p-3 text-center justify-content-center">
+          <p class="p-0 m-0">Insira o PDF com as receitas</p>
+          <div class="input-group my-2">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile02">
+              <label class="custom-file-label text-left" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Escolher arquivo</label>
+            </div>
+          </div>
+          
         </div>
         <div class="row d-flex card bg-light mt-3 p-3">
           <div class="col-md-12">
@@ -94,7 +103,7 @@
                 <p class="text-black font-weight-bold">Subtotal</p>
               </div>
               <div class="col-6">
-                <p class="text-black text-right">R$ 999,00</p>
+                <p class="text-black text-right">R$ {{subtotal}}</p>
               </div>
             </div>
             <div class="row d-flex justify-content-around">
@@ -109,17 +118,18 @@
 
             <div class="row d-flex justify-content-around">
               <div class="col-6">
-                <p class="text-black font-weight-bold">Total (qtde de Itens)</p>
+                <p class="text-black font-weight-bold">Total ({{totalMedicamento}})</p>
               </div>
               <div class="col-6">
-                <p class="text-black text-right">R$ 999,00</p>
+                <p class="text-black text-right">R$ {{total}}</p>
               </div>
             </div>
             <hr />
             <div class="row d-flex justify-content-center">
               <div class="col-md-11">
+                <button  routerLink='/produtos' class="form-control btn btn-danger btn-block">Continuar Comprando</button>
                 <button routerLink='/pagamento' class="form-control btn btn-danger btn-block">
-                  Fechar carrinho!
+                  Fechar Carrinho!
                 </button>
               </div>
             </div>
