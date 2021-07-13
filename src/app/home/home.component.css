@@ -42,38 +42,6 @@
 
 /* Carrosel */
 
-
-/*desktop*/
-@media screen and (min-width: 990px) and (max-width: 9998px) {
-  .fonte {
-    font-size: 32pt;
-    font-style: italic;
-  }
-
-  .img-resp{
-    width: 12rem;
-  }
-
-
-}
-
-/*mobile*/
-@media screen and (min-width: 0px) and (max-width: 990px) {
-  .fonte {
-    font-size: 15pt;
-    font-style: italic;
-  }
-
-  .img-resp{
-    width: 15rem;
-  }
-
-  .card-ajuste{
-    padding: 5rem;
-      
-  }
-
-
 .card-deck {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
