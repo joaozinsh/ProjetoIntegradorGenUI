@@ -58,11 +58,11 @@
                 <div class="card-body">
                     <h5 class="card-title">{{medicamento.nome}}</h5>
                     <p class="card-text"></p>
-                    <a href="#" class="btn btn-success">Comprar</a>
+                    <a class="btn btn-success" (click)='addCarrinho(medicamento.id)'>Comprar</a>
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
     <div class="row">
         <div class="col-md-12">
             <p class="d-flex justify-content-end"><a routerLink="['./']" fragment="home" class="text-black">Voltar ao topo</a></p>

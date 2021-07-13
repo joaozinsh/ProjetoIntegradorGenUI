@@ -1,52 +1,43 @@
-<div class="container mt-4">
+<div class="container-fluid mt-4 px-5">
+
   <div class="row d-flex justify-content-around">
     <div class="col-md-8 card bg-light align-self-start">
+      
       <div class="container-fluid">
         <div class="row d-flex justify-content-around align-items-center p-3">
           <div class="col-md-9 d-flex justify-content-start">
             Total de items: X
           </div>
-          <div class="col-md-3">
-            <button class="btn btn-danger btn-block">Remover Todos</button>
+          <div class="col-md-2">
+            <button class="btn btn-danger btn-block" (click)='clear()'>Remover Todos</button>
           </div>
         </div>
-        <!-- For de Produtos -->
+        
         <div class="container-fluid">
-          <div class="row d-flex justify-content-center py-2 order-1">
+          <!-- For de Produtos -->
+          <div class="row d-flex justify-content-center py-2 order-1" *ngFor='let med of medicamentos'>
             <div class="col-md-11 card">
               <div class="row p-1 d-flex align-items-center">
                 <div class="col-md-2">
-                  <img
-                    src="../../assets/img/icon/cart.png"
-                    alt="Produto"
-                    class="img-fluid"
-                  />
+                  <img src="{{med.foto}}" alt="Produto" height="100px" />
                 </div>
-                <div
-                  class="
-                    col-md-3
-                    d-flex
-                    align-items-center
-                    p-0
-                    justify-content-center
-                  "
-                >
-                  <p class="align-items-center">Lorem ipsum dolor sit amet</p>
+                <div class="col-md-3 d-flex align-items-center p-0 ustify-content-center">
+                  <p class="align-items-center">{{med.nome}}</p>
                 </div>
                 <div class="col-md-2 d-flex justify-content-center">
-                  <p class="text-black-50">Preço Unitário</p>
+                  <p class="text-black-50">{{med.precoUni}}</p>
                 </div>
-                <div class="col-md-2">
-                  <button class="btn btn-danger btn-block text-center">
-                    +
-                  </button>
-                  <input class="form-control text-center" value="0" />
-                  <button class="btn btn-danger btn-block text-center">
+                <div class="col-md-2 d-flex">
+                  <button class="btn btn-danger btn-block text-center p-0">
                     -
+                  </button>
+                  <input class="form-control text-center" value="{{med.qtd}}" />
+                  <button class="btn btn-danger btn-block text-center p-0">
+                    +
                   </button>
                 </div>
                 <div class="col-md-2 p-0 d-flex justify-content-center">
-                  <p class="text-black-50">Preço Total</p>
+                  <p class="text-black-50">{{med.precoTotal}}</p>
                 </div>
                 <div class="col-md-1 p-0 d-flex justify-content-center">
                   <i class="far fa-trash-alt"></i>
@@ -54,12 +45,13 @@
               </div>
             </div>
           </div>
+          <!-- Fim do For de Produtos -->
         </div>
-        <!-- Fim do For de Produtos -->
       </div>
     </div>
-    <div class="col-md-3 d-flex justify-content-center align-self-start">
-      <div class="container-fluid p-0">
+
+    <div class="col-md-2 d-flex justify-content-center align-self-start">
+      <div class="container p-0">
         <div class="row d-flex card bg-light p-3">
           <div class="col-md-12">
             <div class="row d-flex justify-content-around">
@@ -69,33 +61,25 @@
             </div>
             <hr />
             <div class="row d-flex justify-content-around">
-              <div class="col-md-9 p-0">
+              <div class="col-md-8 p-0">
                 <input class="form-control pr-0" type="text" />
               </div>
               <div class="col-md-3 p-0">
                 <button class="btn btn-danger btn-block">OK</button>
               </div>
             </div>
-            <div class="row d-flex justify-content-around">
+            <div class="row d-flex justify-content-around mt-2">
               <div class="col-md-8">
                 <p class="font-weight-bolder text-left">Prazo de entrega</p>
               </div>
-              <div class="col-md-4"><p class="text-right">2 dias</p></div>
+              <div class="col-md-4">
+                <p class="text-right">2 dias</p>
+              </div>
             </div>
           </div>
         </div>
-        <div
-          class="
-            row
-            d-flex
-            card
-            bg-light
-            mt-3
-            p-3
-            text-center text-black-50
-            font-weight-bolder
-          "
-        >
+
+        <div class="row d-flex card bg-light mt-3 p-3 text-center text-black-50 font-weight-bolder">
           Favor carregar a receita
           <input class="form-control bg-light" type="file" />
         </div>
@@ -122,6 +106,7 @@
               </div>
             </div>
             <hr />
+
             <div class="row d-flex justify-content-around">
               <div class="col-6">
                 <p class="text-black font-weight-bold">Total (qtde de Itens)</p>
