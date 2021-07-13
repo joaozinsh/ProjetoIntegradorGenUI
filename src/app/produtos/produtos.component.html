@@ -1,19 +1,20 @@
 <!--drop e titulo -->
 
 <div class="d-flex justify-content-around mt-4">
-    <h4 class="d-flex justify-content-end mr-4" id="#home">Recomendamos esses produtos para todas as doenças</h4>
+    <h4 class="d-flex justify-content-end mr-4" id="#home">Estes medicamento são recomendados para a doença: (........)
+    </h4>
 
     <div class="d-flex ">
         <div class="dropdown  mx-2">
             <a class="btn bg-corDrop dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                filtrar por
+                Filtrar
             </a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Alguma ação</a>
-                <a class="dropdown-item" href="#">Outra ação</a>
-                <a class="dropdown-item" href="#">Alguma coisa aqui</a>
+                <a class="dropdown-item" href="#">Genérico</a>
+                <a class="dropdown-item" href="#">Similar</a>
+                <a class="dropdown-item" href="#">Referência</a>
             </div>
         </div>
         <div class="dropdown mx-2 ">
@@ -23,9 +24,9 @@
             </a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Alguma ação</a>
-                <a class="dropdown-item" href="#">Outra ação</a>
-                <a class="dropdown-item" href="#">Alguma coisa aqui</a>
+                <a class="dropdown-item" href="#">Maior Preço</a>
+                <a class="dropdown-item" href="#">Menor Preço</a>
+                <a class="dropdown-item" href="#"></a>
             </div>
         </div>
     </div>
@@ -38,17 +39,23 @@
 <div class="mt-5  text-center container-fluid">
     <div class="row">
         <div class="col-md-2 ml-5">
-            <div class="list-group bordaList corList">
+            <div class="list-group bordaList corList" style="width: 17rem;">
                 <button type="button" class=" corList text-light list-group-item list-group-item-action " disabled>
-                    <h4>Todos Produtos</h4>
+                    <h4>Medicamentos Para:</h4>
                 </button>
                 <button type="button"
-                    class="corList text-light list-group-item list-group-item-action">Genérico</button>
-                <button type="button" class="corList text-light list-group-item list-group-item-action">Similar</button>
+                    class="corList text-light list-group-item list-group-item-action">Diabetes</button>
+                <button type="button" class="corList text-light list-group-item list-group-item-action">Asma</button>
                 <button type="button"
-                    class="corList text-light list-group-item list-group-item-action">Referência</button>
+                    class="corList text-light list-group-item list-group-item-action">Depressão</button>
+                    <button type="button"
+                    class="corList text-light list-group-item list-group-item-action">Hipertensão</button>
+                    <button type="button"
+                    class="corList text-light list-group-item list-group-item-action">Gripe</button>
+
                 <button type="button" class="corList text-light list-group-item list-group-item-action"
                     disabled></button>
+
             </div>
         </div>
 
@@ -58,11 +65,22 @@
                 <div class="card-body">
                     <h5 class="card-title">{{medicamento.nome}}</h5>
                     <p class="card-text"></p>
+                    <div class="card-footer p-0">
+                        <div class="container">
+                            <div class="row d-flex align-items-stretch">
+                                <div class="col-md-6 p-0 align-items-stretch"><button type="button" class="btn btn-block btn-primary button2">R${{medicamento.preco}} </button></div>
+                                <div data-target="#ModalDetalhes" data-toggle="modal" (click)='findByIdMedicamento(medicamento.id)' class="col-md-6 p-0 align-self-stretch"><button type="button" class="btn btn-block btn-secondary button1">DETALHES</button></div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
                     <button class="btn btn-success" data-target="#ModalDetalhes" data-toggle="modal"
                         (click)='findByIdMedicamento(medicamento.id)'>Detalhes</button>
                 </div>
             </div>
         </div>
+
     </div>
     <div class="row">
         <div class="col-md-12">
