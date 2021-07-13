@@ -6,7 +6,7 @@ export class Medicamento {
     public doencas: Doenca[]
     public id: number
     public nome: string
-    public preco: string
+    public preco: number
     public foto: string
     public promocao: boolean
     public destaque: boolean
