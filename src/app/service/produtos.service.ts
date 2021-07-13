@@ -23,6 +23,10 @@ export class ProdutosService {
     return this.http.get<Medicamento[]>(`${this.baseURL}/medicamentos`)
   }
 
+  getByIdMedicamento(id: number): Observable<Medicamento> {
+    return this.http.get<Medicamento>(`${this.baseURL}/medicamentos/id/${id}`)
+  }
+
   postMedicamentos(medicamento: Medicamento): Observable<Medicamento> {
     return this.http.post<Medicamento>(`${this.baseURL}/medicamentos/cadastrar`, medicamento, this.token
     )
