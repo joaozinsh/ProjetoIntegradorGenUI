@@ -21,8 +21,8 @@ export class LoginCadastroComponent implements OnInit {
   constructor(
     private auth: AuthService,
     private router: Router
-  ) { 
-   }
+  ) {
+  }
 
   ngOnInit() {
     window.scroll(0, 0)
@@ -39,7 +39,7 @@ export class LoginCadastroComponent implements OnInit {
       if (this.isChecked == true) {
         this.auth.cadastrar(this.user).subscribe((resp: Usuario) => {
           this.user = resp
-        
+
           this.user = new Usuario()
         })
       } else {
