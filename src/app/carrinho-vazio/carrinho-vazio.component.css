@@ -11,6 +11,10 @@
   align-self: baseline;
 }
 
+.card{
+  border-radius: 15px;
+}
+
 .button {
   font-size: 25px;
 }
@@ -20,9 +24,4 @@
   border-radius: 15px;
   border-color: #E06767 (0, 0, 0);
   align-self: center;
-}
-
-.container1 {
-  width: 100;
-  height: auto;
 }

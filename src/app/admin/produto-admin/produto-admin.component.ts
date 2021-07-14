@@ -50,6 +50,7 @@ export class ProdutoAdminComponent implements OnInit {
     this.doencaService.getAllDoenca().subscribe((resp: Doenca[]) => {
       this.listaDoenca = resp;
     });
+    this.findAllMedicamentos();
   }
 
   cadastrarProd() {
