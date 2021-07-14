@@ -31,10 +31,6 @@
   color: #3333ff;
 }
 
-.back {
-  transform: rotateY(180deg);
-}
-
 .icon{
     color:#222222;
 }

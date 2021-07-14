@@ -1,25 +1,31 @@
+button{
+    border-radius: 15px;
+}
+
 .corList{
     background-color: #E06767;
 }
 .bg-corDrop{
     background-color: #b3b3b3;
+    border-radius: 15px;
 }
 
 .bordaList{
      border-radius: 25px;
-  
 }
 .button1{
     display: block;
     background-color: #e06767;
     border: none;
     font-size: 8pt;
-    
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 .button2{
     display: block;
     background-color: mediumturquoise;
     border: none;
     font-size: 8pt;
-    
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     }
