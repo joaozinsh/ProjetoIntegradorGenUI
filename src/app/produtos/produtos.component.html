@@ -80,11 +80,13 @@
                 <div class="card-body">
                     <h5 class="card-title">{{medicamento.nome}}</h5>
                     <p class="card-text"></p>
-                    <div class="card-footer p-0">
-                        <div class="container">
+                    <div class="p-0">
+                        <div class="container-fluid">
                             <div class="row d-flex align-items-stretch">
                                 <div class="col-md-6 p-0 align-items-stretch"><button type="button"
+
                                         class="btn btn-block btn-primary button2">R$ {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}} </button>
+
                                 </div>
                                 <div data-target="#ModalDetalhes" data-toggle="modal"
                                     (click)='findByIdMedicamento(medicamento.id)'
