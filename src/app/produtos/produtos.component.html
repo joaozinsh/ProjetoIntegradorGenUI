@@ -1,10 +1,10 @@
 <!--drop e titulo -->
 
 <div class="d-flex justify-content-around mt-4">
-    <h4 *ngIf="status == true" class="d-flex justify-content-end mr-4" id="#home">Estes medicamento são recomendados
+    <h4 *ngIf="status == true" class="d-flex justify-content-end mr-4">Estes medicamento são recomendados
         para a(o) {{doenca.nome}}
     </h4>
-    <h4 *ngIf="status == false" class="d-flex justify-content-end mr-4" id="#home">Todos os medicamentos
+    <h4 *ngIf="status == false" class="d-flex justify-content-end mr-4">Todos os medicamentos
     </h4>
     <div class="d-flex justify-content-end">
         <div class="dropdown mx-2">
@@ -100,12 +100,14 @@
         </div>
 
     </div>
+    <!--
     <div class="row">
         <div class="col-md-12">
-            <p class="d-flex justify-content-end"><a routerLink="['./']" fragment="home" class="text-black">Voltar ao
+            <p class="d-flex justify-content-end"><a routerLink="['/produtos/']" href="#topo" class="text-black">Voltar ao
                     topo</a></p>
         </div>
     </div>
+    -->
 </div>
 
 <!-- Modal -->
