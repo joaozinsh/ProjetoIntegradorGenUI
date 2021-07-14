@@ -1,10 +1,10 @@
 <!--drop e titulo -->
 
 <div class="d-flex justify-content-around mt-4">
-    <h4 *ngIf="status == true" class="d-flex justify-content-end mr-4" id="#home">Estes medicamento são recomendados
+    <h4 *ngIf="status == true" class="d-flex justify-content-end mr-4">Estes medicamento são recomendados
         para a(o) {{doenca.nome}}
     </h4>
-    <h4 *ngIf="status == false" class="d-flex justify-content-end mr-4" id="#home">Todos os medicamentos
+    <h4 *ngIf="status == false" class="d-flex justify-content-end mr-4" id="medicamentos" >Todos os medicamentos
     </h4>
     <div class="d-flex justify-content-end">
         <div class="dropdown mx-2">
@@ -43,20 +43,21 @@
         <div class="col-md-3">
             <div class="list-group bordaList corList">
                 <button type="button" class=" corList text-light list-group-item list-group-item-action " disabled>
-                    <h4>Medicamentos Para:</h4>
+                    <h4>Categoria de Medicamentos</h4>
                 </button>
-                <button type="button" class="corList text-light list-group-item list-group-item-action"
-                    (click)="findAllMedicamentos()">Todos</button>
-                <button *ngFor='let doenca of listaDoenca' type="button"
+                <a type="button" class="corList text-light list-group-item list-group-item-action"
+                    (click)="findAllMedicamentos()">Todos os Medicamentos</a>
+                <a *ngFor='let doenca of listaDoenca' type="button"
                     class="corList text-light list-group-item list-group-item-action"
-                    (click)="filterDoenca(doenca.id)">{{doenca.nome}}</button>
+                    (click)="filterDoenca(doenca.id)">{{doenca.nome}}</a>
 
             </div>
         </div>
 
         <div class="col-md-9 d-flex flex-wrap">
             <div *ngFor='let medicamento of listaMedicamentos' class="card m-2 " style="width: 13rem;">
-                <img width="200px" height="200px"  class="card-img-top" src={{medicamento.foto}}  alt="{{medicamento.nome}}">
+                <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}}
+                    alt="{{medicamento.nome}}">
                 <div class="card-body">
                     <h5 class="card-title">{{medicamento.nome}}</h5>
                     <p class="card-text"></p>
@@ -64,7 +65,9 @@
                         <div class="container-fluid">
                             <div class="row d-flex align-items-stretch">
                                 <div class="col-md-6 p-0 align-items-stretch"><button type="button"
-                                        class="btn btn-block btn-info button2" disabled>R$ {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}} </button>
+                                        class="btn btn-block btn-primary button2">R$
+                                        {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}}
+                                    </button>
                                 </div>
                                 <div data-target="#ModalDetalhes" data-toggle="modal"
                                     (click)='findByIdMedicamento(medicamento.id)'
@@ -76,7 +79,8 @@
                 </div>
             </div>
             <div *ngFor='let medicamento of doenca.medicamentos' class="card m-2 " style="width: 13rem;">
-                <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}} alt="Imagem de capa do card">
+                <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}}
+                    alt="Imagem de capa do card">
                 <div class="card-body">
                     <h5 class="card-title">{{medicamento.nome}}</h5>
                     <p class="card-text"></p>
@@ -84,9 +88,9 @@
                         <div class="container-fluid">
                             <div class="row d-flex align-items-stretch">
                                 <div class="col-md-6 p-0 align-items-stretch"><button type="button"
-
-                                        class="btn btn-block btn-primary button2">R$ {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}} </button>
-
+                                        class="btn btn-block btn-primary button2">R$
+                                        {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}}
+                                    </button>
                                 </div>
                                 <div data-target="#ModalDetalhes" data-toggle="modal"
                                     (click)='findByIdMedicamento(medicamento.id)'
@@ -102,8 +106,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <p class="d-flex justify-content-end"><a routerLink="['./']" fragment="home" class="text-black">Voltar ao
-                    topo</a></p>
+            <p class="d-flex justify-content-end mx-5 my-3"><a fragment="#medicamentos" class="text-black" (click)='voltarTopo()'>Voltar ao topo</a></p>
         </div>
     </div>
 </div>

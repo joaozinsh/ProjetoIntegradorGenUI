@@ -16,3 +16,7 @@ img:before {
     position: absolute;
     background-image: url("./assets/img/icon/cart.png");
 }
+
+/*html {
+    scroll-behavior: smooth;
+}*/

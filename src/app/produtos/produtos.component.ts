@@ -38,6 +38,10 @@ export class ProdutosComponent implements OnInit {
     this.findAllDoenca()
   }
 
+  voltarTopo(){
+    window.scroll(0,0)
+  }
+
   findAllMedicamentos() {
     this.doenca = new Doenca
     this.produtoService.getAllMedicamentos().subscribe((resp: Medicamento[]) => {
