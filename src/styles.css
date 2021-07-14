@@ -17,8 +17,14 @@ img:before {
     background-image: url("./assets/img/icon/cart.png");
 }
 
+<<<<<<< HEAD
 input {
     border-radius: 50px;
     border: 2px solid;
     border-color: #ABABAB;
   }
+=======
+/*html {
+    scroll-behavior: smooth;
+}*/
+>>>>>>> c9ab4236b949bb580c88d5eba968d4c47dd44197
