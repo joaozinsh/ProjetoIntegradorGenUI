@@ -23,7 +23,7 @@ button{
 }
 .button2{
     display: block;
-    background-color: mediumturquoise;
+    /*background-color: mediumturquoise;*/
     border: none;
     font-size: 8pt;
     border-top-right-radius: 0px;
