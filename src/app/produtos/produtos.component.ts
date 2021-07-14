@@ -19,10 +19,12 @@ export class ProdutosComponent implements OnInit {
   medicamento: Medicamento = new Medicamento()
   listaMedicamentos: Medicamento[]
 
-  doencas: Doenca = new Doenca()
+  doenca: Doenca = new Doenca()
   listaDoenca: Doenca[]
   item: MedicamentoItem = new MedicamentoItem()
   qtd: number = 1
+
+  status: boolean = false
 
   constructor(
     private produtoService: ProdutosService,
@@ -37,8 +39,10 @@ export class ProdutosComponent implements OnInit {
   }
 
   findAllMedicamentos() {
+    this.doenca = new Doenca
     this.produtoService.getAllMedicamentos().subscribe((resp: Medicamento[]) => {
       this.listaMedicamentos = resp
+      this.status = false
     })
   }
 
@@ -49,15 +53,36 @@ export class ProdutosComponent implements OnInit {
   }
 
   findByTipo(tipo: string){
-    console.log("oi")
+    this.doenca = new Doenca
     this.produtoService.getTipoMedicamento(tipo).subscribe((resp: Medicamento[])=>{
       this.listaMedicamentos = resp
     })
   }
-  
+
   findByIdMedicamento(id: number){
     this.produtoService.getByIdMedicamento(id).subscribe((resp: Medicamento) => {
       this.medicamento = resp
+    })
+  }
+
+  listForAsc(){
+    this.doenca = new Doenca
+    this.produtoService.getPrecoAsc().subscribe((resp: Medicamento[])=>{
+      this.listaMedicamentos = resp
+    })
+  }
+  listForDesc(){
+    this.doenca = new Doenca
+    this.produtoService.getPrecoDesc().subscribe((resp: Medicamento[])=>{
+      this.listaMedicamentos = resp
+    })
+  }
+
+  filterDoenca(id: number){
+    this.listaMedicamentos = []
+    this.doencaService.getByIdDoenca(id).subscribe((resp: Doenca)=>{
+      this.doenca = resp
+      this.status = true
     })
   }
 

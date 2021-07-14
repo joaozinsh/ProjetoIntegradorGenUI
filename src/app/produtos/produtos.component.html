@@ -1,11 +1,13 @@
 <!--drop e titulo -->
 
 <div class="d-flex justify-content-around mt-4">
-    <h4 class="d-flex justify-content-end mr-4" id="#home">Estes medicamento são recomendados para a doença: (........)
-    </h4>
-
-    <div class="d-flex ">
-        <div class="dropdown  mx-2">
+        <h4 *ngIf="status == true" class="d-flex justify-content-end mr-4" id="#home">Estes medicamento são recomendados
+            para a(o) {{doenca.nome}}
+        </h4>
+        <h4 *ngIf="status == false" class="d-flex justify-content-end mr-4" id="#home">Todos os medicamentos
+        </h4>
+    <div class="d-flex justify-content-end">
+        <div class="dropdown mx-2">
             <a class="btn bg-corDrop dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Filtrar
@@ -24,8 +26,8 @@
             </a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">O Maior Preço</a>
-                <a class="dropdown-item" href="#">Menor Preço</a>
+                <a class="dropdown-item" (click)="listForDesc()">Maior Preço</a>
+                <a class="dropdown-item" (click)="listForAsc()">Menor Preço</a>
                 <a class="dropdown-item" href="#"></a>
             </div>
         </div>
@@ -43,10 +45,11 @@
                 <button type="button" class=" corList text-light list-group-item list-group-item-action " disabled>
                     <h4>Medicamentos Para:</h4>
                 </button>
-                <button type="button"
-                    class="corList text-light list-group-item list-group-item-action">Todos</button>
+                <button type="button" class="corList text-light list-group-item list-group-item-action"
+                    (click)="findAllMedicamentos()">Todos</button>
                 <button *ngFor='let doenca of listaDoenca' type="button"
-                    class="corList text-light list-group-item list-group-item-action">{{doenca.nome}}</button>
+                    class="corList text-light list-group-item list-group-item-action"
+                    (click)="filterDoenca(doenca.id)">{{doenca.nome}}</button>
 
             </div>
         </div>
@@ -60,8 +63,33 @@
                     <div class="card-footer p-0">
                         <div class="container">
                             <div class="row d-flex align-items-stretch">
-                                <div class="col-md-6 p-0 align-items-stretch"><button type="button" class="btn btn-block btn-primary button2">R${{medicamento.preco}} </button></div>
-                                <div data-target="#ModalDetalhes" data-toggle="modal" (click)='findByIdMedicamento(medicamento.id)' class="col-md-6 p-0 align-self-stretch"><button type="button" class="btn btn-block btn-secondary button1">DETALHES</button></div>
+                                <div class="col-md-6 p-0 align-items-stretch"><button type="button"
+                                        class="btn btn-block btn-primary button2">R$ {{medicamento.preco}},00 </button>
+                                </div>
+                                <div data-target="#ModalDetalhes" data-toggle="modal"
+                                    (click)='findByIdMedicamento(medicamento.id)'
+                                    class="col-md-6 p-0 align-self-stretch"><button type="button"
+                                        class="btn btn-block btn-secondary button1">DETALHES</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngFor='let medicamento of doenca.medicamentos' class="card m-2 " style="width: 13rem;">
+                <img class="card-img-top" src={{medicamento.foto}} alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">{{medicamento.nome}}</h5>
+                    <p class="card-text"></p>
+                    <div class="card-footer p-0">
+                        <div class="container">
+                            <div class="row d-flex align-items-stretch">
+                                <div class="col-md-6 p-0 align-items-stretch"><button type="button"
+                                        class="btn btn-block btn-primary button2">R$ {{medicamento.preco}},00 </button>
+                                </div>
+                                <div data-target="#ModalDetalhes" data-toggle="modal"
+                                    (click)='findByIdMedicamento(medicamento.id)'
+                                    class="col-md-6 p-0 align-self-stretch"><button type="button"
+                                        class="btn btn-block btn-secondary button1">DETALHES</button></div>
                             </div>
                         </div>
                     </div>
@@ -101,7 +129,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                
+
                             </div>
                         </div>
                     </div>
@@ -114,7 +142,8 @@
                         <input [(ngModel)]='qtd' class="form-control" type="number" name="qtd" id="qtd">
                     </div>
                     <div class="col-4">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)='addCarrinho(medicamento.id)'>Comprar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"
+                            (click)='addCarrinho(medicamento.id)'>Comprar</button>
                     </div>
                 </div>
             </div>
