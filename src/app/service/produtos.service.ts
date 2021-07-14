@@ -31,8 +31,14 @@ export class ProdutosService {
     return this.http.post<Medicamento>(`${this.baseURL}/medicamentos/cadastrar`, medicamento, this.token
     )
   }
-
   getTipoMedicamento(tipo: string): Observable<Medicamento[]>{
     return this.http.get<Medicamento[]>(`${this.baseURL}/medicamentos/tipo/${tipo}`, this.token)
   }
+  getPrecoAsc(): Observable<Medicamento[]>{
+    return this.http.get<Medicamento[]>(`${this.baseURL}/medicamentos/preco-asc`, this.token)
+  }
+  getPrecoDesc(): Observable<Medicamento[]>{
+    return this.http.get<Medicamento[]>(`${this.baseURL}/medicamentos/preco-desc`, this.token)
+  }
+
 }
