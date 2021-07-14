@@ -6,6 +6,14 @@
     background-size: cover;
 }
 
+button{
+    border-radius: 15px;
+  }
+
+  .card{
+    border-radius: 15px;
+  }
+
 .blur{
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);

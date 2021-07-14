@@ -1,3 +1,62 @@
-p{
-    margin-bottom: 0px;
+p {
+  margin-bottom: 0px;
+}
+
+button {
+  border-radius: 15px;
+  background-color: #E06767;
+  color: white
+}
+
+button:hover {
+  color: white;
+  font-weight: bold;
+}
+
+button:focus {
+  background-color: #E06767;
+  color: white;
+  font-weight: bold;
+  box-shadow: none;
+}
+
+img {
+  border-radius: 15px;
+}
+
+.far {
+  font-size: 15pt;
+}
+
+.far:hover {
+  cursor: pointer;
+  font-size: 15pt;
+  color: #E06767;
+}
+
+
+.card {
+  border-radius: 15px;
+}
+
+.input-cep {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btnOK{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.btnMais {
+  border-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.btnMenos {
+  border-radius: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }

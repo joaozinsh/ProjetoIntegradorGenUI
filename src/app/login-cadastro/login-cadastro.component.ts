@@ -15,30 +15,32 @@ export class LoginCadastroComponent implements OnInit {
   user: Usuario = new Usuario
   userLogin: UserLogin = new UserLogin
 
-  confirmarSenha: string
+  confirmarSenha: string = ''
   isChecked: boolean
 
   constructor(
     private auth: AuthService,
     private router: Router
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
   }
 
   confirmSenha(event: any) {
     this.confirmarSenha = event.target.value
   }
 
-  cadastrar(){
+  cadastrar() {
     this.user.tipo = "Cliente"
 
     if (this.user.senha == this.confirmarSenha) {
-      if(this.isChecked == true) {
-        this.auth.cadastrar(this.user).subscribe((resp: Usuario)=>{
+      if (this.isChecked == true) {
+        this.auth.cadastrar(this.user).subscribe((resp: Usuario) => {
           this.user = resp
-          alert("Usuário cadastrado com sucesso! Faça login ao lado")
+
+          this.user = new Usuario()
         })
       } else {
         alert("Por favor, marque a opção de permissão de uso dos dados.")
@@ -49,16 +51,24 @@ export class LoginCadastroComponent implements OnInit {
   }
 
   entrar() {
-    this.auth.entrar(this.userLogin).subscribe((resp: UserLogin)=>{
+    this.auth.entrar(this.userLogin).subscribe((resp: UserLogin) => {
       this.userLogin = resp
+
+
+      console.log(this.userLogin.apelido)
 
       environment.token = this.userLogin.token
       environment.apelido = this.userLogin.apelido
+      environment.tipo = this.userLogin.tipo
 
-      console.log(environment.token)
       console.log(environment.apelido)
-
       this.router.navigate(['/home'])
+    }, erro => {
+      if (this.userLogin.email == "") {
+        alert("Faltou o email")
+      } else if (this.userLogin.senha == "") {
+        alert("Faltou a senha")
+      }
     })
   }
 }

@@ -1,31 +1,56 @@
-@keyframes profanimation{
-    from{
-        padding:10%;
-        filter:saturate(30%);
-    }
-    to{
-        padding:0%;
-        filter:saturate(110%);
-    }
+@keyframes profanimation {
+  from {
+    padding: 10%;
+    filter: saturate(30%);
+  }
+
+  to {
+    padding: 0%;
+    filter: saturate(110%);
+  }
 }
 
-.profile{
-    padding:10%;
-    border-radius: 100%;
-    filter:saturate(30%);
-    border: 1px;
+#bg-img {
+  background-image: url(../../assets/img/background.png);
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:50% 50%;
 }
 
-.profile:hover{
-    padding:0%;
-    border-radius: 100%;
-    animation:profanimation;
-    animation-duration:0.5s;
-    filter:saturate(110%);
+.card{
+  border-radius: 15px;
 }
 
-.fab:hover{
-    padding:0%;
-    font-size: 32pt;
-    color: #3333ff;
+.profile {
+  padding: 10%;
+  border-radius: 100%;
+  filter: saturate(30%);
+  border: 1px;
+}
+
+.profile:hover {
+  padding: 0%;
+  border-radius: 100%;
+  animation: profanimation;
+  animation-duration: 0.5s;
+  filter: saturate(110%);
+}
+
+.fab:hover {
+  padding: 0%;
+  font-size: 32pt;
+  color: #3333ff;
+}
+
+.icon{
+    color:#222222;
+}
+
+/*mobile*/
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    .sbimg {
+        display: none;
+      }
 }

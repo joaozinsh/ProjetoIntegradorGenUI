@@ -1,3 +1,11 @@
 .borda{
     border-radius: 15px;
 }
+
+button {
+    border-radius: 15px;
+  }
+
+  .card{
+    border-radius: 15px;
+  }

@@ -1,5 +1,6 @@
 import { Medicamento } from "./Medicamento"
 
+
 export class Doenca {
     public descricao: string
     public id: number

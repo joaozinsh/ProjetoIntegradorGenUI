@@ -1,5 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
 body {
     min-height: 100vh;
 }
+
+div{
+    font-family: 'Arimo', sans-serif;
+}
+
+img:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    background-image: url("./assets/img/icon/cart.png");
+}
+
+input {
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: #ABABAB;
+  }
+  
+/*html {
+    scroll-behavior: smooth;
+}*/

@@ -3,22 +3,17 @@
     top: 100%;
 }
 
-ul.redes-sociais {
-    list-style: none;
-    padding: 0;
-}
-
-ul.redes-sociais li{
-    display: inline;
-    margin: 0;
-    padding: 5px;
-}
-
 .fab{
-    font-size: 35pt;
+    /*font-size: 35pt;*/
+    padding-right: 1vw;
 }
 
-.bg-footer{
+.fab:hover{
+    font-size: 50pt;
+    z-index: 1;
+}
+
+footer{
     background-color:rgba(96, 206, 241, 0.8);
 }
 
@@ -26,8 +21,14 @@ ul.redes-sociais li{
     background-color: #33B3DC;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-   
 }
+
 .form-control{
     border-radius: 15px;
 }
+
+.sb{
+    width: 100px;
+}
+
+
