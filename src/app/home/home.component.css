@@ -43,29 +43,8 @@ button {
 }
 
 
-/*Carrosel card*/
-.card img{
-    max-width: 100%;
-    max-height: 100%;
-}
-.cards-wrapper{
-  display: flex;
-  justify-content: center;
-}
 
-.card {
-  margin: 0 0.5em;
-  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-  border: none;
-  border-radius: 0;
-}
-.carousel-inner {
-  padding: 1em;
-}
-
-
-
-
+/* Carrosel */
 
 /*desktop*/
 @media screen and (min-width: 990px) and (max-width: 9998px) {
@@ -77,6 +56,15 @@ button {
     padding: 3rem;
   }
 
+  .card {
+    min-width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    transition: 0.2s;
+    margin: 5px;
+}
 
   .card-deck {
     display: grid;

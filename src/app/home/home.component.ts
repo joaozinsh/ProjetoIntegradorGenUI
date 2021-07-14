@@ -13,12 +13,13 @@ export class HomeComponent implements OnInit {
   medicamento: Medicamento = new Medicamento()
   listaMedicamentosDesc: Medicamento[]
   listaMedicamentosProm: Medicamento[]
-
+  
   constructor(
     private medicamentoService: ProdutosService
   ) { }
 
   ngOnInit() {
+    
     console.log(environment.token)
     this.findByCardHome()
   }
@@ -31,7 +32,6 @@ export class HomeComponent implements OnInit {
       this.listaMedicamentosProm = resp
     })
   }
-
 
 
 }

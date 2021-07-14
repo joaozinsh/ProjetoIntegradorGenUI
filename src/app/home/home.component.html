@@ -41,49 +41,18 @@
 <br />
 
 <!--Card 1-->
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="cards-wrapper mb-5">
-      <div class="card" *ngFor="let medicamento of listaMedicamentosDesc">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{medicamento.nome}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <!--
-      <div class="card" *ngFor="let medicamento of listaMedicamentosDesc">
-        <img width="300px" height="300px" class="card-img-top" src={{medicamento.foto}} alt="{{medicamento.nome}}">
-        <div class="card-body">
-          <h5 class="card-title">{{medicamento.nome}}</h5>
-          <p class="card-text"></p>
-          <div class="p-0">
-            <div class="container-fluid">
-              <div class="row d-flex align-items-stretch">
-                <div class="col-md-6 p-0 align-items-stretch"><button type="button"
-                    class="btn btn-block btn-primary button2">R$
-                    {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}}
-                  </button>
-                </div>
-                <div data-target="#ModalDetalhes" data-toggle="modal" class="col-md-6 p-0 align-self-stretch"><button
-                    type="button" class="btn btn-block btn-secondary button1">DETALHES</button></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>-->
+<div class="card-container mb-5" id="modelo">
+  <div class="card" *ngFor="let medicamento of listaMedicamentosDesc">
+    <img  width="300px" height="300px" class="card-img-top" src="{{medicamento.foto}}" alt="Imagem de capa do card" />
+    <div class="card-body carta">
+      <h5 class="card-title">{{medicamento.nome}}</h5>
+      <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#ExemploModalCentralizado">
+        Detalhes
+      </button>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
 </div>
+
 <!--/Card 1-->
 
 <!-- Jumbotrom 2-->
@@ -96,25 +65,14 @@
 
 <!--Card 2-->
 <h1 class="text-center font-weight-bold font-italic">Outros produtos</h1>
-<div class="card-container" id="modelo">
+<div class="card-container mb-5 lista" id="modelo">
   <div class="card" *ngFor="let medicamento of listaMedicamentosProm">
-    <img width="250px" height="250px" class="card-img-top" src={{medicamento.foto}} alt="{{medicamento.nome}}">
-    <div class="card-body">
+    <img  width="300px" height="300px" class="card-img-top" src="{{medicamento.foto}}" alt="Imagem de capa do card" />
+    <div class="card-body carta">
       <h5 class="card-title">{{medicamento.nome}}</h5>
-      <p class="card-text"></p>
-      <div class="p-0">
-        <div class="container-fluid">
-          <div class="row d-flex align-items-stretch">
-            <div class="col-md-6 p-0 align-items-stretch"><button type="button"
-                class="btn btn-block btn-primary button2">R$
-                {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}}
-              </button>
-            </div>
-            <div data-target="#ModalDetalhes" data-toggle="modal" class="col-md-6 p-0 align-self-stretch"><button
-                type="button" class="btn btn-block btn-secondary button1">DETALHES</button></div>
-          </div>
-        </div>
-      </div>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
+        Detalhes
+      </button>
     </div>
   </div>
 </div>
