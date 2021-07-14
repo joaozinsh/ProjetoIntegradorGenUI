@@ -2,6 +2,14 @@
   align-self: baseline;
 }
 
+.card{
+  border-radius: 15px;
+}
+
+button {
+  border-radius: 15px;
+}
+
 /*mobile*/
 @media screen and (min-width: 0px) and (max-width: 990px) {
     .button {
@@ -23,5 +31,4 @@
         width: 25%;
         margin-bottom: 15px;
       }
-      
 }

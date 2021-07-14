@@ -10,7 +10,7 @@ import { CarrinhoService } from '../service/carrinho.service';
 })
 
 export class CarrinhoComponent implements OnInit {
-
+  /*new Intl.NumberFormat(['pt-BR'{ style: 'currency', currency: 'BRL'}])*/
   medicamentos = this.carrinhoService.get()
 
   totalMedicamento: number
@@ -21,6 +21,7 @@ export class CarrinhoComponent implements OnInit {
   qtd: number
 
   constructor(
+
     private carrinhoService: CarrinhoService,
     private router: Router
   ) { }
@@ -60,7 +61,7 @@ export class CarrinhoComponent implements OnInit {
 
           this.subtotal -= this.medicamentos[i].precoUni
           this.total = this.subtotal
-        }   
+        }
       }
     }
   }

@@ -9,3 +9,10 @@ body {
 div{
     font-family: 'Arimo', sans-serif;
 }
+
+img:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    background-image: url("./assets/img/icon/cart.png");
+}
