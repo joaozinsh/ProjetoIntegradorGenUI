@@ -41,7 +41,7 @@
             <th scope="col">ID</th>
             <th scope="col">Nome</th>
             <th scope="col">Descrição</th>
-            <th scope="col">Trasmissivel</th>
+            <th scope="col">Transmissivel</th>
             <th scope="col" colspan="2" class="text-center pr-5">Modificações</th>
           </tr>
         </thead>
@@ -50,7 +50,7 @@
             <th scope="row">{{ i.id }}</th>
             <td>{{ i.nome }}</td>
             <td>{{ i.descricao }}</td>
-            <td>{{ i.transmissivel }}</td>
+            <td>{{ i.transmissivel.toString().replace("true","Sim").replace("false","Não") }}</td>
             <td><a (click)='findByIdDoenca(i.id)' class="text-info" data-toggle="modal" data-target="#ModalEditar">Editar</a></td>
             <td><a (click)='apagarDoenca(i.id)' class="text-danger">Apagar</a></td>
           </tr>
