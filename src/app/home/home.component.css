@@ -1,4 +1,8 @@
 /* Jumbotron */
+button{
+  border-radius: 15px;
+}
+
 #imagem1 {
   background-image: url("https://i.imgur.com/dfTDjV4.jpg");
   background-size: cover;
@@ -28,7 +32,6 @@
 
 #modelo {
   margin-right: 0px;
-
 }
 
 .carta {
@@ -36,15 +39,44 @@
   /* visibility: hidden; */
   /* position: absolute; */
   padding: 2rem;
-
   transition: all .5s;
 }
 
 /* Carrosel */
 
+/*desktop*/
+@media screen and (min-width: 990px) and (max-width: 9998px) {
+
 .card-deck {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: .5rem;
+}
+  .img-resp {
+    width: 12rem;
+  }
+}
+
+/*mobile*/
+@media screen and (min-width: 0px) and (max-width: 990px) {
+  .fonte {
+    font-size: 15pt;
+    font-style: italic;
+  }
+
+  .img-resp {
+    width: 15rem;
+  }
+
+  .card-ajuste {
+    padding: 5rem;
+  }
+
+
+  .card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: .5rem;
+  }
 
 }
