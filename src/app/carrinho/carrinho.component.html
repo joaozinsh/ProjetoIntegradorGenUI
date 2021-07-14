@@ -25,7 +25,7 @@
                   <p class="text-center">{{med.nome}}</p>
                 </div>
                 <div class="col-md-2 d-flex justify-content-center">
-                  <p class="text-black-50">{{med.precoUni}}</p>
+                  <p class="text-black-50">R$ {{med.precoUni.toLocaleString('pt-br', {minimumFractionDigits: 2})}}</p>
                 </div>
                 <div class="col-md-2 d-flex">
                   <button class="btn btn-danger btn-block text-center p-0 btnMenos" (click)='dec(med.nome, med.qtd)'>
@@ -37,13 +37,12 @@
                   </button>
                 </div>
                 <div class="col-md-2 p-0 d-flex justify-content-center">
-                  <p class="text-black-50">{{med.precoTotal}}</p>
+                  <p class="text-black-50">R$ {{med.precoTotal.toLocaleString('pt-br', {minimumFractionDigits: 2})}}</p>
                 </div>
                 <div class="col-md-1 p-0 d-flex justify-content-center">
                   <a (click)='delete(med.nome)'>
                     <i class="far fa-trash-alt"></i>
                   </a>
-                  
                 </div>
               </div>
             </div>
@@ -86,7 +85,7 @@
           <p class="p-0 m-0">Insira o PDF com as receitas</p>
           <div class="input-group my-2">
             <div class="custom-file">
-              <input type="file" class="custom-file-input" id="inputGroupFile02">
+              <input type="file" class="custom-file-input" id="inputGroupFile02" accept=".pdf">
               <label class="custom-file-label text-left" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Escolher arquivo</label>
             </div>
           </div>
@@ -103,7 +102,7 @@
                 <p class="text-black font-weight-bold">Subtotal</p>
               </div>
               <div class="col-6">
-                <p class="text-black text-right">R$ {{subtotal}}</p>
+                <p class="text-black text-right">R$ {{subtotal.toLocaleString('pt-br', {minimumFractionDigits: 2})}}</p>
               </div>
             </div>
             <div class="row d-flex justify-content-around">
@@ -121,7 +120,7 @@
                 <p class="text-black font-weight-bold">Total ({{totalMedicamento}})</p>
               </div>
               <div class="col-6">
-                <p class="text-black text-right">R$ {{total}}</p>
+                <p class="text-black text-right">R$ {{total.toLocaleString('pt-br', {minimumFractionDigits: 2})}}</p>
               </div>
             </div>
             <hr />
