@@ -64,7 +64,7 @@ export class ProdutoAdminComponent implements OnInit {
         alert('Medicamento criado!');
       });
     console.log(this.medicamento);
-    this.findAllDoencas();
+    this.medicamento = new Medicamento();
     this.findAllMedicamentos();
   }
 }
