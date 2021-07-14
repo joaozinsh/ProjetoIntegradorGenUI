@@ -1,3 +1,5 @@
+import { Medicamento } from 'src/app/model/Medicamento';
+import { ProdutosService } from 'src/app/service/produtos.service';
 import { environment } from './../../environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,10 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  medicamento: Medicamento = new Medicamento()
+  listaMedicamentosDesc: Medicamento[]
+  listaMedicamentosProm: Medicamento[]
+
+  constructor(
+    private medicamentoService: ProdutosService
+  ) { }
 
   ngOnInit() {
     console.log(environment.token)
+    this.findByCardHome()
   }
+
+  findByCardHome(){
+    this.medicamentoService.getMedicamentosDestaque().subscribe((resp: Medicamento[])=>{
+      this.listaMedicamentosDesc = resp
+    })
+    this.medicamentoService.getMedicamentosPromocao().subscribe((resp: Medicamento[])=>{
+      this.listaMedicamentosProm = resp
+    })
+  }
+
+
 
 }
