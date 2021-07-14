@@ -1,5 +1,5 @@
 /* Jumbotron */
-button{
+button {
   border-radius: 15px;
 }
 
@@ -42,16 +42,36 @@ button{
   transition: all .5s;
 }
 
+
+
 /* Carrosel */
 
 /*desktop*/
 @media screen and (min-width: 990px) and (max-width: 9998px) {
 
-.card-deck {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: .5rem;
+  .card-container {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    padding: 3rem;
+  }
+
+  .card {
+    min-width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    transition: 0.2s;
+    margin: 5px;
 }
+
+  .card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: .5rem;
+  }
+
   .img-resp {
     width: 12rem;
   }

@@ -1,60 +1,30 @@
 <!-- Carrosel -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li
-      data-target="#carouselExampleIndicators"
-      data-slide-to="0"
-      class="active"
-    ></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img
-        class="d-block w-100 height: auto;"
-        src="https://i.imgur.com/L5FCaG4.jpg?2"
-        alt="Primeiro Slide"
-      />
+      <img class="d-block w-100 height: auto;" src="https://i.imgur.com/L5FCaG4.jpg?2" alt="Primeiro Slide" />
     </div>
     <div class="carousel-item">
-      <img
-        class="d-block w-100 height: auto;"
-        src="https://i.imgur.com/qKxiTST.jpg?1"
-        alt="Segundo Slide"
-      />
+      <img class="d-block w-100 height: auto;" src="https://i.imgur.com/qKxiTST.jpg?1" alt="Segundo Slide" />
     </div>
     <div class="carousel-item">
-      <img
-        class="d-block w-100 height: auto;"
-        src="https://i.imgur.com/4hgeOeR.png?1"
-        alt="Terceiro Slide"
-      />
+      <img class="d-block w-100 height: auto;" src="https://i.imgur.com/4hgeOeR.png?1" alt="Terceiro Slide" />
     </div>
     <div class="carousel-item">
-      <img
-        class="d-block w-100 height: auto;"
-        src="https://i.imgur.com/ZUh9t0e.png?1"
-        alt="Quarto Slide"
-      />
+      <img class="d-block w-100 height: auto;" src="https://i.imgur.com/ZUh9t0e.png?1" alt="Quarto Slide" />
     </div>
   </div>
-  <a
-    class="carousel-control-prev"
-    href="#carouselExampleIndicators"
-    role="button"
-    data-slide="prev"
-  >
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Anterior</span>
   </a>
-  <a
-    class="carousel-control-next"
-    href="#carouselExampleIndicators"
-    role="button"
-    data-slide="next"
-  >
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Próximo</span>
   </a>
@@ -63,149 +33,26 @@
 
 <!--Jumbotrom-->
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h3 class="display-4 font-italic">Destaques da Semana</h3>
-    </div>
+  <div class="container">
+    <h3 class="display-4 font-italic">Destaques da Semana</h3>
+  </div>
 </div>
 <!--/Jumbotrom-->
 <br />
 
 <!--Card 1-->
-<div class="card-deck mb-5" id="modelo">
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://d1kvbg99uxpcu.cloudfront.net/Custom/Content/Products/10/74/1074560_maleato-de-dexclorfeniramina-sol-oral-fr-120ml-ems-generico-generico_m1_637387915723029964.jpg"
-      alt="Imagem de capa do card"
-    />
+<div class="card-container mb-5" id="modelo">
+  <div class="card" *ngFor="let medicamento of listaMedicamentosDesc">
+    <img  width="300px" height="300px" class="card-img-top" src="{{medicamento.foto}}" alt="Imagem de capa do card" />
     <div class="card-body carta">
-      <h5 class="card-title">Generico</h5>
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-toggle="modal"
-        data-target="#ExemploModalCentralizado"
-      >
+      <h5 class="card-title">{{medicamento.nome}}</h5>
+      <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#ExemploModalCentralizado">
         Detalhes
       </button>
-      <div
-        class="modal fade"
-        id="ExemploModalCentralizado"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="TituloModalCentralizado"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="TituloModalCentralizado">Generico</h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Fechar"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-                veritatis eaque iusto a suscipit quam numquam illo reprehenderit
-                nisi quibusdam id pariatur, et molestias laborum aperiam
-                excepturi consectetur saepe non!
-              </p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
-                Fechar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um
-                conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p> -->
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://w1.ezcdn.com.br/drogariaprimus/fotos/grande/266115fg1/miconazol-locao-30ml-cimed-generico-daktarin.jpg"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Título do card</h5>
-      <p class="card-text">
-        Este é um card com suporte a texto embaixo, que funciona como uma
-        introdução a um conteúdo adicional.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://d1kvbg99uxpcu.cloudfront.net/Custom/Content/Products/10/34/1034447_isovit-75mg-60-comprimidos_m1_637238462084980034.jpg"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Título do card</h5>
-      <p class="card-text">
-        Este é um card maior com suporte a texto embaixo, que funciona como uma
-        introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior
-        que o primeiro, para mostrar a altura igual, em ação.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/75/1075305_atroveran-dip-1g-bl-20-comp-dipirona-monoidratada-cosmed-similar_m1_637389624866488022.jpg"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Título do card</h5>
-      <p class="card-text">
-        Este é um card maior com suporte a texto embaixo, que funciona como uma
-        introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior
-        que o primeiro, para mostrar a altura igual, em ação.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/70/1070178_benegrip-multi-dia-cx-20-comp-paracetamol-cloridrato-de-fenilefrina-cosmed-similar_m1_637340323908862787.jpg"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Título do card</h5>
-      <p class="card-text">
-        Este é um card maior com suporte a texto embaixo, que funciona como uma
-        introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior
-        que o primeiro, para mostrar a altura igual, em ação.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
     </div>
   </div>
 </div>
+
 <!--/Card 1-->
 
 <!-- Jumbotrom 2-->
@@ -218,95 +65,14 @@
 
 <!--Card 2-->
 <h1 class="text-center font-weight-bold font-italic">Outros produtos</h1>
-<div class="card-deck" id="modelo">
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://www.princesadonorteonline.com.br/media/catalog/product/cache/2/image/400x400/85e4522595efc69f496374d01ef2bf13/1/2/12247_original.jpg"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Título do card</h5>
-      <p class="card-text">
-        Este é um card maior com suporte a texto embaixo, que funciona como uma
-        introdução a um conteúdo adicional. Este conteúdo é um pouco maior, para
-        demonstração.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://d3ddx6b2p2pevg.cloudfront.net/Custom/Content/Products/10/65/1065860_os-cal-d-60-comprimidos-500mg-1000ui_m1_637292790645425687.jpg"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Título do card</h5>
-      <p class="card-text">
-        Este é um card com suporte a texto embaixo, que funciona como uma
-        introdução a um conteúdo adicional.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://www.qualidoc.com.br/ccstore/v1/images/?source=/file/v1028708330113958354/products/1006797.Naproxeno-500mg-20-Comprimidos-Teuto-Generico.jpg&height=400&width=400"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Título do card</h5>
-      <p class="card-text">
-        Este é um card maior com suporte a texto embaixo, que funciona como uma
-        introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior
-        que o primeiro, para mostrar a altura igual, em ação.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://w1.ezcdn.com.br/drogariaprimus/fotos/grande/142300fg1/naproxeno-550mg-20-comprimidos-neoquimica-generico-flanax.jpg"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Título do card</h5>
-      <p class="card-text">
-        Este é um card maior com suporte a texto embaixo, que funciona como uma
-        introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior
-        que o primeiro, para mostrar a altura igual, em ação.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://imperialmanipulacao.com.br/content/images/thumbs/0000126_combate-a-dor-de-dente-homeopatico-liquido-30ml.jpeg"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Título do card</h5>
-      <p class="card-text">
-        Este é um card maior com suporte a texto embaixo, que funciona como uma
-        introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior
-        que o primeiro, para mostrar a altura igual, em ação.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
+<div class="card-container mb-5 lista" id="modelo">
+  <div class="card" *ngFor="let medicamento of listaMedicamentosProm">
+    <img  width="300px" height="300px" class="card-img-top" src="{{medicamento.foto}}" alt="Imagem de capa do card" />
+    <div class="card-body carta">
+      <h5 class="card-title">{{medicamento.nome}}</h5>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
+        Detalhes
+      </button>
     </div>
   </div>
 </div>
@@ -318,7 +84,7 @@
     <div class="row d-flex">
       <div class="col-12">
         <h3 class="text-black text-center font-weight-bold">
-            Inscreva-se no nosso newsletter para receber notícias e novidades.
+          Inscreva-se no nosso newsletter para receber notícias e novidades.
         </h3>
       </div>
     </div>
@@ -326,22 +92,12 @@
       <div class="col-lg-8 col-sm-6">
         <div class="row d-flex m-2">
           <div class="col-12">
-            <input
-              type="text"
-              class="form-control borda"
-              id="InputNome"
-              placeholder="Nome"
-            />
+            <input type="text" class="form-control borda" id="InputNome" placeholder="Nome" />
           </div>
         </div>
         <div class="row d-flex m-2">
           <div class="col-12">
-            <input
-              type="email"
-              class="form-control borda"
-              id="exampleEmail"
-              placeholder="Email"
-            />
+            <input type="email" class="form-control borda" id="exampleEmail" placeholder="Email" />
           </div>
         </div>
       </div>
