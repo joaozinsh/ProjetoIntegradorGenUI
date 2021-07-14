@@ -2,6 +2,17 @@ button {
   border-radius: 15px;
 }
 
+input {
+  border-radius: 50px;
+  border: 2px solid;
+  border-color: #ABABAB;
+}
+
+.btn-modal {
+  background-color: #E06767;
+  border: none;
+}
+
 .corList {
   background-color: #E06767;
 }
@@ -9,6 +20,32 @@ button {
 .bg-corDrop {
   background-color: #b3b3b3;
   border-radius: 15px;
+}
+
+.dropdown-toggle:focus {
+  outline: none;
+  box-shadow: none;
+  border-radius: .25rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #e6e6e6;
+  border-bottom: 0;
+}
+
+.custom-drop {
+  border: 0;
+  border-top-left-radius: 0;
+  margin-top: 0;
+  background-color: #e6e6e6;
+  box-shadow: none;
+}
+
+.custom-drop:focus {
+  background-color: #b3b3b3;
+}
+
+.voltar-top:hover {
+  cursor: pointer;
 }
 
 .bordaList {
@@ -19,7 +56,7 @@ button {
   display: block;
   background-color: #e06767;
   border: none;
-  font-size: 8pt;
+  font-size: 0.70rem;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
@@ -28,7 +65,8 @@ button {
   display: block;
   /*background-color: mediumturquoise;*/
   border: none;
-  font-size: 8pt;
+  font-size: 0.70rem;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
+  
 }

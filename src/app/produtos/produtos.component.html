@@ -13,7 +13,7 @@
                 Filtrar
             </a>
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <div class="dropdown-menu custom-drop" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" (click)="findByTipo('Genérico')">Genérico</a>
                 <a class="dropdown-item" (click)="findByTipo('Similar')">Similar</a>
                 <a class="dropdown-item" (click)="findByTipo('Referência')">Referência</a>
@@ -25,10 +25,9 @@
                 Listar por
             </a>
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <div class="dropdown-menu custom-drop" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" (click)="listForDesc()">Maior Preço</a>
                 <a class="dropdown-item" (click)="listForAsc()">Menor Preço</a>
-                <a class="dropdown-item" href="#"></a>
             </div>
         </div>
     </div>
@@ -104,18 +103,11 @@
         </div>
 
     </div>
-    <!--
     <div class="row">
         <div class="col-md-12">
-<<<<<<< HEAD
-            <p class="d-flex justify-content-end"><a routerLink="['/produtos/']" href="#topo" class="text-black">Voltar ao
-                    topo</a></p>
-=======
-            <p class="d-flex justify-content-end mx-5 my-3"><a fragment="#medicamentos" class="text-black" (click)='voltarTopo()'>Voltar ao topo</a></p>
->>>>>>> c9ab4236b949bb580c88d5eba968d4c47dd44197
+            <p class="d-flex justify-content-end mx-5 my-3"><a class="text-black voltar-top" (click)='voltarTopo()'>Voltar ao topo</a></p>
         </div>
     </div>
-    -->
 </div>
 
 <!-- Modal -->
@@ -156,8 +148,8 @@
                         <input [(ngModel)]='qtd' class="form-control" type="number" min="1" name="qtd" id="qtd">
                     </div>
                     <div class="col-2">
-                        <a type="button" class="btn btn-primary " data-dismiss="modal"
-                            (click)='addCarrinho(medicamento.id)'>Comprar</a>
+                        <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal"
+                            (click)='addCarrinho(medicamento.id)'>Comprar</button>
                     </div>
                 </div>
                 <div class="row">
