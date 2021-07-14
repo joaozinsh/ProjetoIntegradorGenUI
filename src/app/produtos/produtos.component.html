@@ -1,10 +1,12 @@
 <!--drop e titulo -->
 
 <div class="d-flex justify-content-around mt-4">
-    <h4 class="d-flex justify-content-end mr-4" id="#home">Estes medicamento são recomendados para a doença: <p *ngIf='(doencas.nome == null)'> Todas as doenças</p>{{doencas.nome}}
+    <h4 *ngIf="status == true" class="d-flex justify-content-end mr-4" id="#home">Estes medicamento são recomendados
+        para a(o) {{doenca.nome}}
     </h4>
-
-    <div class="d-flex">
+    <h4 *ngIf="status == false" class="d-flex justify-content-end mr-4" id="#home">Todos os medicamentos
+    </h4>
+    <div class="d-flex justify-content-end">
         <div class="dropdown mx-2">
             <a class="btn bg-corDrop dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -24,8 +26,8 @@
             </a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">O Maior Preço</a>
-                <a class="dropdown-item" href="#">Menor Preço</a>
+                <a class="dropdown-item" (click)="listForDesc()">Maior Preço</a>
+                <a class="dropdown-item" (click)="listForAsc()">Menor Preço</a>
                 <a class="dropdown-item" href="#"></a>
             </div>
         </div>
@@ -43,25 +45,51 @@
                 <button type="button" class=" corList text-light list-group-item list-group-item-action " disabled>
                     <h4>Medicamentos Para:</h4>
                 </button>
-                <button type="button"
-                    class="corList text-light list-group-item list-group-item-action">Todos</button>
+                <button type="button" class="corList text-light list-group-item list-group-item-action"
+                    (click)="findAllMedicamentos()">Todos</button>
                 <button *ngFor='let doenca of listaDoenca' type="button"
-                    class="corList text-light list-group-item list-group-item-action">{{doenca.nome}}</button>
+                    class="corList text-light list-group-item list-group-item-action"
+                    (click)="filterDoenca(doenca.id)">{{doenca.nome}}</button>
 
             </div>
         </div>
 
         <div class="col-md-9 d-flex flex-wrap">
             <div *ngFor='let medicamento of listaMedicamentos' class="card m-2 " style="width: 13rem;">
-                <img class="card-img-top" src={{medicamento.foto}} alt="Imagem de capa do card">
+                <img width="200px" height="200px"  class="card-img-top" src={{medicamento.foto}}  alt="{{medicamento.nome}}">
                 <div class="card-body">
                     <h5 class="card-title">{{medicamento.nome}}</h5>
                     <p class="card-text"></p>
                     <div class="p-0">
-                    <div class="container-fluid">
+                        <div class="container-fluid">
                             <div class="row d-flex align-items-stretch">
-                                <div class="col-md-6 p-0 align-items-stretch"><button type="button" class="btn btn-block btn-primary button2" disabled>R${{medicamento.preco}} </button></div>
-                                <div data-target="#ModalDetalhes" data-toggle="modal" (click)='findByIdMedicamento(medicamento.id)' class="col-md-6 p-0 align-self-stretch"><button type="button" class="btn btn-block btn-secondary button1">DETALHES</button></div>
+                                <div class="col-md-6 p-0 align-items-stretch"><button type="button"
+                                        class="btn btn-block btn-info button2" disabled>R$ {{medicamento.preco}},00 </button>
+                                </div>
+                                <div data-target="#ModalDetalhes" data-toggle="modal"
+                                    (click)='findByIdMedicamento(medicamento.id)'
+                                    class="col-md-6 p-0 align-self-stretch"><button type="button"
+                                        class="btn btn-block btn-secondary button1">DETALHES</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngFor='let medicamento of doenca.medicamentos' class="card m-2 " style="width: 13rem;">
+                <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}} alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">{{medicamento.nome}}</h5>
+                    <p class="card-text"></p>
+                    <div class="card-footer p-0">
+                        <div class="container">
+                            <div class="row d-flex align-items-stretch">
+                                <div class="col-md-6 p-0 align-items-stretch"><button type="button"
+                                        class="btn btn-block btn-primary button2">R$ {{medicamento.preco}},00 </button>
+                                </div>
+                                <div data-target="#ModalDetalhes" data-toggle="modal"
+                                    (click)='findByIdMedicamento(medicamento.id)'
+                                    class="col-md-6 p-0 align-self-stretch"><button type="button"
+                                        class="btn btn-block btn-secondary button1">DETALHES</button></div>
                             </div>
                         </div>
                     </div>
@@ -81,40 +109,48 @@
 <!-- Modal -->
 <div class="modal fade" id="ModalDetalhes" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+                <h5 class="modal-title" id="TituloModalCentralizado">Medicamento</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <div class="row">
-                    <div class="col-6">
+                <div class="row d-flex align-items-center">
+                    <div class="col-6 ">
+                        <img width="250px" height="250px" src={{medicamento.foto}}>
                     </div>
                     <div class="col-6">
                         <div class="row">
-                            <div class="col-12">
-
+                            <div class="col-12 text-center">
+                                <h2 class="font-weight-bold">{{medicamento.nome}}</h2>
                             </div>
                         </div>
+                        <hr>
                         <div class="row">
-                            <div class="col-12">
-                                
+                            <div class="col-12 text-center">
+                                <p>Descrição: {{medicamento.descricao}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <div class="row d-flex justify-content-end">
-                    <div class="col-5 d-flex align-items-center p-0">
+            <div class="">
+                <div class="row d-flex justify-content-end mb-4">
+                    <div class="col-3 d-flex align-items-center p-0">
                         <label class="m-0 mr-2" for="qtd">Quantidade:</label>
-                        <input [(ngModel)]='qtd' class="form-control" type="number" name="qtd" id="qtd">
+                        <input [(ngModel)]='qtd' class="form-control" type="number" min="1" name="qtd" id="qtd">
                     </div>
-                    <div class="col-4">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)='addCarrinho(medicamento.id)'>Comprar</button>
+                    <div class="col-2">
+                        <a type="button" class="btn btn-primary " data-dismiss="modal"
+                            (click)='addCarrinho(medicamento.id)'>Comprar</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-end">
+                        <p class="mb-2 mr-5" *ngIf="validacaoQTD() == true">Precisa de valores a cima de 1</p>
                     </div>
                 </div>
             </div>
