@@ -10,6 +10,19 @@
   }
 }
 
+#bg-img {
+  background-image: url(../../assets/img/background.png);
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:50% 50%;
+}
+
+.card{
+  border-radius: 15px;
+}
+
 .profile {
   padding: 10%;
   border-radius: 100%;

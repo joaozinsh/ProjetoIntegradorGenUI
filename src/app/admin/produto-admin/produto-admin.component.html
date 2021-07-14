@@ -47,6 +47,32 @@
             </select>
           </div>
         </div>
+        <div class="row d-flex my-2">
+          <div class="col-4">
+            <div class="form-check">
+              <input [(ngModel)]="medicamento.promocao" class="form-check-input" type="checkbox" id="transmissivel" value="true" name="promocao">
+              <label class="form-check-label" for="transmissivel">
+                Na Promoção?
+              </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check">
+              <input [(ngModel)]="medicamento.destaque" class="form-check-input" type="checkbox" id="destaque" value="true" name="destaque">
+              <label class="form-check-label" for="destaque">
+                Em Destaque na Home?
+              </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check">
+              <input [(ngModel)]="medicamento.receita" class="form-check-input" type="checkbox" id="receita" value="true" name="receita">
+              <label class="form-check-label" for="receita">
+                Precisa de receita?
+              </label>
+            </div>
+          </div>
+        </div>
         <div class="row d-flex justify-content-center">
           <div class="col-md-2">
             <button type="submit" class="btn btn-success btn-block" (click)="cadastrarProd()">

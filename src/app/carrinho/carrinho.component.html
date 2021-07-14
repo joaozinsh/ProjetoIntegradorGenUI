@@ -5,24 +5,24 @@
       
       <div class="container-fluid">
         <div class="row d-flex justify-content-around align-items-center p-3">
-          <div class="col-md-9 d-flex justify-content-start">
+          <div class="col-md-9 col-sm-12 d-flex justify-content-start">
             Total de items: {{totalMedicamento}}
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 col-sm-12">
             <button class="btn btn-danger btn-block" (click)='clear()'>Remover Todos</button>
           </div>
         </div>
-        
+
         <div class="container-fluid">
           <!-- For de Produtos -->
-          <div class="row d-flex justify-content-center py-2 order-1" *ngFor='let med of medicamentos'>
+          <div class="row d-flex justify-content-center py-2 m-0" *ngFor='let med of medicamentos'>
             <div class="col-md-11 card">
               <div class="row p-1 d-flex align-items-center">
-                <div class="col-md-2">
+                <div class="col-md-2 d-flex justify-content-center">
                   <img src="{{med.foto}}" alt="Produto" height="100px" width="auto" />
                 </div>
-                <div class="col-md-3 d-flex align-items-center p-0 ustify-content-center">
-                  <p class="align-items-center">{{med.nome}}</p>
+                <div class="col-md-3 d-flex align-items-center p-0 justify-content-center">
+                  <p class="text-center">{{med.nome}}</p>
                 </div>
                 <div class="col-md-2 d-flex justify-content-center">
                   <p class="text-black-50">{{med.precoUni}}</p>
@@ -53,7 +53,7 @@
       </div>
     </div>
 
-    <div class="col-md-2 d-flex justify-content-center align-self-start">
+    <div class="col-md-3 d-flex justify-content-center align-self-start">
       <div class="container p-0">
         <div class="row d-flex card bg-light p-3">
           <div class="col-md-12">
@@ -64,8 +64,8 @@
             </div>
             <hr />
             <div class="row d-flex justify-content-around">
-              <div class="col-md-9 p-0 mr-0">
-                <input class="form-control pr-0" type="text" placeholder="00000-000" />
+              <div class="col-md-9 p-0 mr-0 d-flex align-items-center">
+                <input class="form-control input-lg pr-0" type="text" placeholder="00000-000" />
               </div>
               <div class="col-md-3 p-0 ml-0">
                 <button class="btn btn-danger btn-block btnOK pl-0">OK</button>
