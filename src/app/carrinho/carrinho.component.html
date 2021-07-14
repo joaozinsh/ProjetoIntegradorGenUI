@@ -5,11 +5,11 @@
       
       <div class="container-fluid">
         <div class="row d-flex justify-content-around align-items-center p-3">
-          <div class="col-md-9 col-sm-12 d-flex justify-content-start">
-            Total de items: {{totalMedicamento}}
+          <div class="col-md-9 col-sm-12 d-flex justify-content-start font-weight-bolder">
+            Total de itens: {{totalMedicamento}}
           </div>
           <div class="col-md-2 col-sm-12">
-            <button class="btn btn-danger btn-block" (click)='clear()'>Remover Todos</button>
+            <button class="btn  btn-block" (click)='clear()'>Remover Todos</button>
           </div>
         </div>
 
@@ -19,7 +19,7 @@
             <div class="col-md-11 card">
               <div class="row p-1 d-flex align-items-center">
                 <div class="col-md-2 d-flex justify-content-center">
-                  <img src="{{med.foto}}" alt="Produto" height="100px" width="auto" />
+                  <picture><img class="img-fluid" src="{{med.foto}}" alt="Produto"></picture> 
                 </div>
                 <div class="col-md-3 d-flex align-items-center p-0 justify-content-center">
                   <p class="text-center">{{med.nome}}</p>
@@ -28,11 +28,11 @@
                   <p class="text-black-50">R$ {{med.precoUni.toLocaleString('pt-br', {minimumFractionDigits: 2})}}</p>
                 </div>
                 <div class="col-md-2 d-flex">
-                  <button class="btn btn-danger btn-block text-center p-0 btnMenos" (click)='dec(med.nome, med.qtd)'>
+                  <button class="btn  btn-block text-center p-0 btnMenos" (click)='dec(med.nome, med.qtd)'>
                     -
                   </button>
                   <input class="form-control text-center rounded-0" value="{{med.qtd}}" disabled/>
-                  <button class="btn btn-danger btn-block text-center p-0 btnMais" (click)='inc(med.nome, med.qtd)'>
+                  <button class="btn  btn-block text-center p-0 btnMais" (click)='inc(med.nome, med.qtd)'>
                     +
                   </button>
                 </div>
@@ -52,7 +52,7 @@
       </div>
     </div>
 
-    <div class="col-md-3 d-flex justify-content-center align-self-start">
+    <div class="col-md-2 d-flex justify-content-center align-self-start">
       <div class="container p-0">
         <div class="row d-flex card bg-light p-3">
           <div class="col-md-12">
@@ -64,10 +64,10 @@
             <hr />
             <div class="row d-flex justify-content-around">
               <div class="col-md-9 p-0 mr-0 d-flex align-items-center">
-                <input class="form-control input-lg pr-0" type="text" placeholder="00000-000" />
+                <input class="form-control input-lg pr-0 input-cep" type="text" placeholder="00000-000" />
               </div>
               <div class="col-md-3 p-0 ml-0">
-                <button class="btn btn-danger btn-block btnOK pl-0">OK</button>
+                <button class="btn  btn-block btnOK pl-0">OK</button>
               </div>
             </div>
             <div class="row d-flex justify-content-around mt-2">
@@ -82,7 +82,7 @@
         </div>
 
         <div class="row d-flex card bg-light mt-3 p-3 text-center justify-content-center">
-          <p class="p-0 m-0">Insira o PDF com as receitas</p>
+          <p class="p-0 m-0">Insira um único  PDF com as receitas</p>
           <div class="input-group my-2">
             <div class="custom-file">
               <input type="file" class="custom-file-input" id="inputGroupFile02" accept=".pdf">
@@ -125,9 +125,9 @@
             </div>
             <hr />
             <div class="row d-flex justify-content-center">
-              <div class="col-md-11">
-                <button  routerLink='/produtos' class="form-control btn btn-danger btn-block">Continuar Comprando</button>
-                <button routerLink='/pagamento' class="form-control btn btn-danger btn-block">
+              <div class="col-md-9">
+                <button  routerLink='/produtos' class="btn btn-block">Continuar Comprando</button>
+                <button routerLink='/pagamento' class="btn btn-block">
                   Fechar Carrinho!
                 </button>
               </div>
