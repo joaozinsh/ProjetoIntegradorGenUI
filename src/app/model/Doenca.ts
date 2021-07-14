@@ -8,4 +8,3 @@ export class Doenca {
     public nome: string
     public transmissivel: string
 }
-
