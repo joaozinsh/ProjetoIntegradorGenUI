@@ -1,0 +1,103 @@
+<div class="container mt-3 card bg-light">
+  <div class="row d-flex justify-content-center m-3">
+    <h1 class="text-center mb-3">Doença</h1>
+    <div class="col-md-12">
+      <div class="row d-flex">
+        <div class="col-md-4">
+          <label for="nome" class="no-gutter m-0">Nome:</label>
+          <input [(ngModel)]="doenca.nome" type="text" class="form-control" id="nome" name="nome"
+            placeholder="Nome da doença" />
+        </div>
+        <div class="col-md-4">
+          <label for="descricao" class="no-gutter m-0">Descricao:</label>
+          <input [(ngModel)]="doenca.descricao" type="text" class="form-control" name="descricao" id="descricao"
+            placeholder="Descrição da doença" />
+        </div>
+        <div class="col-md-4">
+          <label for="trasmissivel" class="no-gutter m-0">Transmissivel?</label>
+          <select [(ngModel)]="doenca.transmissivel" class="form-control" name="transmissivel" id="transmissivel">
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+          </select>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center mt-4">
+        <div class="col-md-2">
+          <button class="btn btn-success btn-block" (click)="cadastrarDoenca()">
+            Cadastrar
+          </button>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-danger btn-block" (click)="limparCampos()">Limpar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex card m-2 mb-4">
+    <div class="col-md-12 d-flex justify-content-center">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Trasmissivel</th>
+            <th scope="col" colspan="2" class="text-center pr-5">Modificações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of listaDoenca">
+            <th scope="row">{{ i.id }}</th>
+            <td>{{ i.nome }}</td>
+            <td>{{ i.descricao }}</td>
+            <td>{{ i.transmissivel }}</td>
+            <td><a (click)='findByIdDoenca(i.id)' class="text-info" data-toggle="modal" data-target="#ModalEditar">Editar</a></td>
+            <td><a (click)='apagarDoenca(i.id)' class="text-danger">Apagar</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Editar -->
+<div class="modal fade" id="ModalEditar" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Editar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input [(ngModel)]="doenca.nome" type="text" class="form-control" id="nome" name="nome"
+            placeholder="Nome da doença">
+        </div>
+
+        <div class="form-group">
+          <label for="descricao" class="no-gutter m-0">Descricao:</label>
+          <input [(ngModel)]="doenca.descricao" type="text" class="form-control" name="descricao" id="descricao"
+            placeholder="Descrição da doença" />
+        </div>
+
+        <div class="form-group">
+          <label for="trasmissivel" class="no-gutter m-0">Transmissivel?</label>
+          <select [(ngModel)]="doenca.transmissivel" class="form-control" name="transmissivel" id="transmissivel">
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button (click)='atualizarDoenca(doenca)' type="button" class="btn btn-primary" data-dismiss="modal">Salvar mudanças</button>
+      </div>
+    </div>
+  </div>
+</div>

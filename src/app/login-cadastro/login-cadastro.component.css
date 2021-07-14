@@ -1,56 +1,128 @@
 #bg-img {
-    background-image: url(../../assets/img/background.png);
+  background-image: url(../../assets/img/background.png);
 
-    min-height: 100vh;
+  min-height: 100vh;
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.btn {
+/*desktop*/
+@media screen and (min-width: 767px) and (max-width: 9998px) {
+  .btn {
     background-color: #E06767;
-}
+  }
 
-#btn-voltar {
+  #btn-voltar {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 25px;
-}
+  }
 
-#p-voltar {
+  #p-voltar {
     padding: 0;
     margin: 0;
     font-size: 24pt;
-}
+  }
 
-.fas {
+  .fas {
     font-size: 40px;
-}
+  }
 
-.card {
+  .card {
     border-radius: 15px;
     padding: 2rem;
     margin-bottom: 2rem;
-}
+  }
 
-.blur {
+  .blur {
     background-color: rgba(241, 241, 241, 0.888);
     border: 1px;
-}
+  }
 
-.linha-vertical {
+  .linha-vertical {
     height: 100%;
     border-left: 3px solid grey;
-}
+  }
 
-.font-size {
+  .font-size {
     font-size: 14pt;
-}
+  }
 
-input {
+  input {
     border-radius: 50px;
     border: 2px solid;
     border-color: #ABABAB;
+  }
+
+  /*new class*/
+
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 766px) {
+    .conteudo{
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+  .btn {
+    background-color: #E06767;
+  }
+
+  #btn-voltar {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 25px;
+  }
+
+  #p-voltar {
+    padding: 0;
+    margin: 0;
+    font-size: 24pt;
+  }
+  .card {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .fas {
+    font-size: 40px;
+  }
+
+  .blur {
+    background-color: rgba(241, 241, 241, 0.888);
+    border: 1px;
+  }
+
+  .linha-vertical {
+    margin-top: 25px;
+    border-top: 3px solid grey;
+  }
+
+
+  input {
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: #ABABAB;
+    font-size: 10pt;
+  }
+
+  /*New class*/
+  .card{
+      padding: 1rem;
+  }
+  .titulo {
+    margin-top: 10px;
+    font-size: 20pt;
+  }
+
+  .texts {
+    font-size: 10pt;
+  }
+
+
 }

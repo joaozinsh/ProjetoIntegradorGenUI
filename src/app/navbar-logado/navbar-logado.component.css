@@ -173,12 +173,12 @@
   
   /*icone de logo*/
   .sb {
-    width: 50px;
+    width: 12rem;
   }
   
   /*font color*/
   .letter {
-    padding: 5px;
+    padding-right: 4rem;
     color: #33B3DC;
     text-decoration: none;
   }

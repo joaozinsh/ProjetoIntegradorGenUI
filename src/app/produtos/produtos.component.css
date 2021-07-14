@@ -9,3 +9,17 @@
      border-radius: 25px;
   
 }
+.button1{
+    display: block;
+    background-color: #e06767;
+    border: none;
+    font-size: 8pt;
+    
+}
+.button2{
+    display: block;
+    background-color: mediumturquoise;
+    border: none;
+    font-size: 8pt;
+    
+    }
