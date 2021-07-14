@@ -39,7 +39,7 @@
 
 <div class="mt-5 text-center container-fluid">
     <div class="row d-flex">
-        <div class="col-md-3">
+        <div class="col-md-2 mx-5">
             <div class="list-group bordaList corList">
                 <button type="button" class=" corList text-light list-group-item list-group-item-action " disabled>
                     <h4>Categoria de Medicamentos</h4>
@@ -64,14 +64,14 @@
                         <div class="container-fluid">
                             <div class="row d-flex align-items-stretch">
                                 <div class="col-md-6 p-0 align-items-stretch"><button type="button"
-                                        class="btn btn-block btn-primary button2">R$
+                                        class="btn btn-block button2">R$
                                         {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}}
                                     </button>
                                 </div>
                                 <div data-target="#ModalDetalhes" data-toggle="modal"
                                     (click)='findByIdMedicamento(medicamento.id)'
                                     class="col-md-6 p-0 align-self-stretch"><button type="button"
-                                        class="btn btn-block btn-secondary button1">DETALHES</button></div>
+                                        class="btn btn-block button1">DETALHES</button></div>
                             </div>
                         </div>
                     </div>
@@ -87,14 +87,14 @@
                         <div class="container-fluid">
                             <div class="row d-flex align-items-stretch">
                                 <div class="col-md-6 p-0 align-items-stretch"><button type="button"
-                                        class="btn btn-block btn-primary button2">R$
+                                        class="btn btn-block button2">R$
                                         {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}}
                                     </button>
                                 </div>
                                 <div data-target="#ModalDetalhes" data-toggle="modal"
                                     (click)='findByIdMedicamento(medicamento.id)'
                                     class="col-md-6 p-0 align-self-stretch"><button type="button"
-                                        class="btn btn-block btn-secondary button1">DETALHES</button></div>
+                                        class="btn btn-block button1">DETALHES</button></div>
                             </div>
                         </div>
                     </div>
@@ -148,7 +148,7 @@
                         <input [(ngModel)]='qtd' class="form-control" type="number" min="1" name="qtd" id="qtd">
                     </div>
                     <div class="col-2">
-                        <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal"
+                        <button type="button" class="btn btn-modal text-white" data-dismiss="modal"
                             (click)='addCarrinho(medicamento.id)'>Comprar</button>
                     </div>
                 </div>

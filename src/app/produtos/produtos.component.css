@@ -2,6 +2,10 @@ button {
   border-radius: 15px;
 }
 
+button:focus {
+  box-shadow: none;
+}
+
 input {
   border-radius: 50px;
   border: 2px solid;
@@ -55,6 +59,7 @@ input {
 .button1 {
   display: block;
   background-color: #e06767;
+  color: white;
   border: none;
   font-size: 0.70rem;
   border-top-left-radius: 0px;
@@ -63,10 +68,19 @@ input {
 
 .button2 {
   display: block;
-  /*background-color: mediumturquoise;*/
+  background-color: #33b3dc;
+  color: white;
   border: none;
   font-size: 0.70rem;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   
+}
+
+.button2:hover {
+  cursor: default;
+}
+
+.form-control {
+  box-shadow: none;
 }
