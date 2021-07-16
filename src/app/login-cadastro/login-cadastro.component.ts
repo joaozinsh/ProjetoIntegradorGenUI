@@ -15,7 +15,8 @@ export class LoginCadastroComponent implements OnInit {
   user: Usuario = new Usuario
   userLogin: UserLogin = new UserLogin
 
-  confirmarSenha: string = ''
+  confirmarSenha: string = ""
+  validSenha: string
   isChecked: boolean
 
   constructor(
@@ -28,26 +29,31 @@ export class LoginCadastroComponent implements OnInit {
     window.scroll(0, 0)
   }
 
-  confirmSenha(event: any) {
-    this.confirmarSenha = event.target.value
-  }
-
   cadastrar() {
     this.user.tipo = "Cliente"
 
-    if (this.user.senha == this.confirmarSenha) {
-      if (this.isChecked == true) {
-        this.auth.cadastrar(this.user).subscribe((resp: Usuario) => {
-          this.user = resp
-
-          this.user = new Usuario()
-        })
-      } else {
-        alert("Por favor, marque a opção de permissão de uso dos dados.")
-      }
+    if(this.confirmarSenha == ""){
+      this.validSenha = "Por favor, confirme sua senha."
     } else {
-      alert("As senhas devem ser iguais!")
-    }
+      if (this.user.senha == this.confirmarSenha) {
+        if (this.isChecked == true) {
+          this.auth.cadastrar(this.user).subscribe((resp: Usuario) => {
+            this.user = resp
+  
+            this.user = new Usuario()
+            this.confirmarSenha = ""
+            this.isChecked = false
+            this.router.navigate(['/login-cadastro'])
+          })
+        } else {
+          alert("teste")
+        }
+  
+      } else {
+        this.confirmarSenha = ""
+        this.validSenha = "A senha deve ser iguais"
+      }
+    } 
   }
 
   entrar() {
@@ -72,3 +78,21 @@ export class LoginCadastroComponent implements OnInit {
     })
   }
 }
+
+(function () {
+  'use strict';
+  window.addEventListener('load', function () {
+      // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+      var forms = document.getElementsByClassName('needs-validation');
+      // Faz um loop neles e evita o envio
+      var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event: any) {
+              if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+          }, false);
+      });
+  }, false);
+})();
