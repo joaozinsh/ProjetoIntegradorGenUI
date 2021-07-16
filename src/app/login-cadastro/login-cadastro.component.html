@@ -1,4 +1,3 @@
-
 <div class="container-fluid m-0 pb-3 conteudo" id="bg-img">
     <div class="row mb-4">
         <div class="col-md-12 px-0">
@@ -32,61 +31,82 @@
                         </div>
 
                         <div class="d-flex justify-content-center mt-5">
-                            <button (click)='entrar()' class="btn btn-lg px-5 text-white">Enviar</button>
+                            <button type="submit" (click)='entrar()' class="btn btn-lg px-5 text-white">Enviar</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 mb-2 cards">
-                <div class="row d-flex justify-content-center linha-vertical">
+                <div class="form-row d-flex justify-content-center linha-vertical">
                     <div class="col-md-8">
-                        <h1 class="text-center titulo font-weight-bold py-4">Sou um Novo Cliente</h1>
-                        <div class="form-group texts">
-                            <label class="pl-3" for="nome">Nome Completo</label>
-                            <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome"
-                                placeholder="Digite seu nome completo" required>
-                        </div>
-                        <div class="form-group texts">
-                            <label class="pl-3" for="apelido">Apelido</label>
-                            <input [(ngModel)]='user.apelido' class="form-control" type="text" name="apelido"
-                                id="apelido" placeholder="Como você quer ser chamado no sistema?">
+                        <form class="needs-validation" novalidate>
+                            <h1 class="text-center titulo font-weight-bold py-4">Sou um Novo Cliente</h1>
 
-                        </div>
+                            <div class="form-group texts">
+                                <label class="pl-3" for="nome">Nome Completo</label>
+                                <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome"
+                                    placeholder="Digite seu nome completo" required>
+                                <div class="invalid-feedback">
+                                    Por favor, preencha seu nome.
+                                </div>
+                            </div>
 
-                        <div class="form-group texts">
-                            <label class="pl-3" for="cadEmail">E-mail</label>
-                            <input [(ngModel)]='user.email' class="form-control" type="text" name="email" id="cadEmail"
-                                placeholder="Digite seu e-mail">
+                            <div class="form-group texts">
+                                <label class="pl-3" for="apelido">Apelido</label>
+                                <input [(ngModel)]='user.apelido' class="form-control" type="text" name="apelido"
+                                    id="apelido" placeholder="Como você quer ser chamado no sistema?" required>
+                                <div class="invalid-feedback">
+                                    Por favor, preencha seu apelido.
+                                </div>
+                            </div>
 
-                        </div>
+                            <div class="form-group texts">
+                                <label class="pl-3" for="cadEmail">E-mail</label>
+                                <input [(ngModel)]='user.email' class="form-control" type="email" name="email"
+                                    id="cadEmail" placeholder="Digite seu e-mail" required>
+                                <div class="invalid-feedback">
+                                    Por favor, informe um email válido.
+                                </div>
 
-                        <div class="form-group texts">
-                            <label class="pl-3" for="cadPassword">Senha</label>
-                            <input [(ngModel)]='user.senha' class="form-control" type="password" name="password"
-                                value="" id="cadPassword" placeholder="Digite sua senha">
+                            </div>
 
-                        </div>
+                            <div class="form-group texts">
+                                <label class="pl-3" for="cadPassword">Senha</label>
+                                <input [(ngModel)]='user.senha' class="form-control" type="password" name="password"
+                                    value="" id="cadPassword" placeholder="Digite sua senha" required>
+                                <div class="invalid-feedback">
+                                    Por favor, digite uma senha.
+                                </div>
 
-                        <div class="form-group texts">
-                            <label class="pl-3" for="confirmPassword">Confirmar Senha</label>
-                            <input (input)='confirmSenha($event)' class="form-control" type="password"
-                                name="confirmPassword" id="confirmPassword" placeholder="Confirme sua senha">
+                            </div>
 
-                        </div>
+                            <div class="form-group texts">
+                                <label class="pl-3" for="confirmPassword">Confirmar Senha</label>
+                                <input [(ngModel)]='confirmarSenha' class="form-control" type="password"
+                                    name="confirmPassword" id="confirmPassword" placeholder="Confirme sua senha"
+                                    required>
+                                <div class="invalid-feedback">
+                                    {{validSenha}}
+                                </div>
+                            </div>
 
-                        <div class="form-check mb-4 pl-4 d-flex align-items-center texts">
-                            <input [(ngModel)]="isChecked" class="form-check-input" type="checkbox" value=""
-                                id="defaultCheck1" name="checkbox">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Aceito o uso dos meus dados
-                            </label>
-                        </div>
+                            <div class="form-check mb-4 pl-4 d-flex align-items-center texts">
+                                <input [(ngModel)]="isChecked" class="form-check-input" type="checkbox" value=""
+                                    id="defaultCheck1" name="checkbox" required>
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Aceito o uso dos meus dados
+                                </label>
+                                <div class="invalid-feedback">
+                                    Por favor, aceite os termos de uso.
+                                </div>
+                            </div>
 
-                        <div class="d-flex justify-content-center mt-5">
-                            <button onclick="document.getElementById('confirmPassword').value = ''"
-                                (click)='cadastrar()' class="btn btn-lg px-5 text-white">Cadastrar</button>
-                        </div>
+                            <div class="d-flex justify-content-center mt-5">
+                                <button type="submit" (click)='cadastrar()'
+                                    class="btn btn-lg px-5 text-white">Cadastrar</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
