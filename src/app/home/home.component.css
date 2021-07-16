@@ -1,4 +1,3 @@
-/* Jumbotron */
 button {
   border-radius: 15px;
 }
@@ -46,11 +45,14 @@ button {
 /*desktop*/
 @media screen and (min-width: 990px) and (max-width: 9998px) {
 
+
+
   .card-container {
     width: 100%;
     overflow-x: scroll;
     display: flex;
-    padding: 3rem;
+    padding: 1.5rem;
+    padding-bottom: 2px;
   }
 
   .card {
@@ -72,6 +74,33 @@ button {
   .img-resp {
     width: 12rem;
   }
+
+  *{
+    scrollbar-width: thin;
+    scrollbar-color: #33B3DC ;
+    
+  }
+    
+    *::-webkit-scrollbar {
+      height: 10px;
+      width: 5px;
+    }
+    
+    *::-webkit-scrollbar-track {
+      background: #ffffff;
+      
+    }
+    
+    *::-webkit-scrollbar-thumb {
+      background-color: #33B3DC;
+      border-radius: 20px;
+      transition: 2s;
+    }
+  
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2890b3; 
+      transition: 2s;
+    }
 }
 
 /*mobile*/
