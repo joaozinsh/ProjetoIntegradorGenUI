@@ -17,6 +17,25 @@ img:before {
     background-image: url("./assets/img/icon/cart.png");
 }
 
+*::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+    
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #b1b1b1;
+    border: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #535353; 
+  }
+
 /*html {
     scroll-behavior: smooth;
 }*/
