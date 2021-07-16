@@ -4,6 +4,44 @@ p {
 
 button {
   border-radius: 15px;
+  background-color: #E06767;
+  color: white
+}
+
+button:hover {
+  color: white;
+  font-weight: bold;
+}
+
+button:focus {
+  background-color: #E06767;
+  color: white;
+  font-weight: bold;
+  box-shadow: none;
+}
+
+img {
+  border-radius: 15px;
+}
+
+.far {
+  font-size: 15pt;
+}
+
+.far:hover {
+  cursor: pointer;
+  font-size: 15pt;
+  color: #E06767;
+}
+
+
+.card {
+  border-radius: 15px;
+}
+
+.input-cep {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .btnOK{
