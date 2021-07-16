@@ -1,338 +1,171 @@
 <!-- Carrosel -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li
-      data-target="#carouselExampleIndicators"
-      data-slide-to="0"
-      class="active"
-    ></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img
-        class="d-block w-100 height: auto;"
-        src="https://i.imgur.com/L5FCaG4.jpg?2"
-        alt="Primeiro Slide"
-      />
+      <img class="d-block w-100 height: auto;" src="https://i.imgur.com/L5FCaG4.jpg?2" alt="Primeiro Slide" />
     </div>
     <div class="carousel-item">
-      <img
-        class="d-block w-100 height: auto;"
-        src="https://i.imgur.com/qKxiTST.jpg?1"
-        alt="Segundo Slide"
-      />
+      <img class="d-block w-100 height: auto;" src="https://i.imgur.com/qKxiTST.jpg?1" alt="Segundo Slide" />
     </div>
     <div class="carousel-item">
-      <img
-        class="d-block w-100 height: auto;"
-        src="https://i.imgur.com/4hgeOeR.png?1"
-        alt="Terceiro Slide"
-      />
+      <img class="d-block w-100 height: auto;" src="https://i.imgur.com/4hgeOeR.png?1" alt="Terceiro Slide" />
     </div>
     <div class="carousel-item">
-      <img
-        class="d-block w-100 height: auto;"
-        src="https://i.imgur.com/ZUh9t0e.png?1"
-        alt="Quarto Slide"
-      />
+      <img class="d-block w-100 height: auto;" src="https://i.imgur.com/ZUh9t0e.png?1" alt="Quarto Slide" />
     </div>
   </div>
-  <a
-    class="carousel-control-prev"
-    href="#carouselExampleIndicators"
-    role="button"
-    data-slide="prev"
-  >
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Anterior</span>
   </a>
-  <a
-    class="carousel-control-next"
-    href="#carouselExampleIndicators"
-    role="button"
-    data-slide="next"
-  >
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Próximo</span>
   </a>
 </div>
+
+
 <!--/Carrosel-->
 
-<!--Jumbotrom-->
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h3 class="display-4 font-italic">Destaques da Semana</h3>
-    </div>
-</div>
-<!--/Jumbotrom-->
-<br />
 
-<!--Card 1-->
-<div class="card-deck mb-5" id="modelo">
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://i.imgur.com/IrEh9jq.png"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body carta">
-      <h5 class="card-title">Alenia 12mcg</h5>
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-toggle="modal"
-        data-target="#ExemploModalCentralizado"
-      >
-        Detalhes
-      </button>
-      <div
-        class="modal fade"
-        id="ExemploModalCentralizado"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="TituloModalCentralizado"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="TituloModalCentralizado">Alenia 12mcg</h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Fechar"
-              >
-                <span aria-hidden="true">&times;</span>
+<h1 class="font-italic font-weight-bold ml-5 mt-5 mb-3">Destaques da Semana</h1>
+<div class="card-container pt-0 pb-3 mb-5" id="modelo">
+  <div *ngFor='let medicamento of listaMedicamentosDesc' class="card m-2 ">
+    <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}} alt="{{medicamento.nome}}">
+    <div class="card-body">
+      <h5 class="card-title">{{medicamento.nome}}</h5>
+      <p class="card-text"></p>
+      <div class="p-0">
+        <div class="container-fluid">
+          <div class="row d-flex align-items-stretch">
+            <div class="col-md-6 p-0 align-items-stretch"><button type="button" class="btn btn-block button2">R$
+                {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}}
               </button>
             </div>
-            <div class="modal-body">
-              <p>
-                Alenia 6/100 mcg é indicado para a melhora e controle da falta de ar em pacientes com broncoconstrição (fechamento parcial dos brônquios provocado por uma contração do mesmo) ou broncoespasmo (contração da musculatura do brônquio, provocando um fechamento parcial), em pacientes que são portadores de asma brônquica, doença esta que causa diminuição da capacidade de respirar adequadamente.
-              </p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
-                Fechar
-              </button>
-            </div>
+            <div data-target="#ModalDetalhes" data-toggle="modal" (click)='findByIdMedicamento(medicamento.id)'
+              class="col-md-6 p-0 align-self-stretch"><button type="button"
+                class="btn btn-block button1">DETALHES</button></div>
           </div>
         </div>
       </div>
-      <!-- <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um
-                conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p> -->
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://i.imgur.com/LeNdzqa.png"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Lamivudina</h5>
-      <p class="card-text">
-        Lamivudina é indicado para o tratamento da infecção pelo vírus da imunodeficiência humana (HIV), em adultos e crianças, em associação com outros agentes antirretrovirais.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://i.imgur.com/ZkjaJE8.png"
-      alt="Imagem de capa do card"
-    />
-    <br>
-    <br><br>
-    <div class="card-body">
-      <h5 class="card-title">Seretide Accuhaler</h5>
-      <p class="card-text">
-        Seretide® Diskus® está indicado (para adultos e crianças) no tratamento da asma (doença obstrutiva reversível do trato respiratório), e no tratamento de manutenção da doença pulmonar obstrutiva crônica (DPOC), inclusive bronquite crônica e enfisema.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://i.imgur.com/9wqQlyA.png"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body">
-      <h5 class="card-title">GLYXAMBI</h5>
-      <p class="card-text">
-        é um medicamento que possui duas substâncias ativas associadas, a empagliflozina e a linagliptina, as quais atuam juntas e de forma complementar no controle da glicose (açúcar) no sangue.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://i.imgur.com/REkusOa.png"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Jardiance</h5>
-      <p class="card-text">
-        Jardiance um medicamento utilizado para o controle glicêmico e prevenção de eventos cardiovasculares em pacientes com diabetes mellitus tipo 2 e doenças do coração e vasos sanguíneos.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
     </div>
   </div>
 </div>
-<!--/Card 1-->
+
 
 <!-- Jumbotrom 2-->
-<div id="imagem1" class="jumbotron jumbotron-fluid">
-  <div class="container imagem">
-    <img src="" alt="" />
-  </div>
+<div id="imagem1" class="jumbotron jumbotron-fluid imagem">
 </div>
 <!--/Jumbotrom 2-->
 
-<!--Card 2-->
-<h1 class="text-center font-weight-bold font-italic">Medicamento em Promoção</h1>
-<div class="card-deck" id="modelo">
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://i.imgur.com/Ctw2ep9.png"
-      alt="Imagem de capa do card"
-    />
+<h1 class="font-italic font-weight-bold ml-5 mt-5 mb-3">Promoções da Semana</h1>
+<div class="card-container pt-0 pb-3 mb-5 lista" id="modelo">
+  <div *ngFor='let medicamento of listaMedicamentosProm' class="card m-2 " style="width: 13rem;">
+    <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}} alt="{{medicamento.nome}}">
     <div class="card-body">
-      <h5 class="card-title">Ozempic</h5>
-      <p class="card-text">
-        Ozempic contém o princípio ativo semaglutida. Ozempic é usado, em conjunto com dieta e exercícios, para tratar pacientes adultos com diabetes tipo 2 não satisfatoriamente controlada (nível de açúcar no sangue permanece muito alto).
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://i.imgur.com/T1M4bWA.png"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Raltegravir</h5>
-      <p class="card-text">
-        Quando utilizado com outros medicamentos anti-HIV, ISENTRESS® pode reduzir a quantidade de HIV em seu sangue (chamada de "carga viral") e aumentar o número de células CD4 (T). A redução da quantidade de HIV no sangue pode manter o seu sistema imunológico saudável, para que ele possa ajudar a combater a infecção. ISENTRESS® pode não causar esses efeitos em todos os pacientes.
-O tratamento antirretroviral também passa a ser recomendado para crianças vivendo com HIV com idade inferior a 2 anos de idade
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://i.imgur.com/0p2qo9S.png"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Tenofovir 300mg+Lamivudina 300mg</h5>
-      <p class="card-text">
-        Fumarato de Lamivudina + Fumarato de Tenofovir Desoproxila em combinação com outros agentes antirretrovirais é indicado para o tratamento de infecção por HIV-1 em adultos.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://i.imgur.com/LD6GmzP.png"
-      alt="Imagem de capa do card"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Symbicort Spray</h5>
-      <p class="card-text">
-        Esse Medicamento é para adultos e crianças (a partir de 4 anos de idade) SYMBICORT TURBUHALER está indicado no tratamento da asma nos casos em que o uso de uma associação (corticosteroide inalatório com um beta-2 agonista de ação prolongada) é apropriado (vide Posologia).
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
-    </div>
-  </div>
-
-  <div class="card">
-    <img
-      class="card-img-top"
-      src="https://i.imgur.com/RoZg4yc.png"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Relvar Ellipta</h5>
-      <p class="card-text">
-        Relvar Ellipta é indicado para o tratamento regular da asma em adultos e adolescentes com 12 anos ou mais cujo uso do produto em combinação (corticosteroide inalatório e um agonista seletivo do receptor beta2 adrenérgico de ação prolongada) é apropriado:- pacientes não adequadamente controlados com corticosteroide inalatório e quando necessário agonista seletivo do receptor beta2 adrenérgico de curta ação.
-      </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Atualizados 3 minutos atrás</small>
+      <h5 class="card-title">{{medicamento.nome}}</h5>
+      <p class="card-text"></p>
+      <div class="p-0">
+        <div class="container-fluid">
+          <div class="row d-flex align-items-stretch">
+            <div class="col-md-6 p-0 align-items-stretch"><button type="button" class="btn btn-block button2">R$
+                {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}}
+              </button>
+            </div>
+            <div data-target="#ModalDetalhes" data-toggle="modal" (click)='findByIdMedicamento(medicamento.id)'
+              class="col-md-6 p-0 align-self-stretch"><button type="button"
+                class="btn btn-block button1">DETALHES</button></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<!--/Card 2-->
 
 <!--Jumbotrom 3 / Newsletter-->
-<div class="jumbotron3 my-5 p-3">
-  <div class="container-fluid">
-    <div class="row d-flex">
-      <div class="col-12">
-        <h3 class="text-black text-center font-weight-bold">
-            Inscreva-se no nosso newsletter para receber notícias e novidades.
-        </h3>
+<div class="container card-red my-5 py-3">
+  <div class="row d-flex">
+    <div class="col-12 p-0">
+      <h3 class="text-black text-center font-weight-bold">
+        Inscreva-se no nosso newsletter para receber notícias e novidades.
+      </h3>
+    </div>
+  </div>
+  <div class="row d-flex align-items-center justify-content-center mt-4">
+    <div class="col-lg-7 col-sm-6">
+      <div class="row d-flex m-2">
+        <div class="col-12">
+          <input type="text" class="form-control borda" id="InputNome" placeholder="Nome" />
+        </div>
+      </div>
+      <div class="row d-flex m-2">
+        <div class="col-12">
+          <input type="email" class="form-control borda" id="exampleEmail" placeholder="Email" />
+        </div>
       </div>
     </div>
-    <div class="row d-flex align-items-center justify-content-around p-2">
-      <div class="col-lg-8 col-sm-6">
-        <div class="row d-flex m-2">
-          <div class="col-12">
-            <input
-              type="text"
-              class="form-control borda"
-              id="InputNome"
-              placeholder="Nome"
-            />
-          </div>
-        </div>
-        <div class="row d-flex m-2">
-          <div class="col-12">
-            <input
-              type="email"
-              class="form-control borda"
-              id="exampleEmail"
-              placeholder="Email"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <button type="submit" class="btn btn-primary btn-block p-4 borda">Increver</button>
-      </div>
+    <div class="col-lg-2 col-sm-6">
+      <button type="submit" class="btn btn-block button-news font-weight-bold">Inscreva-se</button>
     </div>
   </div>
 </div>
 <!-- /Jumbotrom -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="ModalDetalhes" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Medicamento</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row d-flex align-items-center">
+          <div class="col-6 ">
+            <img width="250px" height="250px" src={{medicamento.foto}}>
+          </div>
+          <div class="col-6">
+            <div class="row">
+              <div class="col-12 text-center">
+                <h2 class="font-weight-bold">{{medicamento.nome}}</h2>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-12 text-center">
+                <p>Descrição: {{medicamento.descricao}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <div class="row d-flex justify-content-end mb-4">
+          <div class="col-3 d-flex align-items-center p-0">
+            <label class="m-0 mr-2" for="qtd">Quantidade:</label>
+            <input [(ngModel)]='qtd' class="form-control" type="number" min="1" name="qtd" id="qtd">
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn btn-modal text-white" data-dismiss="modal"
+              (click)='addCarrinho(medicamento.id)'>Comprar</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex justify-content-end">
+            <p class="mb-2 mr-5" *ngIf="validacaoQTD() == true">Precisa de valores a cima de 1</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,4 @@
-/* Jumbotron */
-button{
+button {
   border-radius: 15px;
 }
 
@@ -13,19 +12,16 @@ button{
   background-size: 100% 100%;
 }
 
-.jumbotron {
-  background-color: #A0E2F7;
-}
-
-.jumbotron3 {
+.card-red {
   align-self: center;
   background-color: #e06767;
-  width: 80%;
-  margin: auto;
+  border-radius: 15px;
+  max-width: 60rem;
 }
 
-.borda {
+.button-news {
   border-radius: 15px;
+  background-color: #33b3dc;
 }
 
 /*Card */
@@ -42,19 +38,69 @@ button{
   transition: all .5s;
 }
 
+
+
 /* Carrosel */
 
 /*desktop*/
 @media screen and (min-width: 990px) and (max-width: 9998px) {
 
-.card-deck {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: .5rem;
+
+
+  .card-container {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    padding: 1.5rem;
+    padding-bottom: 2px;
+  }
+
+  .card {
+    min-width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    transition: 0.2s;
+    margin: 5px;
 }
+
+  .card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: .5rem;
+  }
+
   .img-resp {
     width: 12rem;
   }
+
+  *{
+    scrollbar-width: thin;
+    scrollbar-color: #33B3DC ;
+    
+  }
+    
+    *::-webkit-scrollbar {
+      height: 10px;
+      width: 5px;
+    }
+    
+    *::-webkit-scrollbar-track {
+      background: #ffffff;
+      
+    }
+    
+    *::-webkit-scrollbar-thumb {
+      background-color: #33B3DC;
+      border-radius: 20px;
+      transition: 2s;
+    }
+  
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2890b3; 
+      transition: 2s;
+    }
 }
 
 /*mobile*/
@@ -79,4 +125,87 @@ button{
     grid-gap: .5rem;
   }
 
+}
+
+button:focus {
+  box-shadow: none;
+}
+
+input {
+  border-radius: 50px;
+  border: 2px solid;
+  border-color: #ABABAB;
+}
+
+.btn-modal {
+  background-color: #E06767;
+  border: none;
+}
+
+.corList {
+  background-color: #E06767;
+}
+
+.bg-corDrop {
+  background-color: #b3b3b3;
+  border-radius: 15px;
+}
+
+.dropdown-toggle:focus {
+  outline: none;
+  box-shadow: none;
+  border-radius: .25rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #e6e6e6;
+  border-bottom: 0;
+}
+
+.custom-drop {
+  border: 0;
+  border-top-left-radius: 0;
+  margin-top: 0;
+  background-color: #e6e6e6;
+  box-shadow: none;
+}
+
+.custom-drop:focus {
+  background-color: #b3b3b3;
+}
+
+.voltar-top:hover {
+  cursor: pointer;
+}
+
+.bordaList {
+  border-radius: 25px;
+}
+
+.button1 {
+  display: block;
+  background-color: #e06767;
+  color: white;
+  border: none;
+  font-size: 0.70rem;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.button2 {
+  display: block;
+  background-color: #33b3dc;
+  color: white;
+  border: none;
+  font-size: 0.70rem;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  
+}
+
+.button2:hover {
+  cursor: default;
+}
+
+.form-control {
+  box-shadow: none;
 }

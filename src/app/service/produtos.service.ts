@@ -41,4 +41,11 @@ export class ProdutosService {
     return this.http.get<Medicamento[]>(`${this.baseURL}/medicamentos/preco-desc`, this.token)
   }
 
+  getMedicamentosDestaque(): Observable<Medicamento[]>{
+    return this.http.get<Medicamento[]>(`${this.baseURL}/medicamentos/destaque`)
+  }
+  getMedicamentosPromocao(): Observable<Medicamento[]>{
+    return this.http.get<Medicamento[]>(`${this.baseURL}/medicamentos/promocao`)
+  }
+
 }
