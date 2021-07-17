@@ -29,82 +29,143 @@
     <span class="sr-only">Próximo</span>
   </a>
 </div>
+
+
 <!--/Carrosel-->
 
-<!--Jumbotrom-->
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h3 class="display-4 font-italic">Destaques da Semana</h3>
-  </div>
-</div>
-<!--/Jumbotrom-->
-<br />
 
-<!--Card 1-->
-<div class="card-container mb-5" id="modelo">
-  <div class="card" *ngFor="let medicamento of listaMedicamentosDesc">
-    <img  width="300px" height="300px" class="card-img-top" src="{{medicamento.foto}}" alt="Imagem de capa do card" />
-    <div class="card-body carta">
+<h1 class="font-italic font-weight-bold ml-5 mt-5 mb-3">Destaques da Semana</h1>
+<div class="card-container pt-0 pb-3 mb-5" id="modelo">
+  <div *ngFor='let medicamento of listaMedicamentosDesc' class="card m-2 ">
+    <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}} alt="{{medicamento.nome}}">
+    <div class="card-body">
       <h5 class="card-title">{{medicamento.nome}}</h5>
-      <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#ExemploModalCentralizado">
-        Detalhes
-      </button>
+      <p class="card-text"></p>
+      <div class="p-0">
+        <div class="container-fluid">
+          <div class="row d-flex align-items-stretch">
+            <div class="col-md-6 p-0 align-items-stretch"><button type="button" class="btn btn-block button2">R$
+                {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}}
+              </button>
+            </div>
+            <div data-target="#ModalDetalhes" data-toggle="modal" (click)='findByIdMedicamento(medicamento.id)'
+              class="col-md-6 p-0 align-self-stretch"><button type="button"
+                class="btn btn-block button1">DETALHES</button></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<!--/Card 1-->
 
 <!-- Jumbotrom 2-->
-<div id="imagem1" class="jumbotron jumbotron-fluid">
-  <div class="container imagem">
-    <img src="" alt="" />
-  </div>
+<div id="imagem1" class="jumbotron jumbotron-fluid imagem">
 </div>
 <!--/Jumbotrom 2-->
 
-<!--Card 2-->
-<h1 class="text-center font-weight-bold font-italic">Outros produtos</h1>
-<div class="card-container mb-5 lista" id="modelo">
-  <div class="card" *ngFor="let medicamento of listaMedicamentosProm">
-    <img  width="300px" height="300px" class="card-img-top" src="{{medicamento.foto}}" alt="Imagem de capa do card" />
-    <div class="card-body carta">
+<h1 class="font-italic font-weight-bold ml-5 mt-5 mb-3">Promoções da Semana</h1>
+<div class="card-container pt-0 pb-3 mb-5 lista" id="modelo">
+  <div *ngFor='let medicamento of listaMedicamentosProm' class="card m-2 " style="width: 13rem;">
+    <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}} alt="{{medicamento.nome}}">
+    <div class="card-body">
       <h5 class="card-title">{{medicamento.nome}}</h5>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
-        Detalhes
-      </button>
+      <p class="card-text"></p>
+      <div class="p-0">
+        <div class="container-fluid">
+          <div class="row d-flex align-items-stretch">
+            <div class="col-md-6 p-0 align-items-stretch"><button type="button" class="btn btn-block button2">R$
+                {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}}
+              </button>
+            </div>
+            <div data-target="#ModalDetalhes" data-toggle="modal" (click)='findByIdMedicamento(medicamento.id)'
+              class="col-md-6 p-0 align-self-stretch"><button type="button"
+                class="btn btn-block button1">DETALHES</button></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<!--/Card 2-->
 
 <!--Jumbotrom 3 / Newsletter-->
-<div class="jumbotron3 my-5 py-3">
-  <div class="container">
-    <div class="row d-flex">
-      <div class="col-12">
-        <h3 class="text-black text-center font-weight-bold">
-          Inscreva-se no nosso newsletter para receber notícias e novidades.
-        </h3>
+<div class="container card-red my-5 py-3">
+  <div class="row d-flex">
+    <div class="col-12 p-0">
+      <h3 class="text-black text-center font-weight-bold">
+        Inscreva-se no nosso newsletter para receber notícias e novidades.
+      </h3>
+    </div>
+  </div>
+  <div class="row d-flex align-items-center justify-content-center mt-4">
+    <div class="col-lg-7 col-sm-6">
+      <div class="row d-flex m-2">
+        <div class="col-12">
+          <input type="text" class="form-control borda" id="InputNome" placeholder="Nome" />
+        </div>
+      </div>
+      <div class="row d-flex m-2">
+        <div class="col-12">
+          <input type="email" class="form-control borda" id="exampleEmail" placeholder="Email" />
+        </div>
       </div>
     </div>
-    <div class="row d-flex align-items-center justify-content-center p-3">
-      <div class="col-lg-5 col-sm-6">
-        <div class="row d-flex m-2">
-          <div class="col-12">
-            <input type="text" class="form-control borda" id="InputNome" placeholder="Nome" />
-          </div>
-        </div>
-        <div class="row d-flex m-2">
-          <div class="col-12">
-            <input type="email" class="form-control borda" id="exampleEmail" placeholder="Email" />
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2 col-sm-6">
-        <button type="submit" class="btn btn-primary btn-block p-4 borda">Increver</button>
-      </div>
+    <div class="col-lg-2 col-sm-6">
+      <button type="submit" class="btn btn-block button-news font-weight-bold">Inscreva-se</button>
     </div>
   </div>
 </div>
 <!-- /Jumbotrom -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="ModalDetalhes" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Medicamento</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row d-flex align-items-center">
+          <div class="col-6 ">
+            <img width="250px" height="250px" src={{medicamento.foto}}>
+          </div>
+          <div class="col-6">
+            <div class="row">
+              <div class="col-12 text-center">
+                <h2 class="font-weight-bold">{{medicamento.nome}}</h2>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-12 text-center">
+                <p>Descrição: {{medicamento.descricao}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <div class="row d-flex justify-content-end mb-4">
+          <div class="col-3 d-flex align-items-center p-0">
+            <label class="m-0 mr-2" for="qtd">Quantidade:</label>
+            <input [(ngModel)]='qtd' class="form-control" type="number" min="1" name="qtd" id="qtd">
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn btn-modal text-white" data-dismiss="modal"
+              (click)='addCarrinho(medicamento.id)'>Comprar</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex justify-content-end">
+            <p class="mb-2 mr-5" *ngIf="validacaoQTD() == true">Precisa de valores a cima de 1</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
