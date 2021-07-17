@@ -2,16 +2,6 @@ button {
   border-radius: 15px;
 }
 
-#imagem1 {
-  background-image: url("https://i.imgur.com/x4R0eeb.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
-}
-
 .jumbotron {
   background-color: #A0E2F7;
 }
@@ -42,12 +32,21 @@ button {
 
 
 
-/* Carrosel */
 
 /*desktop*/
 @media screen and (min-width: 990px) and (max-width: 9998px) {
 
 
+  /*Jubotron com a imagem*/
+  #imagem1 {
+    background-image: url("https://i.imgur.com/JCYGBB3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+  }
 
   .card-container {
     width: 100%;
@@ -107,6 +106,18 @@ button {
 
 /*mobile*/
 @media screen and (min-width: 0px) and (max-width: 990px) {
+
+  /*Jubotron com a imagem*/
+  #imagem1 {
+    background-image: url("https://i.imgur.com/iZf62jN.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+  }
+
   .fonte {
     font-size: 15pt;
     font-style: italic;
