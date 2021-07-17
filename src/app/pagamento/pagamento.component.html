@@ -7,43 +7,63 @@
         <div class="form-row ">
             <div class="form-group col-md-6">
                 <label for="inputEndereco">Endereço</label>
-                <input type="text" class="form-control borda" id="inputEndereco" placeholder="Ex:Rua Santos...">
+                <input type="text" class="form-control borda" id="inputEndereco" placeholder="Ex: Rua Santos">
             </div>
             <div class="form-group col-md-2">
                 <label for="inputNumero">Número</label>
-                <input type="numero" class="form-control borda" id="inputNumero" placeholder="nº 0000">
+                <input type="numero" class="form-control borda" id="inputNumero" placeholder="Nº 00">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputComplemento">Complemento</label>
-                <input type="text" class="form-control borda" id="inputComplemento" placeholder="Ex:Rio branco">
+                <input type="text" class="form-control borda" id="inputComplemento" placeholder="Ex: Rio Branco">
             </div>
             <div class="form-group col-md-4">
                 <label for="inputBairro">Bairro</label>
-                <input type="text" class="form-control borda" id="inputBairro" placeholder="Ex: Bairro da liberdade">
+                <input type="text" class="form-control borda" id="inputBairro" placeholder="Ex: Bairro da Liberdade">
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputCidade">Cidade</label>
-                <select id="inputCidade" class="form-control borda">
-                    <option selected>Escolher...</option>
-                    <option>...</option>
-                </select>
+                <input id="inputCidade" class="form-control borda" placeholder="Ex: São Paulo"/>
             </div>
             <div class="form-group col-md-4">
                 <label for="inputEstado">Estado</label>
                 <select id="inputEstado" class="form-control borda">
-                    <option selected>Escolher...</option>
-                    <option>...</option>
+                    <option selected>Escolha um Estado:</option>
+                    <option>AC</option>
+                    <option>AL</option>
+                    <option>AP</option>
+                    <option>AM</option>
+                    <option>BA</option>
+                    <option>CE</option>
+                    <option>DF</option>
+                    <option>ES</option>
+                    <option>GO</option>
+                    <option>MA</option>
+                    <option>MT</option>
+                    <option>MS</option>
+                    <option>MG</option>
+                    <option>PA</option>
+                    <option>PB</option>
+                    <option>PR</option>
+                    <option>PE</option>
+                    <option>PI</option>
+                    <option>RJ</option>
+                    <option>RN</option>
+                    <option>RS</option>
+                    <option>RO</option>
+                    <option>RR</option>
+                    <option>SC</option>
+                    <option>SP</option>
+                    <option>SE</option>
+                    <option>TO</option>
                 </select>
             </div>
-
         </div>
-
-        <!-- <button type="submit" class="btn btn-primary">Entrar</button> -->
     </form>
 
 </div>
@@ -69,14 +89,11 @@
 
             <form class="mt-2  col-md-12">
 
-                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aspernatur, ea
-                    commodi maiores minus
-                    harum
-                    veniam id, fugit corporis nostrum autem quo eaque ex, perferendis ipsam iure minima est eius.</p>
+                <p class="text-center">O boleto pode ser pago até em 30 dias, se não houver pagamento após o período a compra sera cancelada.</p>
 
                 <div class="d-flex justify-content-center ">
                     <button type="button" class="btn btn-danger mx-5">Cancelar</button>
-                    <button routerLink='/concluir-compra' type="button" class="btn btn-success"> Gerar</button>
+                    <button routerLink='/concluir-compra' type="button" class="btn btn-success">Gerar Boleto</button>
                 </div>
 
             </form>
@@ -88,34 +105,32 @@
         <div class="tab-pane fade " id="cartao" role="tabpanel" aria-labelledby="nav-cartao-tab">
 
 
-            <form class=" col-md-12">
-               
-                <div class="form-row">
-
-                    <div class="form-group col-md-6">
+            <form class=" col-md-12 mt-2">
+                <div class="form-row d-flex justify-content-center">
+                    <div class="form-group col-md-4">
                         <label for="inputnum">Número do cartão</label>
-                        <input type="text" class="form-control borda" id="inputnum" placeholder="Ex, xxxx,xxxx,x.xx">
+                        <input type="text" class="form-control borda" id="inputnum" placeholder="Ex: xxxx xxxx xxxx xxxx">
                     </div>
 
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-4">
                         <label for="inputNomeC">Nome do cartão</label>
-                        <input type="numero" class="form-control borda" id="inputNomeC" placeholder="Ex saude do bem ">
+                        <input type="numero" class="form-control borda" id="inputNomeC" placeholder="Ex: Fulano da Silva">
                     </div>
                 </div>
 
-                <div class="form-row ">
-                    <div class="form-group col-md-4">
+                <div class="form-row d-flex justify-content-center">
+                    <div class="form-group col-md-2">
                         <label for="inputMes">Mês de validade</label>
-                        <input type="text" class="form-control borda" id="inputEndereco" placeholder="Ex:Rua Santos...">
+                        <input type="text" class="form-control borda" id="inputEndereco" placeholder="Ex: 05">
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-2">
                         <label for="inputNumero">Ano de validade</label>
-                        <input type="numero" class="form-control borda" id="inputNumero" placeholder="nº 0000">
+                        <input type="numero" class="form-control borda" id="inputNumero" placeholder="Ex: 2021">
                     </div>
 
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-2">
                         <label for="inputNumero">CVV</label>
-                        <input type="numero" class="form-control borda" id="inputNumero" placeholder="nº 0000">
+                        <input type="numero" class="form-control borda" id="inputNumero" placeholder="Ex: 123">
                     </div>
                 </div>
 

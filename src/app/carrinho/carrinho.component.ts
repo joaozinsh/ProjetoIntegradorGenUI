@@ -1,5 +1,6 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { MedicamentoItem } from '../model/MedicamentoItem';
 import { CarrinhoService } from '../service/carrinho.service';
 
@@ -27,6 +28,11 @@ export class CarrinhoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    if (environment.token == '') {
+      alert('Você precisa estar logado para adicionar medicamentos no carrinho!');
+      this.router.navigate(['/login-cadastro']);
+    }
+
     this.totalMedicamento = this.carrinhoService.total()
     this.vazio()
     this.subtotal = 0

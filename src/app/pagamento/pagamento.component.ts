@@ -17,9 +17,5 @@ export class PagamentoComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    if (environment.token == '') {
-      alert('Faltando Token!');
-      this.router.navigate(['/home']);
-    }
   }
 }
