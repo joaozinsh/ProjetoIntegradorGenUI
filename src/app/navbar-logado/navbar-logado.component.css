@@ -34,23 +34,7 @@
     text-decoration: none;
   }
 
-  .dropdown li:hover> ul.dropdown-menu{
-    display: block;
-  }
 
-  .dropdown-submenu{
-    position: relative;
-  }
-
-  .dropdown-submenu>.dropdown-menu{
-    top: 0;
-    left: -100%;
-  }
-
-  .dropdown-menu>li>a:hover::after{
-    text-decoration: underline;
-    transform: rotate(90deg);
-  }
   
   /*mobile*/
   @media screen and (min-width: 0px) and (max-width: 990px) {
@@ -129,6 +113,34 @@
       right: 5px;
       width: 24px;
       height: 24px;
+    }
+    
+    .dropdown{
+      width: 100%;
+    }
+
+    .dropdown-menu:hover, .dropdown-menu:active{
+      position: absolute;
+      z-index: 5;
+    }
+
+    .dropdown li:hover> ul.dropdown-menu{
+      display: absolute;
+      z-index: 5;
+    }
+  
+    .dropdown-submenu{
+      position: relative;
+    }
+  
+    .dropdown-submenu>.dropdown-menu{
+      top: 0;
+      left: -100%;
+    }
+  
+    .dropdown-menu>li>a:hover::after{
+      text-decoration: underline;
+      transform: rotate(90deg);
     }
   }
   
@@ -210,6 +222,25 @@
       width: 24px;
       height: 24px;
     }
+
+    .dropdown li:hover> ul.dropdown-menu{
+      display: block;
+    }
+  
+    .dropdown-submenu{
+      position: relative;
+    }
+  
+    .dropdown-submenu>.dropdown-menu{
+      top: 0;
+      left: -100%;
+    }
+  
+    .dropdown-menu>li>a:hover::after{
+      text-decoration: underline;
+      transform: rotate(90deg);
+    }
+
   }
   
   /*icone de logo*/

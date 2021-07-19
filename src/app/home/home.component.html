@@ -31,9 +31,7 @@
 </div>
 
 
-<!--/Carrosel-->
-
-
+<!--Destaques da semana-->
 <h1 class="font-italic font-weight-bold ml-5 mt-5 mb-3">Destaques da Semana</h1>
 <div class="card-container pt-0 pb-3 mb-5" id="modelo">
   <div *ngFor='let medicamento of listaMedicamentosDesc' class="card m-2 ">
@@ -41,6 +39,8 @@
     <div class="card-body">
       <h5 class="card-title">{{medicamento.nome}}</h5>
       <p class="card-text"></p>
+    </div>
+    <div>
       <div class="p-0">
         <div class="container-fluid">
           <div class="row d-flex align-items-stretch">
@@ -59,11 +59,12 @@
 </div>
 
 
-<!-- Jumbotrom 2-->
+<!-- Jumbotrom 1 / propaganda-->
 <div id="imagem1" class="jumbotron jumbotron-fluid imagem">
 </div>
-<!--/Jumbotrom 2-->
 
+
+<!--Promoções da semana-->
 <h1 class="font-italic font-weight-bold ml-5 mt-5 mb-3">Promoções da Semana</h1>
 <div class="card-container pt-0 pb-3 mb-5 lista" id="modelo">
   <div *ngFor='let medicamento of listaMedicamentosProm' class="card m-2 " style="width: 13rem;">
@@ -71,6 +72,8 @@
     <div class="card-body">
       <h5 class="card-title">{{medicamento.nome}}</h5>
       <p class="card-text"></p>
+    </div>
+    <div>
       <div class="p-0">
         <div class="container-fluid">
           <div class="row d-flex align-items-stretch">
@@ -88,7 +91,8 @@
   </div>
 </div>
 
-<!--Jumbotrom 3 / Newsletter-->
+
+<!--Jumbotrom 2 / Newsletter-->
 <div class="container card-red my-5 py-3">
   <div class="row d-flex">
     <div class="col-12 p-0">
@@ -115,7 +119,6 @@
     </div>
   </div>
 </div>
-<!-- /Jumbotrom -->
 
 
 <!-- Modal -->

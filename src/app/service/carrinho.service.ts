@@ -8,6 +8,7 @@ import { MedicamentoItem } from '../model/MedicamentoItem';
 export class CarrinhoService {
 
   medicamentos: MedicamentoItem[] = []
+  public totalPro: number
 
   constructor() {
   }

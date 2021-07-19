@@ -34,5 +34,4 @@ export class NavbarLogadoComponent implements OnInit {
     this.totalCarrinho = this.carrinho.total()
     this.carrinho.cartSubject.next(this.totalCarrinho)
   }
-
 }
