@@ -69,6 +69,7 @@ input:hover{
   border-bottom-right-radius: 0;
   background-color: #e6e6e6;
   border-bottom: 0;
+  transition: 0.5s;
 }
 
 .custom-drop {
@@ -81,6 +82,7 @@ input:hover{
 
 .custom-drop:focus {
   background-color: #b3b3b3;
+  transition: 0.5s;
 }
 
 .voltar-top:hover {

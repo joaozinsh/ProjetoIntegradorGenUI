@@ -11,7 +11,7 @@
   align-self: baseline;
 }
 
-.card{
+.card {
   border-radius: 15px;
 }
 
@@ -19,7 +19,26 @@
   font-size: 25px;
 }
 
-.btn {
+button:hover {
+  box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+  transition: 0.25s;
+}
+
+button:active {
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+button:focus {
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+.borda {
   background-color: #E06767;
   border-radius: 15px;
   border: none;
@@ -48,4 +67,3 @@
 .bg-white {
   border-radius: 15px;
 }
-

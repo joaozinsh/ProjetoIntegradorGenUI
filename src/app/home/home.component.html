@@ -35,7 +35,7 @@
 <h1 class="font-italic font-weight-bold ml-5 mt-5 mb-3">Destaques da Semana</h1>
 <div class="card-container pt-0 pb-3 mb-5" id="modelo">
   <div *ngFor='let medicamento of listaMedicamentosDesc' class="card m-2 ">
-    <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}} alt="{{medicamento.nome}}">
+    <picture class="d-flex justify-content-center"><img width="250px" height="250px" class="" src={{medicamento.foto}} alt="{{medicamento.nome}}"></picture>
     <div class="card-body">
       <h5 class="card-title">{{medicamento.nome}}</h5>
       <p class="card-text"></p>
@@ -68,7 +68,7 @@
 <h1 class="font-italic font-weight-bold ml-5 mt-5 mb-3">Promoções da Semana</h1>
 <div class="card-container pt-0 pb-3 mb-5 lista" id="modelo">
   <div *ngFor='let medicamento of listaMedicamentosProm' class="card m-2 " style="width: 13rem;">
-    <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}} alt="{{medicamento.nome}}">
+    <picture class="d-flex justify-content-center"><img width="250px" height="250px" class="" src={{medicamento.foto}} alt="{{medicamento.nome}}"></picture>
     <div class="card-body">
       <h5 class="card-title">{{medicamento.nome}}</h5>
       <p class="card-text"></p>

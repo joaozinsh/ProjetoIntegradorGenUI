@@ -56,4 +56,10 @@ footer{
     width: 100px;
 }
 
+input::selection {
+  color: white;
+  background: rgba(96, 206, 241, 0.8);
+}
+
+
 
