@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { CarrinhoService } from './../service/carrinho.service';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
+import { NavbarLogadoComponent } from '../navbar-logado/navbar-logado.component';
 
 @Component({
   selector: 'app-pagamento',
@@ -11,7 +12,7 @@ import { environment } from 'src/environments/environment.prod';
 export class PagamentoComponent implements OnInit {
 
   constructor(
-    private router: Router
+    private navbarLogado: NavbarLogadoComponent
   ) { }
 
   ngOnInit(){

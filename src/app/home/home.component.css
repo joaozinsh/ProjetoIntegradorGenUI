@@ -1,17 +1,10 @@
+/*Card medicamentoa*/
 button {
   border-radius: 15px;
 }
 
-#imagem1 {
-  background-image: url("https://i.imgur.com/x4R0eeb.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
-}
 
+/*Card newslatter*/
 .card-red {
   align-self: center;
   background-color: #e06767;
@@ -24,29 +17,34 @@ button {
   background-color: #33b3dc;
 }
 
-/*Card */
 
+/*Card */
 #modelo {
   margin-right: 0px;
 }
 
 .carta {
-  /* opacity: 0; */
-  /* visibility: hidden; */
-  /* position: absolute; */
   padding: 2rem;
   transition: all .5s;
 }
 
 
-
-/* Carrosel */
-
-/*desktop*/
+/*responsividade desktop >990*/
 @media screen and (min-width: 990px) and (max-width: 9998px) {
 
 
+  /*Jubotron com a imagem*/
+  #imagem1 {
+    background-image: url("https://i.imgur.com/JCYGBB3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+  }
 
+  /*Card Medicamentos*/
   .card-container {
     width: 100%;
     overflow-x: scroll;
@@ -71,10 +69,7 @@ button {
     grid-gap: .5rem;
   }
 
-  .img-resp {
-    width: 12rem;
-  }
-
+  /*Custom scroll*/
   *{
     scrollbar-width: thin;
     scrollbar-color: #33B3DC ;
@@ -103,17 +98,21 @@ button {
     }
 }
 
-/*mobile*/
+/*responsividade mobile <990px*/
 @media screen and (min-width: 0px) and (max-width: 990px) {
-  .fonte {
-    font-size: 15pt;
-    font-style: italic;
+
+  /*Jubotron com a imagem*/
+  #imagem1 {
+    background-image: url("https://i.imgur.com/iZf62jN.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
   }
 
-  .img-resp {
-    width: 15rem;
-  }
-
+  /*Card*/
   .card-ajuste {
     padding: 5rem;
   }
@@ -127,6 +126,7 @@ button {
 
 }
 
+/*Modal*/
 button:focus {
   box-shadow: none;
 }

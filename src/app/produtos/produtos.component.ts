@@ -1,3 +1,4 @@
+import { NavbarLogadoComponent } from './../navbar-logado/navbar-logado.component';
 import { Doenca } from './../model/Doenca';
 import { DoencaService } from './../service/doenca.service';
 import { Component, OnInit } from '@angular/core';
@@ -111,7 +112,9 @@ export class ProdutosComponent implements OnInit {
         
         this.carrinhoService.add(this.item)
 
+
         this.router.navigate(['/carrinho'])
+
       })
     }
   }
