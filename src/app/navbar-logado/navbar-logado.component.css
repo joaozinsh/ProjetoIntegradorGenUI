@@ -152,6 +152,19 @@
       outline: none;
     }
 
+    .custom-button:hover{
+      color:antiquewhite;
+      box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+      transition: 0.25s;
+    }
+    
+    .custom-button:active{
+      box-shadow: #E06767 0px 0px 20px;
+      border-color: #E94C4C;
+      background-color: #E94C4C;
+      transition: 0.5s;
+    }
+
     .custom-drop {
       border: 0;
       border-top-left-radius: 0;

@@ -85,6 +85,26 @@ a{
     outline: none;
   }
 
+  .btn-modal:hover{
+  color:antiquewhite;
+  box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+  transition: 0.25s;
+}
+
+.btn-modal:active{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+.btn-modal:focus{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
   /*Icone de pesquisa*/
   .form-container {
     position: relative;
@@ -135,6 +155,26 @@ a{
     top: 0px;
     padding: 30px;
     outline: none;
+  }
+
+  .custom-button:hover{
+    color:antiquewhite;
+    box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+    transition: 0.25s;
+  }
+  
+  .custom-button:active{
+    box-shadow: #E06767 0px 0px 20px;
+    border-color: #E94C4C;
+    background-color: #E94C4C;
+    transition: 0.5s;
+  }
+  
+  .custom-button:focus{
+    box-shadow: #E06767 0px 0px 20px;
+    border-color: #E94C4C;
+    background-color: #E94C4C;
+    transition: 0.5s;
   }
 
   /*Icone de pesquisa*/

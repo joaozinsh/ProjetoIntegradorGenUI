@@ -161,6 +161,26 @@ input:hover{
   border: none;
 }
 
+.btn-modal:hover{
+  color:antiquewhite;
+  box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+  transition: 0.25s;
+}
+
+.btn-modal:active{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+.btn-modal:focus{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
 .corList {
   background-color: #E06767;
 }
@@ -210,6 +230,28 @@ input:hover{
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
+
+.button1:hover{
+  color:antiquewhite;
+  box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+  transition: 0.25s;
+}
+
+.button1:active{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+.button1:focus{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+
 
 .button2 {
   display: block;

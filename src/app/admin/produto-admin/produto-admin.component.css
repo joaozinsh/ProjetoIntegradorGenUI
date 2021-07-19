@@ -1,5 +1,7 @@
 button {
   border-radius: 15px;
+  background-color: #E06767;
+  color: white;
 }
 
 .card {
@@ -12,7 +14,91 @@ input, textarea, select {
   border-color: #ABABAB;
 }
 
-.btn {
-  background-color: #E06767;
+input:focus{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  transition: 0.5s;
+}
+
+input::selection {
   color: white;
+  background: #E06767;
+}
+
+input:hover{
+  border-color: #E94C4C;
+  transition:0.25s;
+}
+
+textarea:focus{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  transition: 0.5s;
+}
+
+textarea:active{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  transition: 0.5s;
+}
+
+textarea::selection {
+  color: white;
+  background: #E06767;
+}
+
+textarea:hover{
+  border-color: #E94C4C;
+  transition:0.25s;
+}
+
+select:focus{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  transition: 0.5s;
+}
+
+select:active{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  transition: 0.5s;
+}
+
+select::selection {
+  color: white;
+  background: #E06767;
+}
+
+select:hover{
+  border-color: #E94C4C;
+  transition:0.25s;
+}
+
+button:hover{
+  color:antiquewhite;
+  box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+  transition: 0.25s;
+}
+
+button:active{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+button:focus{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+.head{
+  background-color: #E94C4C;
+}
+
+.head:hover{
+  background-color: red;
+  transition: 0.5s;
 }
