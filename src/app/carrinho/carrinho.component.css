@@ -20,6 +20,17 @@ button:focus {
   box-shadow: none;
 }
 
+input {
+  border-radius: 15px;
+  border: 2px solid;
+  border-right: 0px;
+  border-color: #ABABAB;
+}
+
+.qtd {
+  border: none;
+}
+
 img {
   border-radius: 15px;
 }

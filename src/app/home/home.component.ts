@@ -28,8 +28,6 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    
-    console.log(environment.token)
     this.findByCardHome()
   }
 
@@ -58,7 +56,6 @@ export class HomeComponent implements OnInit {
   addCarrinho(id: number) {
     if (this.qtd <= 0) {
     } else {
-      console.log(this.qtd)
       this.produtoService.getByIdMedicamento(id).subscribe((resp: Medicamento) => {
         this.medicamento = resp
 
@@ -68,7 +65,6 @@ export class HomeComponent implements OnInit {
         this.item.qtd = this.qtd
         this.item.precoTotal = this.item.precoUni * this.item.qtd
 
-        console.log(this.item)
         this.carrinhoService.add(this.item)
 
         this.router.navigate(['/carrinho'])

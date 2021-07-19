@@ -10,8 +10,36 @@ button{
     border-radius: 15px;
   }
 
+  .btn {
+    background-color: #E06767;
+  }
+
   .card{
     border-radius: 15px;
+  }
+
+  input {
+    border-radius: 15px;
+    border: 2px solid;
+    border-color: #ABABAB;
+  }
+
+  textarea {
+    border-radius: 15px;
+    border: 2px solid;
+    border-color: #ABABAB;
+  }
+
+  select {
+    border-radius: 15px;
+    border: 2px solid;
+    border-color: #ABABAB;
+  }
+
+  option {
+    border-radius: 15px;
+    border: 2px solid;
+    border-color: #ABABAB;
   }
 
 .blur{

@@ -5,3 +5,14 @@ button {
 .card {
   border-radius: 15px;
 }
+
+input, textarea, select {
+  border-radius: 15px;
+  border: 2px solid;
+  border-color: #ABABAB;
+}
+
+.btn {
+  background-color: #E06767;
+  color: white;
+}

@@ -1,6 +1,6 @@
-import { Component, Injectable, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MedicamentoItem } from '../model/MedicamentoItem';
+import { environment } from 'src/environments/environment.prod';
 import { CarrinhoService } from '../service/carrinho.service';
 
 @Component({
@@ -32,6 +32,15 @@ export class CarrinhoComponent implements OnInit {
     this.subtotal = 0
     this.subTotal()
     this.total = this.subtotal
+  }
+
+  fecharCarrinho(){
+    if (environment.token == '') {
+      alert('Você precisa estar logado para continuar!');
+      this.router.navigate(['/login-cadastro']);
+    } else {
+      this.router.navigate(['/pagamento']);
+    }
   }
 
   vazio(){
