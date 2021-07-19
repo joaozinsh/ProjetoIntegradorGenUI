@@ -12,6 +12,26 @@ button{
   border-radius: 15px;
 }
 
+button:hover{
+  color:antiquewhite;
+  box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+  transition: 0.25s;
+}
+
+button:active{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+button:focus{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
 /*desktop*/
 @media screen and (min-width: 767px) and (max-width: 9998px) {
   .btn {
@@ -59,6 +79,22 @@ button{
     border-radius: 15px;
     border: 2px solid;
     border-color: #ABABAB;
+  }
+
+  input:focus{
+    box-shadow: #E06767 0px 0px 20px;
+    border-color: #E94C4C;
+    transition: 0.5s;
+  }
+
+  input::selection {
+    color: white;
+    background: #E06767;
+  }
+
+  input:hover{
+    border-color: #E94C4C;
+    transition:0.25s;
   }
 
   /*new class*/
@@ -113,6 +149,22 @@ button{
     border: 2px solid;
     border-color: #ABABAB;
     font-size: 10pt;
+  }
+
+  input:focus{
+    box-shadow: #E06767 0px 0px 20px;
+    border-color: #E94C4C;
+    transition: 0.5s;
+  }
+
+  input::selection {
+    color: white;
+    background: #E06767;
+  }
+
+  input:hover{
+    border-color: #E94C4C;
+    transition:0.25s;
   }
 
   /*New class*/

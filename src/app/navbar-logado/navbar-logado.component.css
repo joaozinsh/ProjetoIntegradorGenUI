@@ -28,14 +28,33 @@
   .icon:hover {
     color: #000000;
     cursor: pointer;
+    transition: 0.25s;
   }
   
   a{
     text-decoration: none;
   }
 
+  .dropdown li:hover> ul.dropdown-menu{
+    display: block;
+    transition: 0.25s;
+  }
 
-  
+  .dropdown-submenu{
+    position: relative;
+  }
+
+  .dropdown-submenu>.dropdown-menu{
+    top: 0;
+    left: -100%;
+  }
+
+  .dropdown-menu>li>a:hover::after{
+    text-decoration: underline;
+    transform: rotate(90deg);
+    transition: 0.25s;
+  }
+
   /*mobile*/
   @media screen and (min-width: 0px) and (max-width: 990px) {
     .nav-bar {
@@ -78,6 +97,7 @@
     .icon:hover {
       color: #ffff;
       cursor: pointer;
+      transition: 0.25s;
     }
   
   
@@ -173,6 +193,19 @@
       outline: none;
     }
 
+    .custom-button:hover{
+      color:antiquewhite;
+      box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+      transition: 0.25s;
+    }
+    
+    .custom-button:active{
+      box-shadow: #E06767 0px 0px 20px;
+      border-color: #E94C4C;
+      background-color: #E94C4C;
+      transition: 0.5s;
+    }
+
     .custom-drop {
       border: 0;
       border-top-left-radius: 0;
@@ -195,10 +228,12 @@
 
     .dropdown-item:hover {
       background-color: #b35151;
+      transition: 0.25s;
     }
 
     .custom-button:focus{
       border-bottom-left-radius: 0;
+      transition: 0.25s;
     }
   
     /*Icone de pesquisa*/

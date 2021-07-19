@@ -3,38 +3,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 
 body {
-    min-height: 100vh;
+  min-height: 100vh;
+  font-family: 'Arimo', sans-serif;
 }
 
-div{
-    font-family: 'Arimo', sans-serif;
+div {
+  font-family: 'Arimo', sans-serif;
+}
+
+ul {
+  font-family: 'Arimo', sans-serif;
+}
+
+li {
+  font-family: 'Arimo', sans-serif;
+}
+
+button {
+  font-family: 'Arimo', sans-serif;
+}
+
+label {
+  font-family: 'Arimo', sans-serif;
+}
+
+p {
+  font-family: 'Arimo', sans-serif;
 }
 
 img:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    background-image: url("./assets/img/icon/cart.png");
+  content: ' ';
+  display: block;
+  position: absolute;
+  background-image: url("./assets/img/icon/cart.png");
 }
 
 *::-webkit-scrollbar {
-    height: 10px;
-    width: 10px;
-  }
-  
-  *::-webkit-scrollbar-track {
-    background: #ffffff;
-    
-  }
-  
-  *::-webkit-scrollbar-thumb {
-    background-color: #b1b1b1;
-    border: 5px;
-  }
+  height: 10px;
+  width: 10px;
+}
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: #535353; 
-  }
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #b1b1b1;
+  border: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #535353;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #3a3a3a;
+}
 
 /*html {
     scroll-behavior: smooth;
