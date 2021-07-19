@@ -9,15 +9,22 @@ button {
 }
 
 button:hover {
-  color: white;
-  font-weight: bold;
+  box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+  transition: 0.25s;
+}
+
+button:active {
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
 }
 
 button:focus {
-  background-color: #E06767;
-  color: white;
-  font-weight: bold;
-  box-shadow: none;
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
 }
 
 input {
