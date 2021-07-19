@@ -10,6 +10,7 @@ input, textarea, select {
   border-radius: 15px;
   border: 2px solid;
   border-color: #ABABAB;
+  overflow-y: hidden;
 }
 
 .btn {
