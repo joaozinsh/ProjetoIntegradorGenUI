@@ -93,7 +93,7 @@ export class ProdutoAdminComponent implements OnInit {
       .postMedicamentos(this.medicamento)
       .subscribe((resp: Medicamento) => {
         this.medicamento = resp;
-        alert('Medicamento criado!');
+        alert('Medicamento inserido com sucesso!');
         this.medicamento = new Medicamento();
         this.findAllMedicamentos();
       });

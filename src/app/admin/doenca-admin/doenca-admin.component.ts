@@ -53,7 +53,7 @@ export class DoencaAdminComponent implements OnInit {
   cadastrarDoenca() {
     this.doencaService.postDoenca(this.doenca).subscribe((resp: Doenca) => {
       this.doenca = new Doenca()
-      alert('Categoria Doença criada!');
+      alert('Categoria doença inserida com sucesso!');
       this.findAllDoencas()
     });
   }
@@ -61,18 +61,18 @@ export class DoencaAdminComponent implements OnInit {
   atualizarDoenca(doenca: Doenca) {
     this.doencaService.putDoenca(doenca).subscribe((resp: Doenca) => {
       this.doenca = new Doenca()
-      alert('Categoria Doença atualizada!')
+      alert('Categoria doença atualizada com sucesso!')
       this.findAllDoencas()
     })
   }
 
   apagarDoenca(id: number) {
     this.doencaService.deleteDoenca(id).subscribe(() => {
-      alert("Categoria Doença apagada!")
+      alert("Categoria doença apagada com sucesso!")
       this.findAllDoencas()
     }, erro => {
       if (erro.status == 500) {
-        alert('Não é Possivel Apagar uma Doença com Medicamentos Atribulos a Ela!')
+        alert('Não é possivel apagar uma doença com medicamentos atribulos a ela!')
       }
     })
   }

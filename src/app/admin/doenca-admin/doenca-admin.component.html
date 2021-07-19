@@ -72,20 +72,20 @@
       <div class="modal-body">
 
         <div class="form-group">
-          <label for="nome">Nome:</label>
-          <input [(ngModel)]="doenca.nome" type="text" class="form-control" id="nome" name="nome"
+          <label for="nomeEdit">Nome:</label>
+          <input [(ngModel)]="doenca.nome" type="text" class="form-control" id="nomeEdit" name="nomeEdit"
             placeholder="Nome da doença">
         </div>
 
         <div class="form-group">
-          <label for="descricao" class="no-gutter m-0">Descricao:</label>
-          <input [(ngModel)]="doenca.descricao" type="text" class="form-control" name="descricao" id="descricao"
+          <label for="descricaoEdit" class="no-gutter m-0">Descricao:</label>
+          <input [(ngModel)]="doenca.descricao" type="text" class="form-control" name="descricaoEdit" id="descricaoEdit"
             placeholder="Descrição da doença" />
         </div>
 
         <div class="form-group">
-          <label for="trasmissivel" class="no-gutter m-0">Transmissivel?</label>
-          <select [(ngModel)]="doenca.transmissivel" class="form-control" name="transmissivel" id="transmissivel">
+          <label for="trasmissivelEdit" class="no-gutter m-0">Transmissivel?</label>
+          <select [(ngModel)]="doenca.transmissivel" class="form-control" name="transmissivelEdit" id="transmissivelEdit">
             <option value="true">Sim</option>
             <option value="false">Não</option>
           </select>
