@@ -24,4 +24,9 @@
   border-radius: 15px;
   border-color: #E06767 (0, 0, 0);
   align-self: center;
+  color: white;
+}
+
+.bg-white {
+  border-radius: 15px;
 }

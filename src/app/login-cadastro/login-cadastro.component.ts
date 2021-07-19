@@ -60,14 +60,10 @@ export class LoginCadastroComponent implements OnInit {
     this.auth.entrar(this.userLogin).subscribe((resp: UserLogin) => {
       this.userLogin = resp
 
-
-      console.log(this.userLogin.apelido)
-
       environment.token = this.userLogin.token
       environment.apelido = this.userLogin.apelido
       environment.tipo = this.userLogin.tipo
 
-      console.log(environment.apelido)
       this.router.navigate(['/home'])
     }, erro => {
       if (this.userLogin.email == "") {

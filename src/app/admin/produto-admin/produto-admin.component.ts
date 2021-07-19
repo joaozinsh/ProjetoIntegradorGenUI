@@ -26,17 +26,13 @@ export class ProdutoAdminComponent implements OnInit {
 
   ngOnInit() {
     this.missingToken();
-    console.log(environment.token);
     this.findAllDoencas();
     this.findAllMedicamentos();
-    console.log(this.medicamento.promocao);
-    console.log(this.medicamento.destaque);
-    console.log(this.medicamento.receita);
   }
 
   missingToken() {
     if (environment.token == '') {
-      alert('Faltando Token!');
+      alert('Necessário acesso de Administrador!')
       this.router.navigate(['/home']);
     }
   }
@@ -84,9 +80,6 @@ export class ProdutoAdminComponent implements OnInit {
   }
 
   cadastrarProd() {
-    console.log(this.listaDoenca);
-    console.log(environment.token);
-    console.log(this.medicamento);
     if(this.medicamento.promocao === null){this.medicamento.promocao = false}
     if(this.medicamento.destaque === null){this.medicamento.destaque = false}
     if(this.medicamento.receita === null){this.medicamento.receita = false}
@@ -98,7 +91,6 @@ export class ProdutoAdminComponent implements OnInit {
         this.medicamento = new Medicamento();
         this.findAllMedicamentos();
       });
-    console.log(this.medicamento);
     this.medicamento = new Medicamento();
     this.findAllMedicamentos();
   }

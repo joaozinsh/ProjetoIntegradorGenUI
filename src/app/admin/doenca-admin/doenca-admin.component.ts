@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { Doenca } from 'src/app/model/Doenca';
 import { Medicamento } from 'src/app/model/Medicamento';
 import { DoencaService } from 'src/app/service/doenca.service';
-import { ProdutosService } from 'src/app/service/produtos.service';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
@@ -23,20 +22,18 @@ export class DoencaAdminComponent implements OnInit {
 
 
   constructor(
-    private produtoService: ProdutosService,
     private doencaService: DoencaService,
     private router: Router
   ) { }
 
   ngOnInit() {
-    /*this.missingToken();*/
-    console.log(environment.token);
+    this.missingToken();
     this.findAllDoencas();
   }
 
   missingToken() {
     if (environment.token == '') {
-      /*alert('Faltando Token!');*/
+      alert('Necessário acesso de Administrador!')
       this.router.navigate(['/home'])
     }
   }
@@ -54,13 +51,11 @@ export class DoencaAdminComponent implements OnInit {
   }
 
   cadastrarDoenca() {
-    console.log(environment.token);
     this.doencaService.postDoenca(this.doenca).subscribe((resp: Doenca) => {
       this.doenca = new Doenca()
       alert('Categoria Doença criada!');
       this.findAllDoencas()
     });
-    console.log(this.doenca);
   }
 
   atualizarDoenca(doenca: Doenca) {
@@ -69,10 +64,6 @@ export class DoencaAdminComponent implements OnInit {
       alert('Categoria Doença atualizada!')
       this.findAllDoencas()
     })
-  }
-
-  limparCampos() {
-    this.doenca = new Doenca()
   }
 
   apagarDoenca(id: number) {

@@ -6,6 +6,17 @@ button {
     border-radius: 15px;
   }
 
+  .btn-cancelar{
+    background-color: #e06767;
+    color: white
+  }
+
   .card{
     border-radius: 15px;
+  }
+
+  input, select {
+    border-radius: 15px;
+    border: 2px solid;
+    border-color: #ABABAB;
   }
