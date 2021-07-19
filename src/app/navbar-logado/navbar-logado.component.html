@@ -36,7 +36,6 @@
                     </button>
 
                     <ul class="dropdown-menu custom-drop" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item">Perfil</a></li>
 
                         <li class="dropdown-submenu" *ngIf="auth.admin() == true">
                             <a class="dropdown-item dropdown-toggle">Admin</a>
@@ -49,20 +48,6 @@
                         <li><a class="dropdown-item" href="#">Sair</a></li>
                     </ul>
                 </div>
-                <!--
-                <div class="dropdown">
-                    <button class="p-2 custom-button" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <p class="login m-0 d-flex align-items-center">
-                            <i class="pr-2 fas fa-user-circle perfil"></i>
-                            Olá, {{apelido}}
-                        </p>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>-->
             </li>
         </ul>
     </div>

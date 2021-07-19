@@ -28,6 +28,7 @@
   border-radius: 100%;
   filter: saturate(30%);
   border: 1px;
+  transition: 0.5s;
 }
 
 .profile:hover {
@@ -38,14 +39,17 @@
   filter: saturate(110%);
 }
 
+.fab {
+  font-size: 28pt;
+}
+
 .fab:hover {
   padding: 0%;
-  font-size: 32pt;
   color: #3333ff;
 }
 
 .icon{
-    color:#222222;
+  color:#222222;
 }
 
 /*mobile*/

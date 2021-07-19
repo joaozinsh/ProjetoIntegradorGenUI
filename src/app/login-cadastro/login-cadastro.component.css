@@ -55,7 +55,7 @@ button{
   }
 
   input {
-    border-radius: 50px;
+    border-radius: 15px;
     border: 2px solid;
     border-color: #ABABAB;
   }
@@ -108,7 +108,7 @@ button{
 
 
   input {
-    border-radius: 50px;
+    border-radius: 15px;
     border: 2px solid;
     border-color: #ABABAB;
     font-size: 10pt;

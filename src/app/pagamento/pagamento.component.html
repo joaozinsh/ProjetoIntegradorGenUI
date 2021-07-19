@@ -1,15 +1,17 @@
-<h1 class="text-center">Endereço de Entrega</h1>
+
 <!-- Formulários -->
 
 <div class="container">
-
-    <form class=" mt-4 ">
-        <div class="form-row ">
+    
+    <form class="mt-4 card bg-light p-4">
+        <h2 class="text-center">Endereço de Entrega</h2>
+        <hr>
+        <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputEndereco">Endereço</label>
                 <input type="text" class="form-control borda" id="inputEndereco" placeholder="Ex: Rua Santos">
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-1">
                 <label for="inputNumero">Número</label>
                 <input type="numero" class="form-control borda" id="inputNumero" placeholder="Nº 00">
             </div>
@@ -68,31 +70,33 @@
 
 </div>
 <!-- /Formulários -->
-<h2 class="text-center mt-3">Forma de pagamento</h2>
+
 
 <!-- nav -->
 
-<div class="container  mb-5 mt-5 " id="postagens">
+<div class="container card bg-light my-5 p-4">
+    <h2 class="text-center">Forma de Pagamento</h2>
+    <hr>
     <nav>
-        <div class="nav nav-tabs d-flex justify-content-center " id="nav-tab" role="tablist">
+        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
 
-            <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-boleto-tab" data-toggle="tab"
+            <a class="nav-item nav-link active text-dark font-weight-bold" id="nav-boleto-tab" data-toggle="tab"
                 href="#boleto" role="tab" aria-controls="nav-boleto" aria-selected="true">Boleto</a>
 
 
-            <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-cartao-tab" data-toggle="tab"
+            <a class="nav-item nav-link text-dark font-weight-bold" id="nav-cartao-tab" data-toggle="tab"
                 href="#cartao" role="tab" aria-controls="nav-cartao" aria-selected="false">Cartão</a>
         </div>
     </nav>
-    <div class="tab-content " id="nav-tabContent">
+    <div class="tab-content bg-white" id="nav-tabContent">
         <div class="tab-pane fade show active " id="boleto" role="tabpanel" aria-labelledby="nav-boleto-tab">
 
             <form class="mt-2  col-md-12">
 
                 <p class="text-center">O boleto pode ser pago até em 30 dias, se não houver pagamento após o período a compra sera cancelada.</p>
 
-                <div class="d-flex justify-content-center ">
-                    <button type="button" class="btn btn-danger mx-5">Cancelar</button>
+                <div class="d-flex justify-content-center mt-4 pb-3">
+                    <button routerLink='/carrinho' type="button" class="btn btn-cancelar mx-3">Cancelar</button>
                     <button routerLink='/concluir-compra' type="button" class="btn btn-success">Gerar Boleto</button>
                 </div>
 
@@ -135,13 +139,11 @@
                 </div>
 
 
-                <div class="d-flex justify-content-center ">
-                    <button type="button" class="btn btn-danger mx-5">Cancelar</button>
-                    <button routerLink='/concluir-compra' type="button" class="btn btn-success ">Pagar</button>
+                <div class="d-flex justify-content-center mt-4 pb-3">
+                    <button routerLink='/carrinho' type="button" class="btn btn-cancelar mx-3">Cancelar</button>
+                    <button routerLink='/concluir-compra' type="button" class="btn btn-success">Pagar</button>
                 </div>
             </form>
-
-
 
         </div>
     </div>

@@ -1,7 +1,7 @@
 <div class="container mt-3 card bg-light">
   <div class="row d-flex justify-content-center m-3">
     <h1 class="text-center mb-3">Doença</h1>
-    <div class="col-md-12">
+    <div class="col-md-12 card p-2 px-3">
       <div class="row d-flex">
         <div class="col-md-4">
           <label for="nome" class="no-gutter m-0">Nome:</label>
@@ -22,13 +22,10 @@
         </div>
       </div>
       <div class="row d-flex justify-content-center mt-4">
-        <div class="col-md-2">
-          <button class="btn btn-success btn-block" (click)="cadastrarDoenca()">
+        <div class="col-md-2 mb-3">
+          <button class="btn btn-block" (click)="cadastrarDoenca()">
             Cadastrar
           </button>
-        </div>
-        <div class="col-md-2">
-          <button class="btn btn-danger btn-block" (click)="limparCampos()">Limpar</button>
         </div>
       </div>
     </div>
@@ -95,8 +92,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button (click)='atualizarDoenca(doenca)' type="button" class="btn btn-primary" data-dismiss="modal">Salvar mudanças</button>
+        <button (click)='atualizarDoenca(doenca)' type="button" class="btn" data-dismiss="modal">Salvar mudanças</button>
       </div>
     </div>
   </div>

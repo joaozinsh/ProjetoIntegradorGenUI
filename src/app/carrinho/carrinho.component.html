@@ -31,7 +31,7 @@
                   <button class="btn  btn-block text-center p-0 btnMenos" (click)='dec(med.nome, med.qtd)'>
                     -
                   </button>
-                  <input class="form-control text-center rounded-0" value="{{med.qtd}}" disabled/>
+                  <input class="form-control text-center rounded-0 qtd" value="{{med.qtd}}" disabled/>
                   <button class="btn  btn-block text-center p-0 btnMais" (click)='inc(med.nome, med.qtd)'>
                     +
                   </button>
@@ -126,8 +126,8 @@
             <hr />
             <div class="row d-flex justify-content-center">
               <div class="col-md-10">
-                <button  routerLink='/produtos' class="btn btn-block">Continuar Comprando</button>
-                <button routerLink='/pagamento' class="btn btn-block">
+                <button routerLink='/produtos' class="btn btn-block">Continuar Comprando</button>
+                <button (click)="fecharCarrinho()" class="btn btn-block">
                   Fechar Carrinho!
                 </button>
               </div>

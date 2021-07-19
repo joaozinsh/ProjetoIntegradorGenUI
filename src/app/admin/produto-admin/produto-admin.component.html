@@ -1,6 +1,6 @@
 <div class="container card bg-light my-3 p-3">
   <div class="row d-flex justify-content-center">
-    <h3 class="text-center">Adicionar Medicamento</h3>
+    <h1 class="text-center">Medicamento</h1>
   </div>
   <div class="row d-flex card m-2">
     <div class="col-md-12">
@@ -87,9 +87,9 @@
             </select>
           </div>
         </div>
-        <div class="row d-flex my-2">
+        <div class="row d-flex justify-content-center my-2">
           
-            <div class="col-4">
+            <div class="col-4 d-flex justify-content-center">
               <div class="form-check">
                 <input
                   [(ngModel)]="medicamento.promocao"
@@ -106,7 +106,7 @@
                 </label>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-4 d-flex justify-content-center">
               <div class="form-check">
                 <input
                   [(ngModel)]="medicamento.destaque"
@@ -123,7 +123,7 @@
                 </label>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-4 d-flex justify-content-center">
               <div class="form-check">
                 <input
                   [(ngModel)]="medicamento.receita"
@@ -142,18 +142,13 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-          <div class="col-md-2">
+          <div class="col-md-2 mt-3">
             <button
               type="submit"
-              class="btn btn-success btn-block"
+              class="btn btn-block"
               (click)="cadastrarProd()"
             >
-              Enviar
-            </button>
-          </div>
-          <div class="col-md-2">
-            <button type="submit" class="btn btn-danger btn-block">
-              Limpar
+              Cadastrar
             </button>
           </div>
         </div>
