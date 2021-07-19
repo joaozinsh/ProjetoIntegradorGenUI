@@ -53,7 +53,8 @@ textarea:hover{
   transition:0.25s;
 }
 
-select:focus{
+select:focus {
+  border-radius: 0px;
   box-shadow: #E06767 0px 0px 20px;
   border-color: #E94C4C;
   transition: 0.5s;

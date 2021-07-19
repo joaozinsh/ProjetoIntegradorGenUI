@@ -1,70 +1,78 @@
-button{
-    border-radius: 15px;
-    background-color: #E06767;
-    color: white;
-  }
+button {
+  border-radius: 15px;
+  background-color: #E06767;
+  color: white;
+}
 
-  .card{
-    border-radius: 15px;
-  }
+.card {
+  border-radius: 15px;
+}
 
-  .cursor{
-    cursor:pointer;
-  }
+.cursor {
+  cursor: pointer;
+}
 
-  input {
-    border-radius: 15px;
-    border: 2px solid;
-    border-color: #ABABAB;
-  }
+input {
+  border-radius: 15px;
+  border: 2px solid;
+  border-color: #ABABAB;
+}
 
-  input:focus{
-    box-shadow: #E06767 0px 0px 20px;
-    border-color: #E94C4C;
-    transition: 0.5s;
-  }
+input:focus {
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  transition: 0.5s;
+}
 
-  input::selection {
-    color: white;
-    background: #E06767;
-  }
+input::selection {
+  color: white;
+  background: #E06767;
+}
 
-  input:hover{
-    border-color: #E94C4C;
-    transition:0.25s;
-  }
+input:hover {
+  border-color: #E94C4C;
+  transition: 0.25s;
+}
 
-  button:hover{
-    color:antiquewhite;
-    box-shadow: rgb(255, 0, 0) 0px 0px 5px;
-    transition: 0.25s;
-  }
-  
-  button:active{
-    box-shadow: #E06767 0px 0px 20px;
-    border-color: #E94C4C;
-    background-color: #E94C4C;
-    transition: 0.5s;
-  }
-  
-  button:focus{
-    box-shadow: #E06767 0px 0px 20px;
-    border-color: #E94C4C;
-    background-color: #E94C4C;
-    transition: 0.5s;
-  }
+button:hover {
+  color: antiquewhite;
+  box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+  transition: 0.25s;
+}
 
-  select {
-    border-radius: 15px;
-    border: 2px solid;
-    border-color: #ABABAB;
-  }
+button:active {
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
 
-  .head{
-    background-color: #E94C4C;
-  }
-  
-  .head:hover{
-    background-color: red;
-    transition: 0.5s;
-  }
+button:focus {
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+select {
+  border-radius: 15px;
+  border: 2px solid;
+  border-color: #ABABAB;
+}
+
+select:focus {
+  border-radius: 0px;
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  transition: 0.5s;
+}
+
+
+.head {
+  background-color: #E94C4C;
+}
+
+.head:hover {
+  background-color: red;
+  transition: 0.5s;
+}
