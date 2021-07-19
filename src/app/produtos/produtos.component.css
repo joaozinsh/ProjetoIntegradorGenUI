@@ -12,6 +12,22 @@ input {
   border-color: #ABABAB;
 }
 
+input:focus{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  transition: 0.5s;
+}
+
+input::selection {
+  color: white;
+  background: #E06767;
+}
+
+input:hover{
+  border-color: #E94C4C;
+  transition:0.25s;
+}
+
 .btn-modal {
   background-color: #E06767;
   border: none;

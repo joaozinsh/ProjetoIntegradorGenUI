@@ -11,32 +11,30 @@
 }
 
 .fa-facebook-square:hover {
-    font-size: 40pt;
     color: #1877f1;
     transition: 0.3s;
+    transform: scale(1.5);
 }
 
 .fa-linkedin:hover {
-    font-size: 40pt;
     color: #0a66c1;
     transition: 0.3s;
+    transform: scale(1.5);
 }
 
 .fa-instagram-square:hover {
-    font-size: 40pt;
     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 0.3s;
+    transform: scale(1.5);
 }
 
 .fa-twitter-square:hover {
-    font-size: 40pt;
     color: #2aa8e0;
     transition: 0.3s;
+    transform: scale(1.5);
 }
-
-
 
 footer{
     background-color:rgba(96, 206, 241, 0.8);

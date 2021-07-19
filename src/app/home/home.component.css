@@ -32,7 +32,6 @@ button {
 /*responsividade desktop >990*/
 @media screen and (min-width: 990px) and (max-width: 9998px) {
 
-
   /*Jubotron com a imagem*/
   #imagem1 {
     background-image: url("https://i.imgur.com/JCYGBB3.png");
@@ -61,7 +60,7 @@ button {
     padding: 1.5rem;
     transition: 0.2s;
     margin: 5px;
-}
+  }
 
   .card-deck {
     display: grid;
@@ -69,33 +68,44 @@ button {
     grid-gap: .5rem;
   }
 
+
+  .img-resp {
+    width: 12rem;
+  }
+
+
   /*Custom scroll*/
   *{
     scrollbar-width: thin;
-    scrollbar-color: #33B3DC ;
-    
+    scrollbar-color: #33B3DC;
+
   }
-    
-    *::-webkit-scrollbar {
-      height: 10px;
-      width: 5px;
-    }
-    
-    *::-webkit-scrollbar-track {
-      background: #ffffff;
-      
-    }
-    
-    *::-webkit-scrollbar-thumb {
-      background-color: #33B3DC;
-      border-radius: 20px;
-      transition: 2s;
-    }
-  
-    ::-webkit-scrollbar-thumb:hover {
-      background: #2890b3; 
-      transition: 2s;
-    }
+
+  *::-webkit-scrollbar {
+    height: 10px;
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #33B3DC;
+    border-radius: 20px;
+    transition: 2s;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2890b3;
+    transition: 2s;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: #227894;
+    transition: 2s;
+  }
 }
 
 /*responsividade mobile <990px*/
@@ -137,9 +147,45 @@ input {
   border-color: #ABABAB;
 }
 
+input:focus {
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  transition: 0.5s;
+}
+
+input::selection {
+  color: white;
+  background: #E06767;
+}
+
+input:hover{
+  border-color: #E94C4C;
+  transition:0.25s;
+}
+
 .btn-modal {
   background-color: #E06767;
   border: none;
+}
+
+.btn-modal:hover{
+  color:antiquewhite;
+  box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+  transition: 0.25s;
+}
+
+.btn-modal:active{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+.btn-modal:focus{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
 }
 
 .corList {
@@ -159,6 +205,7 @@ input {
   border-bottom-right-radius: 0;
   background-color: #e6e6e6;
   border-bottom: 0;
+  transition: 0.25s;
 }
 
 .custom-drop {
@@ -191,6 +238,28 @@ input {
   border-bottom-left-radius: 0px;
 }
 
+.button1:hover{
+  color:antiquewhite;
+  box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+  transition: 0.25s;
+}
+
+.button1:active{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+.button1:focus{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+
+
 .button2 {
   display: block;
   background-color: #33b3dc;
@@ -199,7 +268,7 @@ input {
   font-size: 0.70rem;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
-  
+
 }
 
 .button2:hover {

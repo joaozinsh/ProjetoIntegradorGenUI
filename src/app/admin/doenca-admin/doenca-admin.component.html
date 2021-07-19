@@ -35,11 +35,11 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Descrição</th>
-            <th scope="col">Transmissivel</th>
-            <th scope="col" colspan="2" class="text-center pr-5">Modificações</th>
+            <th scope="col" class="text-white head">ID</th>
+            <th scope="col" class="text-white head">Nome</th>
+            <th scope="col" class="text-white head">Descrição</th>
+            <th scope="col" class="text-white head">Transmissivel</th>
+            <th scope="col" colspan="2" class="text-center text-white head">Modificações</th>
           </tr>
         </thead>
         <tbody>
@@ -48,8 +48,8 @@
             <td>{{ i.nome }}</td>
             <td>{{ i.descricao }}</td>
             <td>{{ i.transmissivel.toString().replace("true","Sim").replace("false","Não") }}</td>
-            <td><a (click)='findByIdDoenca(i.id)' class="text-info" data-toggle="modal" data-target="#ModalEditar">Editar</a></td>
-            <td><a (click)='apagarDoenca(i.id)' class="text-danger">Apagar</a></td>
+            <td><a (click)='findByIdDoenca(i.id)' class="text-info cursor" data-toggle="modal" data-target="#ModalEditar">Editar</a></td>
+            <td><a (click)='apagarDoenca(i.id)' class="text-danger cursor">Apagar</a></td>
           </tr>
         </tbody>
       </table>
