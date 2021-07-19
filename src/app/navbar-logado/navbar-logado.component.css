@@ -15,6 +15,7 @@
   .icon:hover {
     color: #000000;
     cursor: pointer;
+    transition: 0.25s;
   }
   
   a{
@@ -23,6 +24,7 @@
 
   .dropdown li:hover> ul.dropdown-menu{
     display: block;
+    transition: 0.25s;
   }
 
   .dropdown-submenu{
@@ -37,6 +39,7 @@
   .dropdown-menu>li>a:hover::after{
     text-decoration: underline;
     transform: rotate(90deg);
+    transition: 0.25s;
   }
   
   /*mobile*/
@@ -81,6 +84,7 @@
     .icon:hover {
       color: #ffff;
       cursor: pointer;
+      transition: 0.25s;
     }
   
   
@@ -170,10 +174,12 @@
 
     .dropdown-item:hover {
       background-color: #b35151;
+      transition: 0.25s;
     }
 
     .custom-button:focus{
       border-bottom-left-radius: 0;
+      transition: 0.25s;
     }
   
     /*Icone de pesquisa*/

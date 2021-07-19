@@ -48,8 +48,8 @@
             <td>{{ i.nome }}</td>
             <td>{{ i.descricao }}</td>
             <td>{{ i.transmissivel.toString().replace("true","Sim").replace("false","Não") }}</td>
-            <td><a (click)='findByIdDoenca(i.id)' class="text-info" data-toggle="modal" data-target="#ModalEditar">Editar</a></td>
-            <td><a (click)='apagarDoenca(i.id)' class="text-danger">Apagar</a></td>
+            <td><a (click)='findByIdDoenca(i.id)' class="text-info cursor" data-toggle="modal" data-target="#ModalEditar">Editar</a></td>
+            <td><a (click)='apagarDoenca(i.id)' class="text-danger cursor">Apagar</a></td>
           </tr>
         </tbody>
       </table>

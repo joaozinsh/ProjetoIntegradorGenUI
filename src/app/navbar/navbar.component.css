@@ -15,6 +15,7 @@
 .icon:hover {
   color: #000000;
   cursor: pointer;
+  transition: 0.25s;
 }
 
 a{
@@ -45,7 +46,7 @@ a{
     font-size: 11pt;
   }
 
-  /*Botões cutomizados*/
+  /*Botões customizados*/
   .custom-cart {
     background-color: #E06767;
     color: #ffff;
@@ -68,6 +69,7 @@ a{
   .icon:hover {
     color: #ffff;
     cursor: pointer;
+    transition: 0.5s;
   }
 
 
