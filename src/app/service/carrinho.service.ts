@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { MedicamentoItem } from '../model/MedicamentoItem';
 
 @Injectable({
@@ -12,9 +13,10 @@ export class CarrinhoService {
   constructor() {
   }
 
-  total(){
-    this.totalPro = this.medicamentos.length
-    return this.totalPro
+  cartSubject = new Subject<any>()
+
+  total() {
+    return this.medicamentos.length
   }
 
   add(medicamento: MedicamentoItem) {

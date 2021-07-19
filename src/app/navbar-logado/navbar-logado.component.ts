@@ -1,8 +1,7 @@
-import { Router } from '@angular/router';
-import { CarrinhoService } from './../service/carrinho.service';
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 import { AuthService } from '../service/auth.service';
+import { CarrinhoService } from '../service/carrinho.service';
 
 @Component({
   selector: 'app-navbar-logado',
@@ -10,18 +9,29 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./navbar-logado.component.css']
 })
 
-
+@Injectable({
+  providedIn: 'root'
+})
 export class NavbarLogadoComponent implements OnInit {
-
+  
   apelido = environment.apelido
-
-
+  totalCarrinho: number
+  
   constructor(
-    public auth: AuthService,
-    private carrinhoService: CarrinhoService
+    public  auth: AuthService,
+    public carrinho: CarrinhoService
   ) {
-   }
+    this.carrinho.cartSubject.subscribe((data)=> {
+      this.totalCarrinho = data
+    })
+  }
 
-  ngOnInit(): void {   
+  ngOnInit(){
+    this.cartCounter()
+  }
+
+  cartCounter(){
+    this.totalCarrinho = this.carrinho.total()
+    this.carrinho.cartSubject.next(this.totalCarrinho)
   }
 }
