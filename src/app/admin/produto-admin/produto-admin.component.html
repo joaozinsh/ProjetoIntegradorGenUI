@@ -8,54 +8,26 @@
         <div class="row d-flex">
           <div class="col-md-6">
             <label for="nome" class="no-gutter m-0">Produto:</label>
-            <input
-              [(ngModel)]="medicamento.nome"
-              type="text"
-              class="form-control"
-              id="nome"
-              name="nome"
-              placeholder="Nome do Produto"
-              required
-            />
+            <input [(ngModel)]="medicamento.nome" type="text" class="form-control" id="nome" name="nome"
+              placeholder="Nome do Produto" required />
           </div>
           <div class="col-md-6">
             <label for="foto" class="no-gutter m-0">Foto:</label>
-            <input
-              [(ngModel)]="medicamento.foto"
-              type="text"
-              class="form-control"
-              name="foto"
-              id="foto"
-              placeholder="link do imgur"
-              required
-            />
+            <input [(ngModel)]="medicamento.foto" type="text" class="form-control" name="foto" id="foto"
+              placeholder="link do imgur" required />
           </div>
         </div>
         <div class="row d-flex align-items-center">
           <div class="col-md-3 my-3">
             <label for="desc" class="no-gutter m-0">Descrição:</label>
-            <textarea
-              [(ngModel)]="medicamento.descricao"
-              type="text"
-              class="form-control"
-              id="desc"
-              name="desc"
-              placeholder="Insira a descrição do produto"
-              rows="3"
-              required
-            ></textarea>
+            <textarea [(ngModel)]="medicamento.descricao" type="text" class="form-control" id="desc" name="desc"
+              placeholder="Insira a descrição do produto" rows="3" required></textarea>
           </div>
           <div class="col-md-3 my-3 d-flex align-items-start">
-            <label for="selectdoencas" class="p-1 d-flex align-items-start"
-              >Doença:
+            <label for="selectdoencas" class="p-1 d-flex align-items-start">Doença:
             </label>
-            <select
-              [(ngModel)]="medicamento.doencas"
-              name="selectdoencas"
-              id="selectdoencas"
-              class="form-control"
-              multiple
-            >
+            <select [(ngModel)]="medicamento.doencas" name="selectdoencas" id="selectdoencas" class="form-control"
+              multiple>
               <option *ngFor="let i of listaDoenca" [ngValue]="i">
                 {{ i.nome }}
               </option>
@@ -63,24 +35,12 @@
           </div>
           <div class="col-md-3 my-3">
             <label for="preco" class="no-gutter m-0">Preço: </label>
-            <input
-              [(ngModel)]="medicamento.preco"
-              type="text"
-              class="form-control"
-              id="preco"
-              name="preco"
-              placeholder="0.00"
-              required
-            />
+            <input [(ngModel)]="medicamento.preco" type="text" class="form-control" id="preco" name="preco"
+              placeholder="0.00" required />
           </div>
           <div class="col-md-3">
             <label for="tipo" class="no-gutter m-0">Tipo: </label>
-            <select
-              [(ngModel)]="medicamento.tipo"
-              name="tipo"
-              id="tipo"
-              class="form-control"
-            >
+            <select [(ngModel)]="medicamento.tipo" name="tipo" id="tipo" class="form-control">
               <option class="form-control">Referência</option>
               <option class="form-control">Genérico</option>
               <option class="form-control">Similar</option>
@@ -88,66 +48,38 @@
           </div>
         </div>
         <div class="row d-flex justify-content-center my-2">
-          
-            <div class="col-4 d-flex justify-content-center">
-              <div class="form-check">
-                <input
-                  [(ngModel)]="medicamento.promocao"
-                  (change)='checkedPromo($event)'
-                  class="form-check-input"
-                  type="checkbox"
-                  id="promocao"
-                  value="true"
-                  name="promocao"
-                  checked
-                />
-                <label class="form-check-label" for="promocao">
-                  Na Promoção?
-                </label>
-              </div>
+
+          <div class="col-4 d-flex justify-content-center">
+            <div class="form-check">
+              <input [(ngModel)]="medicamento.promocao" (change)='checkedPromo($event)' class="form-check-input"
+                type="checkbox" id="promocao" value="true" name="promocao" checked />
+              <label class="form-check-label" for="promocao">
+                Na Promoção?
+              </label>
             </div>
-            <div class="col-4 d-flex justify-content-center">
-              <div class="form-check">
-                <input
-                  [(ngModel)]="medicamento.destaque"
-                  (change)='checkedDestaque($event)'
-                  class="form-check-input"
-                  type="checkbox"
-                  id="destaque"
-                  value="true"
-                  name="destaque"
-                  checked
-                />
-                <label class="form-check-label" for="destaque">
-                  Em Destaque na Home?
-                </label>
-              </div>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <div class="form-check">
+              <input [(ngModel)]="medicamento.destaque" (change)='checkedDestaque($event)' class="form-check-input"
+                type="checkbox" id="destaque" value="true" name="destaque" checked />
+              <label class="form-check-label" for="destaque">
+                Em Destaque na Home?
+              </label>
             </div>
-            <div class="col-4 d-flex justify-content-center">
-              <div class="form-check">
-                <input
-                  [(ngModel)]="medicamento.receita"
-                  class="form-check-input"
-                  type="checkbox"
-                  id="receita"
-                  value="true"
-                  name="receita"
-                  default="false"
-                  checked
-                />
-                <label class="form-check-label" for="receita">
-                  Precisa de receita?
-                </label>
-              </div>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <div class="form-check">
+              <input [(ngModel)]="medicamento.receita" class="form-check-input" type="checkbox" id="receita"
+                value="true" name="receita" default="false" checked />
+              <label class="form-check-label" for="receita">
+                Precisa de receita?
+              </label>
             </div>
+          </div>
         </div>
         <div class="row d-flex justify-content-center">
           <div class="col-md-2 mt-3">
-            <button
-              type="submit"
-              class="btn btn-block"
-              (click)="cadastrarProd()"
-            >
+            <button type="submit" class="btn btn-block" (click)="cadastrarProd()">
               Cadastrar
             </button>
           </div>
@@ -164,6 +96,7 @@
             <th scope="col" class="text-white head">Preço</th>
             <th scope="col" class="text-white head">Doença</th>
             <th scope="col" class="text-white head">Tipo</th>
+            <th scope="col" colspan="2" class="text-center text-white head">Modificações</th>
           </tr>
         </thead>
         <tbody>
@@ -176,10 +109,102 @@
               </p>
             </td>
             <td>{{ medicamento.tipo }}</td>
+            <td><a (click)='findByIdMedicamento(medicamento.id)' class="text-info cursor" data-toggle="modal"
+                data-target="#ModalEditar">Editar</a></td>
+            <td><a (click)='apagarMedicamento(medicamento.id)' class="text-danger cursor">Apagar</a></td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
   <hr />
+</div>
+
+
+<div class="modal fade" id="ModalEditar" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Editar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input [(ngModel)]="medicamento.nome" type="text" class="form-control" id="nome" name="nome"
+            placeholder="Nome do medicamento">
+        </div>
+
+        <div class="form-group">
+          <label for="descricao" class="no-gutter m-0">Descricao:</label>
+          <input [(ngModel)]="medicamento.descricao" type="text" class="form-control" name="descricao" id="descricao"
+            placeholder="Descrição do medicamento" />
+        </div>
+
+        <div class="form-group">
+          <label for="foto">Foto:</label>
+          <input [(ngModel)]="medicamento.foto" type="text" class="form-control" id="foto" name="foto"
+            placeholder="Link da foto">
+        </div>
+
+        <div class="form-group">
+          <label for="selectdoencas" class="p-1 d-flex align-items-start">Doença:
+          </label>
+          <select [(ngModel)]="medicamento.doencas" name="selectdoencas" id="selectdoencas" class="form-control"
+            multiple>
+            <option *ngFor="let i of listaDoenca" [ngValue]="i">
+              {{ i.nome }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="preco" class="no-gutter m-0">Preço:</label>
+          <input [(ngModel)]="medicamento.preco" type="text" class="form-control" name="preco" id="preco"
+            placeholder="0.00" />
+        </div>
+
+        <div class="form-group">
+          <label for="tipo" class="no-gutter m-0">Tipo: </label>
+          <select [(ngModel)]="medicamento.tipo" name="tipo" id="tipo" class="form-control">
+            <option class="form-control">Referência</option>
+            <option class="form-control">Genérico</option>
+            <option class="form-control">Similar</option>
+          </select>
+        </div>
+
+        <div class="form-group pl-4">
+          <input [(ngModel)]="medicamento.promocao" (change)='checkedPromo($event)' class="form-check-input"
+            type="checkbox" id="promocao" value="true" name="promocao" checked />
+          <label class="form-check-label" for="promocao">
+            Na Promoção?
+          </label>
+        </div>
+
+        <div class="form-group pl-4">
+          <input [(ngModel)]="medicamento.destaque" (change)='checkedDestaque($event)' class="form-check-input"
+            type="checkbox" id="destaque" value="true" name="destaque" checked />
+          <label class="form-check-label" for="destaque">
+            Em Destaque na Home?
+          </label>
+        </div>
+
+        <div class="form-group pl-4">
+          <input [(ngModel)]="medicamento.receita" class="form-check-input" type="checkbox" id="receita" value="true"
+            name="receita" default="false" checked />
+          <label class="form-check-label" for="receita">
+            Precisa de receita?
+          </label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button (click)='atualizarMedicamento(medicamento)' type="button" class="btn" data-dismiss="modal">Salvar
+          mudanças</button>
+      </div>
+    </div>
+  </div>
 </div>

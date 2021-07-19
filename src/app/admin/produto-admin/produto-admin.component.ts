@@ -72,6 +72,12 @@ export class ProdutoAdminComponent implements OnInit {
       this.medicamento.receita = false
   }
 
+  findByIdMedicamento(id: number) {
+    this.produtoService.getByIdMedicamento(id).subscribe((resp: Medicamento)=> {
+      this.medicamento = resp
+    })
+  }
+
   findAllDoencas() {
     this.doencaService.getAllDoenca().subscribe((resp: Doenca[]) => {
       this.listaDoenca = resp;
@@ -91,7 +97,21 @@ export class ProdutoAdminComponent implements OnInit {
         this.medicamento = new Medicamento();
         this.findAllMedicamentos();
       });
-    this.medicamento = new Medicamento();
-    this.findAllMedicamentos();
   }
+
+  atualizarMedicamento(medicamento: Medicamento) {
+    this.produtoService.putMedicamento(medicamento).subscribe((resp: Medicamento)=> {
+      this.medicamento = new Medicamento()
+      alert("Medicamento atualizado com sucesso!")
+      this.findAllMedicamentos()
+    })
+  }
+
+  apagarMedicamento(id: number) {
+    this.produtoService.deleteMedicamento(id).subscribe(()=> {
+      alert("Medicamento apagado com sucesso!")
+      this.findAllMedicamentos()
+    })
+  }
+
 }
