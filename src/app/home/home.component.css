@@ -1,12 +1,11 @@
+/*Card medicamentoa*/
 button {
   border-radius: 15px;
 }
 
-.jumbotron {
-  background-color: #A0E2F7;
-}
 
-.jumbotron3 {
+/*Card newslatter*/
+.card-red {
   align-self: center;
   background-color: #e06767;
   border-radius: 15px;
@@ -18,24 +17,19 @@ button {
   background-color: #33b3dc;
 }
 
-/*Card */
 
+/*Card */
 #modelo {
   margin-right: 0px;
 }
 
 .carta {
-  /* opacity: 0; */
-  /* visibility: hidden; */
-  /* position: absolute; */
   padding: 2rem;
   transition: all .5s;
 }
 
 
-
-
-/*desktop*/
+/*responsividade desktop >990*/
 @media screen and (min-width: 990px) and (max-width: 9998px) {
 
 
@@ -50,6 +44,7 @@ button {
     background-size: 100% 100%;
   }
 
+  /*Card Medicamentos*/
   .card-container {
     width: 100%;
     overflow-x: scroll;
@@ -74,10 +69,7 @@ button {
     grid-gap: .5rem;
   }
 
-  .img-resp {
-    width: 12rem;
-  }
-
+  /*Custom scroll*/
   *{
     scrollbar-width: thin;
     scrollbar-color: #33B3DC ;
@@ -106,7 +98,7 @@ button {
     }
 }
 
-/*mobile*/
+/*responsividade mobile <990px*/
 @media screen and (min-width: 0px) and (max-width: 990px) {
 
   /*Jubotron com a imagem*/
@@ -120,15 +112,7 @@ button {
     background-size: 100% 100%;
   }
 
-  .fonte {
-    font-size: 15pt;
-    font-style: italic;
-  }
-
-  .img-resp {
-    width: 15rem;
-  }
-
+  /*Card*/
   .card-ajuste {
     padding: 5rem;
   }
@@ -142,6 +126,7 @@ button {
 
 }
 
+/*Modal*/
 button:focus {
   box-shadow: none;
 }
