@@ -67,6 +67,7 @@ img {
   cursor: pointer;
   font-size: 15pt;
   color: #E06767;
+  transition: 0.25s;
 }
 
 
