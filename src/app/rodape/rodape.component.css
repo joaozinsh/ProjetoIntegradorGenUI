@@ -13,13 +13,13 @@
 .fa-facebook-square:hover {
     color: #1877f1;
     transition: 0.3s;
-    transform: scale(1.75);
+    transform: scale(1.5);
 }
 
 .fa-linkedin:hover {
     color: #0a66c1;
     transition: 0.3s;
-    transform: scale(1.75);
+    transform: scale(1.5);
 }
 
 .fa-instagram-square:hover {
@@ -27,16 +27,14 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 0.3s;
-    transform: scale(1.75);
+    transform: scale(1.5);
 }
 
 .fa-twitter-square:hover {
     color: #2aa8e0;
     transition: 0.3s;
-    transform: scale(1.75);
+    transform: scale(1.5);
 }
-
-
 
 footer{
     background-color:rgba(96, 206, 241, 0.8);
