@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'produtos', component: ProdutosComponent },
   { path: 'sobre', component: SobreComponent },
   { path: 'admin-doenca', component: DoencaAdminComponent },
-  { path: 'admin-produto', component: ProdutoAdminComponent },
+  { path: 'admin-produto', component: ProdutoAdminComponent }
 ];
 
 const routerOptions: ExtraOptions = {

@@ -11,6 +11,19 @@
   font-size: 20pt;
 }
 
+span#counter {
+  position: absolute;
+  right: 216px;
+  top: 10px;
+  background-color: #e06767;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  font-size: 10pt;
+}
+
 
 .icon:hover {
   color: #000000;
@@ -21,6 +34,8 @@
 a{
   text-decoration: none;
 }
+
+/*Teste do indicador*/
 
 
 /*mobile*/

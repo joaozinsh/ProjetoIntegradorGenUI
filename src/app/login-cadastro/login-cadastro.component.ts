@@ -16,7 +16,6 @@ export class LoginCadastroComponent implements OnInit {
   userLogin: UserLogin = new UserLogin
 
   confirmarSenha: string = ""
-  validSenha: string
   isChecked: boolean
 
   constructor(
@@ -33,7 +32,6 @@ export class LoginCadastroComponent implements OnInit {
     this.user.tipo = "Cliente"
 
     if(this.confirmarSenha == ""){
-      this.validSenha = "Por favor, confirme sua senha."
     } else {
       if (this.user.senha == this.confirmarSenha) {
         if (this.isChecked == true) {
@@ -43,15 +41,14 @@ export class LoginCadastroComponent implements OnInit {
             this.user = new Usuario()
             this.confirmarSenha = ""
             this.isChecked = false
-            this.router.navigate(['/login-cadastro'])
+            alert("Cadastro realizado com sucesso! Faça login ao lado.")
           })
         } else {
-          alert("teste")
+          alert("Por favor, aceite os termos de uso!")
         }
-  
       } else {
         this.confirmarSenha = ""
-        this.validSenha = "A senha deve ser iguais"
+        alert("As senhas devem ser iguais!")
       }
     } 
   }
@@ -66,29 +63,15 @@ export class LoginCadastroComponent implements OnInit {
 
       this.router.navigate(['/home'])
     }, erro => {
+      if(erro.status == 401) {
+        alert("Email ou senha invalidos!")
+      }
+
       if (this.userLogin.email == "") {
-        alert("Faltou o email")
+        alert("Por favor, digite um email")
       } else if (this.userLogin.senha == "") {
-        alert("Faltou a senha")
+        alert("Por favor, digite uma senha")
       }
     })
   }
 }
-
-(function () {
-  'use strict';
-  window.addEventListener('load', function () {
-      // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
-      var forms = document.getElementsByClassName('needs-validation');
-      // Faz um loop neles e evita o envio
-      var validation = Array.prototype.filter.call(forms, function (form) {
-          form.addEventListener('submit', function (event: any) {
-              if (form.checkValidity() === false) {
-                  event.preventDefault();
-                  event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-          }, false);
-      });
-  }, false);
-})();

@@ -10,6 +10,19 @@
     color: #b3b3b3;
     font-size: 20pt;
   }
+
+  span#counter {
+    position: absolute;
+    right: 216px;
+    top: 10px;
+    background-color: #e06767;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    font-size: 10pt;
+  }
   
   
   .icon:hover {
@@ -41,7 +54,7 @@
     transform: rotate(90deg);
     transition: 0.25s;
   }
-  
+
   /*mobile*/
   @media screen and (min-width: 0px) and (max-width: 990px) {
     .nav-bar {
@@ -120,6 +133,34 @@
       right: 5px;
       width: 24px;
       height: 24px;
+    }
+    
+    .dropdown{
+      width: 100%;
+    }
+
+    .dropdown-menu:hover, .dropdown-menu:active{
+      position: absolute;
+      z-index: 5;
+    }
+
+    .dropdown li:hover> ul.dropdown-menu{
+      display: absolute;
+      z-index: 5;
+    }
+  
+    .dropdown-submenu{
+      position: relative;
+    }
+  
+    .dropdown-submenu>.dropdown-menu{
+      top: 0;
+      left: -100%;
+    }
+  
+    .dropdown-menu>li>a:hover::after{
+      text-decoration: underline;
+      transform: rotate(90deg);
     }
   }
   
@@ -216,6 +257,25 @@
       width: 24px;
       height: 24px;
     }
+
+    .dropdown li:hover> ul.dropdown-menu{
+      display: block;
+    }
+  
+    .dropdown-submenu{
+      position: relative;
+    }
+  
+    .dropdown-submenu>.dropdown-menu{
+      top: 0;
+      left: -100%;
+    }
+  
+    .dropdown-menu>li>a:hover::after{
+      text-decoration: underline;
+      transform: rotate(90deg);
+    }
+
   }
   
   /*icone de logo*/

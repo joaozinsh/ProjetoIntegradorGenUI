@@ -1,6 +1,9 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { NavbarLogadoComponent } from '../navbar-logado/navbar-logado.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 import { CarrinhoService } from '../service/carrinho.service';
 
 @Component({
@@ -23,7 +26,9 @@ export class CarrinhoComponent implements OnInit {
   constructor(
 
     private carrinhoService: CarrinhoService,
-    private router: Router
+    private router: Router,
+    private navbar: NavbarComponent,
+    private navbarLogado: NavbarLogadoComponent
   ) { }
 
   ngOnInit() {
@@ -32,6 +37,8 @@ export class CarrinhoComponent implements OnInit {
     this.subtotal = 0
     this.subTotal()
     this.total = this.subtotal
+    this.navbar.cartCounter()
+    this.navbarLogado.cartCounter()
   }
 
   fecharCarrinho(){
@@ -92,6 +99,8 @@ export class CarrinhoComponent implements OnInit {
         this.vazio()
       }
     }
+    this.navbar.cartCounter()
+    this.navbarLogado.cartCounter()
   }
 
   clear() {
@@ -100,5 +109,7 @@ export class CarrinhoComponent implements OnInit {
     this.total = this.subtotal
     this.totalMedicamento = 0
     this.vazio()
+    this.navbar.cartCounter()
+    this.navbarLogado.cartCounter()
   }
 }

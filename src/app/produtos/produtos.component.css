@@ -79,6 +79,7 @@ input:hover{
   border: none;
   font-size: 0.70rem;
   border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
 
@@ -89,6 +90,7 @@ input:hover{
   border: none;
   font-size: 0.70rem;
   border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
   border-bottom-right-radius: 0px;
   
 }
@@ -99,4 +101,9 @@ input:hover{
 
 .form-control {
   box-shadow: none;
+}
+
+.card{
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
