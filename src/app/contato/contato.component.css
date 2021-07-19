@@ -11,7 +11,7 @@ button {
 }
 
 button:hover {
-  color: antiquewhite;
+  color: white;
   box-shadow: rgb(255, 0, 0) 0px 0px 5px;
   transition: 0.25s;
 }
@@ -89,6 +89,16 @@ option {
   border-radius: 15px;
   border: 2px solid;
   border-color: #ABABAB;
+}
+
+textarea:hover {
+  border-color: #E94C4C;
+  transition: 0.25s;
+}
+
+select:hover {
+  border-color: #E94C4C;
+  transition: 0.25s;
 }
 
 .blur {
