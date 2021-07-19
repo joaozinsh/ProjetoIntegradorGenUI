@@ -104,3 +104,7 @@ select:hover{
   background-color: red;
   transition: 0.5s;
 }
+
+.cursor {
+  cursor: pointer;
+}
