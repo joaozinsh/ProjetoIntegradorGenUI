@@ -11,6 +11,11 @@ button {
     color: white
   }
 
+  .btn-sucesso{
+    background-color: #28a745;
+    color: white
+  }
+
   .card{
     border-radius: 15px;
   }
@@ -19,4 +24,58 @@ button {
     border-radius: 15px;
     border: 2px solid;
     border-color: #ABABAB;
+  }
+
+  input:focus, select:focus{
+    box-shadow: #E06767 0px 0px 20px;
+    border-color: #E94C4C;
+    transition: 0.5s;
+  }
+
+  input::selection, select::selection {
+    color: white;
+    background: #E06767;
+  }
+
+  input:hover, select:hover{
+    border-color: #E94C4C;
+    transition:0.25s;
+  }
+
+  .btn-cancelar:hover{
+    box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+    transition: 0.25s;
+  }
+  
+  .btn-cancelar:active{
+    box-shadow: #E06767 0px 0px 20px;
+    border-color: #E94C4C;
+    background-color: #E94C4C;
+    transition: 0.5s;
+  }
+  
+  .btn-cancelar:focus{
+    box-shadow: #E06767 0px 0px 20px;
+    border-color: #E94C4C;
+    background-color: #E94C4C;
+    transition: 0.5s;
+  }
+
+  .btn-sucesso:hover{
+    box-shadow: rgb(0, 255, 0) 0px 0px 5px;
+    transition: 0.25s;
+  }
+  
+  .btn-sucesso:active{
+    box-shadow: #28a745 0px 0px 20px;
+    border-color: #22ac42;
+    background-color: #22ac42;
+    transition: 0.5s;
+  }
+  
+  .btn-sucesso:focus{
+    box-shadow: #28a745 0px 0px 20px;
+    border-color: #22ac42;
+    background-color: #22ac42;
+    transition: 0.5s;
   }

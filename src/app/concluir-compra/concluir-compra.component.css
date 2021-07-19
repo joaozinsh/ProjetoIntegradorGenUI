@@ -31,4 +31,23 @@ button {
         width: 25%;
         margin-bottom: 15px;
       }
+
+      .btn:hover{
+        box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+        transition: 0.25s;
+      }
+      
+      .btn:active{
+        box-shadow: #E06767 0px 0px 20px;
+        border-color: #E94C4C;
+        background-color: #E94C4C;
+        transition: 0.5s;
+      }
+      
+      .btn:focus{
+        box-shadow: #E06767 0px 0px 20px;
+        border-color: #E94C4C;
+        background-color: #E94C4C;
+        transition: 0.5s;
+      }
 }
