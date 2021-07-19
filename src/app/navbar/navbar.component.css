@@ -101,7 +101,6 @@ a{
   }
 
   .btn-modal:hover{
-  color:antiquewhite;
   box-shadow: rgb(255, 0, 0) 0px 0px 5px;
   transition: 0.25s;
 }
@@ -173,7 +172,6 @@ a{
   }
 
   .custom-button:hover{
-    color:antiquewhite;
     box-shadow: rgb(255, 0, 0) 0px 0px 5px;
     transition: 0.25s;
   }

@@ -81,10 +81,12 @@
             </div>
             <div *ngFor='let medicamento of doenca.medicamentos' class="card m-2 " style="width: 13rem;">
                 <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}}
-                    alt="Imagem de capa do card">
+                    alt="{{medicamento.nome}}">
                 <div class="card-body">
                     <h5 class="card-title">{{medicamento.nome}}</h5>
                     <p class="card-text"></p>
+                </div>
+                <div>
                     <div class="p-0">
                         <div class="container-fluid">
                             <div class="row d-flex align-items-stretch">

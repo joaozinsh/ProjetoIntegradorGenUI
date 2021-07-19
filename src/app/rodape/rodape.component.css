@@ -1,6 +1,7 @@
 .sticky-footer {
     position: sticky;
     top: 100%;
+    
 }
 
 .fab{
@@ -13,13 +14,14 @@
 .fa-facebook-square:hover {
     color: #1877f1;
     transition: 0.3s;
-    transform: scale(1.5);
+    font-size: 40pt;
+    
 }
 
 .fa-linkedin:hover {
     color: #0a66c1;
     transition: 0.3s;
-    transform: scale(1.5);
+    font-size: 40pt;
 }
 
 .fa-instagram-square:hover {
@@ -27,13 +29,13 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 0.3s;
-    transform: scale(1.5);
+    font-size: 40pt;
 }
 
 .fa-twitter-square:hover {
     color: #2aa8e0;
     transition: 0.3s;
-    transform: scale(1.5);
+    font-size: 40pt;
 }
 
 footer{
