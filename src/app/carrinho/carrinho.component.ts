@@ -22,9 +22,9 @@ export class CarrinhoComponent implements OnInit {
   total: number
 
   qtd: number
-
+   
   constructor(
-
+    
     private carrinhoService: CarrinhoService,
     private router: Router,
     private navbar: NavbarComponent,
@@ -32,6 +32,7 @@ export class CarrinhoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
     this.totalMedicamento = this.carrinhoService.total()
     this.vazio()
     this.subtotal = 0
