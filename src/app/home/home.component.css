@@ -58,17 +58,11 @@ button {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
     transition: 0.2s;
     margin: 5px;
+    border-end-end-radius: 15px;
+    border-end-start-radius: 15px;
 }
-
-  .card-deck {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: .5rem;
-  }
-
   /*Custom scroll*/
   *{
     scrollbar-width: thin;
@@ -188,6 +182,7 @@ input {
   border: none;
   font-size: 0.70rem;
   border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
 
@@ -198,6 +193,7 @@ input {
   border: none;
   font-size: 0.70rem;
   border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
   border-bottom-right-radius: 0px;
   
 }
