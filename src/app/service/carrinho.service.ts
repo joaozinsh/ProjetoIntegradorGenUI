@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { CarrinhoComponent } from '../carrinho/carrinho.component';
 import { MedicamentoItem } from '../model/MedicamentoItem';
 
 @Injectable({
@@ -8,12 +7,14 @@ import { MedicamentoItem } from '../model/MedicamentoItem';
 export class CarrinhoService {
 
   medicamentos: MedicamentoItem[] = []
+  public totalPro: number
 
   constructor() {
   }
 
-  total() {
-    return this.medicamentos.length
+  total(){
+    this.totalPro = this.medicamentos.length
+    return this.totalPro
   }
 
   add(medicamento: MedicamentoItem) {

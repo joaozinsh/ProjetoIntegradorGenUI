@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CarrinhoService } from './../service/carrinho.service';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 import { AuthService } from '../service/auth.service';
 
@@ -7,15 +9,19 @@ import { AuthService } from '../service/auth.service';
   templateUrl: './navbar-logado.component.html',
   styleUrls: ['./navbar-logado.component.css']
 })
+
+
 export class NavbarLogadoComponent implements OnInit {
+
   apelido = environment.apelido
-  
+
+
   constructor(
-    public  auth: AuthService
-  ) { }
+    public auth: AuthService,
+    private carrinhoService: CarrinhoService
+  ) {
+   }
 
-  ngOnInit(){
-    
+  ngOnInit(): void {   
   }
-
 }
