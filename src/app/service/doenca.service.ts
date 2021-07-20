@@ -16,6 +16,13 @@ export class DoencaService {
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
+
+  refreshToken(){
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
   baseURL = "https://api-saudedobem.herokuapp.com"
 
   getAllDoenca(): Observable<Doenca[]> {
@@ -27,14 +34,17 @@ export class DoencaService {
   }
 
   postDoenca(doenca: Doenca): Observable<Doenca> {
+    this.refreshToken()
     return this.http.post<Doenca>(`${this.baseURL}/doencas/cadastrar`, doenca, this.token)
   }
 
   putDoenca(doenca: Doenca): Observable<Doenca> {
+    this.refreshToken()
     return this.http.put<Doenca>(`${this.baseURL}/doencas/alterar`, doenca, this.token)
   }
 
   deleteDoenca(id: number) {
+    this.refreshToken()
     return this.http.delete(`${this.baseURL}/doencas/deletar/${id}`, this.token)
   }
 }
