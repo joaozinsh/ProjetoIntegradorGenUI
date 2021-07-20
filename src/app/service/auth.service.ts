@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../model/UserLogin';
@@ -11,7 +12,8 @@ import { Usuario } from '../model/Usuario';
 export class AuthService {
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) { }
 
   entrar(userLogin: UserLogin): Observable<UserLogin> {
@@ -29,6 +31,16 @@ export class AuthService {
       ok = true
     }
     return ok
+  }
+
+  loginCadastro() {
+    let currentUrl = this.router.url
+
+    if(currentUrl === "/login-cadastro"){
+      return true
+    }
+
+    return false
   }
 
   admin() {

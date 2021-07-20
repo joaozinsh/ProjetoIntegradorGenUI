@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Doenca } from 'src/app/model/Doenca';
 import { Medicamento } from 'src/app/model/Medicamento';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { DoencaService } from 'src/app/service/doenca.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -23,7 +24,8 @@ export class DoencaAdminComponent implements OnInit {
 
   constructor(
     private doencaService: DoencaService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -33,7 +35,7 @@ export class DoencaAdminComponent implements OnInit {
 
   missingToken() {
     if (environment.token == '') {
-      alert('Necessário acesso de Administrador!')
+      this.alertas.showAlertInfo('Necessário acesso de Administrador!')
       this.router.navigate(['/home'])
     }
   }
@@ -53,7 +55,7 @@ export class DoencaAdminComponent implements OnInit {
   cadastrarDoenca() {
     this.doencaService.postDoenca(this.doenca).subscribe((resp: Doenca) => {
       this.doenca = new Doenca()
-      alert('Categoria doença inserida com sucesso!');
+      this.alertas.showAlertSuccess('Categoria doença inserida com sucesso!');
       this.findAllDoencas()
     });
   }
@@ -61,18 +63,18 @@ export class DoencaAdminComponent implements OnInit {
   atualizarDoenca(doenca: Doenca) {
     this.doencaService.putDoenca(doenca).subscribe((resp: Doenca) => {
       this.doenca = new Doenca()
-      alert('Categoria doença atualizada com sucesso!')
+      this.alertas.showAlertSuccess('Categoria doença atualizada com sucesso!')
       this.findAllDoencas()
     })
   }
 
   apagarDoenca(id: number) {
     this.doencaService.deleteDoenca(id).subscribe(() => {
-      alert("Categoria doença apagada com sucesso!")
+      this.alertas.showAlertSuccess("Categoria doença apagada com sucesso!")
       this.findAllDoencas()
     }, erro => {
       if (erro.status == 500) {
-        alert('Não é possivel apagar uma doença com medicamentos atribulos a ela!')
+        this.alertas.showAlertDanger('Não é possivel apagar uma doença com medicamentos atribulos a ela!')
       }
     })
   }

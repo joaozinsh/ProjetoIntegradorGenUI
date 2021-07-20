@@ -49,7 +49,7 @@
             <td>{{ i.descricao }}</td>
             <td>{{ i.transmissivel.toString().replace("true","Sim").replace("false","Não") }}</td>
             <td><a (click)='findByIdDoenca(i.id)' class="text-info cursor" data-toggle="modal" data-target="#ModalEditar">Editar</a></td>
-            <td><a (click)='apagarDoenca(i.id)' class="text-danger cursor">Apagar</a></td>
+            <td><a (click)='findByIdDoenca(i.id)' data-toggle="modal" data-target="#ModalApagar" class="text-danger cursor">Apagar</a></td>
           </tr>
         </tbody>
       </table>
@@ -93,6 +93,24 @@
       </div>
       <div class="modal-footer">
         <button (click)='atualizarDoenca(doenca)' type="button" class="btn" data-dismiss="modal">Salvar mudanças</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Apagar -->
+<div class="modal fade" id="ModalApagar" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Deseja realmente apagar?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-sucesso mr-4" data-dismiss="modal">Não</button>
+        <button type="button" class="btn" data-dismiss="modal" (click)='apagarDoenca(doenca.id)'>Sim</button>
       </div>
     </div>
   </div>

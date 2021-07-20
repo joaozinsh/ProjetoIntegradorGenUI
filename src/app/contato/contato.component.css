@@ -83,6 +83,7 @@ select {
   border-radius: 15px;
   border: 2px solid;
   border-color: #ABABAB;
+  transition: 0.25s;
 }
 
 option {
@@ -99,6 +100,7 @@ textarea:hover {
 select:hover {
   border-color: #E94C4C;
   transition: 0.25s;
+  border-radius: 0px;
 }
 
 .blur {

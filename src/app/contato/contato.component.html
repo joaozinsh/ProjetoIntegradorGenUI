@@ -4,41 +4,42 @@
             <h1 class="text-black text-center p-1">Entre em contato conosco</h1>
         </div>
         <form class="p-4">
-        <div class="row d-flex">
-            <div class="col-md-5 p-2">
-                <div class="form-group">
-                    <label for="Nome">Nome</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Insira seu nome completo">
+            <div class="row d-flex">
+                <div class="col-md-5 p-2">
+                    <div class="form-group">
+                        <label for="Nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Insira seu nome completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="E-mail">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="email@dominio.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="Tel">Telefone</label>
+                        <input type="text" class="form-control" id="tel" placeholder="(xx) 99999-9999">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="E-mail">E-mail</label>
-                    <input type="email" class="form-control" id="email" placeholder="email@dominio.com">
-                </div>
-                <div class="form-group">
-                    <label for="Tel">Telefone</label>
-                    <input type="text" class="form-control" id="tel" placeholder="(xx) 99999-9999">
+                <div class="col-md-7 p-2">
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <select type="text" class="form-control" id="assunto" placeholder="Assunto da Mensagem">
+                            <option value="">Selecione um assunto</option>
+                            <option value="Medicamentos">Medicamentos</option>
+                            <option value="Prazos e Entregas">Prazos e Entregas</option>
+                            <option value="Reclamações">Reclamações</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="msg">Digite sua mensagem:</label>
+                        <textarea class="form-control" id="msg" rows="4"
+                            placeholder="Insira sua mensagem aqui"></textarea>
+                    </div>
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <button (click)='enviarMsg()' type="submit" class="btn px-5 text-white">Enviar</button>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-7 p-2">
-                <div class="form-group">
-                    <label for="assunto">Assunto</label>
-                    <select type="text" class="form-control" id="assunto" placeholder="Assunto da Mensagem">
-                        <option value="">Selecione um assunto</option>
-                        <option value="Medicamentos">Medicamentos</option>
-                        <option value="Prazos e Entregas">Prazos e Entregas</option>
-                        <option value="Reclamações">Reclamações</option>
-                        <option value="Outros">Outros</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="msg">Digite sua mensagem:</label>
-                    <textarea class="form-control" id="msg" rows="4" placeholder="Insira sua mensagem aqui"></textarea>
-                </div>
-                <div class="row d-flex justify-content-center align-items-center">
-                    <button type="submit" class="btn px-5 text-white">Enviar</button>
-                </div>
-            </div>
-        </div>
         </form>
         <hr>
         <div class="row d-flex justify-content-center align-items-center p-3">

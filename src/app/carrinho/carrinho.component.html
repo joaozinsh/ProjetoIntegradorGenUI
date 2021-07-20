@@ -37,7 +37,7 @@
                   </button>
                 </div>
                 <div class="col-md-2 p-0 d-flex justify-content-center">
-                  <p class="text-black-50">R$ {{med.precoTotal.toLocaleString('pt-br', {minimumFractionDigits: 2})}}</p>
+                  <p class="text-black">R$ {{med.precoTotal.toLocaleString('pt-br', {minimumFractionDigits: 2})}}</p>
                 </div>
                 <div class="col-md-1 p-0 d-flex justify-content-center">
                   <a (click)='delete(med.nome)'>
@@ -58,7 +58,7 @@
           <div class="col-md-12">
             <div class="row d-flex justify-content-around">
               <div class="col-md-12">
-                <h5 class="text-center">Calcular frete</h5>
+                <h5 class="text-center">Calcular Frete</h5>
               </div>
             </div>
             <hr />
@@ -67,10 +67,10 @@
                 <input class="form-control input-lg pr-0 input-cep" type="text" placeholder="00000-000" />
               </div>
               <div class="col-md-3 p-0 ml-0">
-                <button class="btn  btn-block btnOK pl-0">OK</button>
+                <button (click)='clickCep = "ok"' class="btn btn-block btnOK pl-0">OK</button>
               </div>
             </div>
-            <div class="row d-flex justify-content-around mt-2">
+            <div *ngIf='clickCep === "ok"' class="row d-flex justify-content-around mt-2">
               <div class="col-md-8">
                 <p class="font-weight-bolder text-left">Prazo de entrega</p>
               </div>
@@ -117,7 +117,7 @@
 
             <div class="row d-flex justify-content-around">
               <div class="col-6">
-                <p class="text-black font-weight-bold">Total ({{totalMedicamento}})</p>
+                <p class="text-black font-weight-bold">Total ({{totalMedicamento}} itens)</p>
               </div>
               <div class="col-6">
                 <p class="text-black text-right">R$ {{total.toLocaleString('pt-br', {minimumFractionDigits: 2})}}</p>
