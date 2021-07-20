@@ -13,6 +13,7 @@ input, textarea, select {
   border: 2px solid;
   border-color: #ABABAB;
   overflow-y: hidden;
+  transition:0.25s;
 }
 
 input:focus{
@@ -74,6 +75,8 @@ select::selection {
 select:hover{
   border-color: #E94C4C;
   transition:0.25s;
+  border-radius: 0px;
+  overflow-y: visible;
 }
 
 .btn:hover{

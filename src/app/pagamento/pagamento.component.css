@@ -25,6 +25,7 @@ select {
   border-radius: 15px;
   border: 2px solid;
   border-color: #ABABAB;
+  transition: 0.25s;
 }
 
 input:focus {
@@ -46,10 +47,15 @@ select::selection {
   background: #E06767;
 }
 
-input:hover,
+input:hover{
+  border-color: #E94C4C;
+  transition: 0.25s;
+}
+
 select:hover {
   border-color: #E94C4C;
   transition: 0.25s;
+  border-radius: 0px;
 }
 
 .btn-cancelar:hover {
