@@ -18,6 +18,8 @@ export class CarrinhoComponent implements OnInit {
 
   totalMedicamento: number
 
+  clickCep = ""
+
   subtotal: number
   total: number
 
