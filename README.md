@@ -65,31 +65,31 @@ Durante o desenvolvimento percebemos a tamanha complexidade e confusão das idei
 
 <h2 align=center id="tecnologias">Tecnologias: </h2>
 <p align= center>
-   <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">
+   <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
      <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_html_icon_130541.png" height="50px" width="50px"/>
    </a>
-   <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">
+   <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
      <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_css_icon_130661.png" height="50px" width="50px"/>
    </a>
-   <a href="https://www.typescriptlang.org">
+   <a href="https://www.typescriptlang.org" target="_blank">
      <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_typescript_official_icon_130107.png" height="50px" width="50px"/>
    </a>
-   <a href="https://docs.oracle.com/javase/7/docs/api/">
+   <a href="https://docs.oracle.com/javase/7/docs/api/" target="_blank">
      <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_wordmark_logo_icon_146459.png" height="50px" width="50px"/>
    </a>
-   <a href-="https://angular.io">
+   <a href-="https://angular.io" target="_blank">
      <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_angular_icon_130754.png" height="50px" width="50px"/>
    </a>
-    <a href="https://getbootstrap.com.br">
+    <a href="https://getbootstrap.com.br" target="_blank">
      <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/bootstrap_plain_logo_icon_146619.png" height="50px" width="50px"/>
    </a>
-   <a href="https://spring.io">
+   <a href="https://spring.io" target="_blank">
      <img src="https://img.icons8.com/color/50/000000/spring-logo.png" height="50px" width="50px"/>
    </a>
-  <a href="https://www.mysql.com">
+  <a href="https://www.mysql.com" target="_blank">
      <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/mysql_original_wordmark_logo_icon_146417.png" height="50px" width="50px"/>
    </a
-    <a href="https://www.figma.com/file/l90e4iaeMd7Lpx7RrKav4Y/Wireframe---Projeto-Integrador?node-id=0%3A1">
+    <a href="https://www.figma.com/file/l90e4iaeMd7Lpx7RrKav4Y/Wireframe---Projeto-Integrador?node-id=0%3A1" target="_blank">
      <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/figma_logo_icon_170157.png" height="50px" width="50px"/>
    </a>
 </p>
