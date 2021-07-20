@@ -12,7 +12,7 @@
   <br>
   <br>
   
-  <p>https://saudedobem.netlify.app/#/home</p>
+  <p>https://saudedobem.netlify.app</p>
   
   <hr>
 </div>
