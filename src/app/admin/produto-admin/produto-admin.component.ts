@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Doenca } from 'src/app/model/Doenca';
 import { Medicamento } from 'src/app/model/Medicamento';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { DoencaService } from 'src/app/service/doenca.service';
 import { ProdutosService } from 'src/app/service/produtos.service';
 import { environment } from 'src/environments/environment.prod';
@@ -21,7 +22,8 @@ export class ProdutoAdminComponent implements OnInit {
   constructor(
     private produtoService: ProdutosService,
     private doencaService: DoencaService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) {}
 
   ngOnInit() {
@@ -32,7 +34,7 @@ export class ProdutoAdminComponent implements OnInit {
 
   missingToken() {
     if (environment.token == '') {
-      alert('Necessário acesso de Administrador!')
+      this.alertas.showAlertInfo('Necessário acesso de Administrador!')
       this.router.navigate(['/home']);
     }
   }
@@ -93,7 +95,7 @@ export class ProdutoAdminComponent implements OnInit {
       .postMedicamentos(this.medicamento)
       .subscribe((resp: Medicamento) => {
         this.medicamento = resp;
-        alert('Medicamento inserido com sucesso!');
+        this.alertas.showAlertSuccess('Medicamento inserido com sucesso!');
         this.medicamento = new Medicamento();
         this.findAllMedicamentos();
       });
@@ -102,14 +104,14 @@ export class ProdutoAdminComponent implements OnInit {
   atualizarMedicamento(medicamento: Medicamento) {
     this.produtoService.putMedicamento(medicamento).subscribe((resp: Medicamento)=> {
       this.medicamento = new Medicamento()
-      alert("Medicamento atualizado com sucesso!")
+      this.alertas.showAlertSuccess("Medicamento atualizado com sucesso!")
       this.findAllMedicamentos()
     })
   }
 
   apagarMedicamento(id: number) {
     this.produtoService.deleteMedicamento(id).subscribe(()=> {
-      alert("Medicamento apagado com sucesso!")
+      this.alertas.showAlertSuccess("Medicamento apagado com sucesso!")
       this.findAllMedicamentos()
     })
   }

@@ -104,3 +104,27 @@ select:hover{
   background-color: red;
   transition: 0.5s;
 }
+
+.btn-sucesso {
+  background-color: #28a745;
+  color: white
+}
+
+.btn-sucesso:hover {
+  box-shadow: rgb(0, 255, 0) 0px 0px 7px;
+  transition: 0.25s;
+}
+
+.btn-sucesso:active {
+  box-shadow: #28a745 0px 0px 20px;
+  border-color: #22ac42;
+  background-color: #22ac42;
+  transition: 0.5s;
+}
+
+.btn-sucesso:focus {
+  box-shadow: #28a745 0px 0px 20px;
+  border-color: #22ac42;
+  background-color: #22ac42;
+  transition: 0.5s;
+}
