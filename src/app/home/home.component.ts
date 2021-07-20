@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   qtd: number = 1
   item: MedicamentoItem = new MedicamentoItem()
-  
+
   constructor(
     private medicamentoService: ProdutosService,
     private produtoService: ProdutosService,
@@ -31,13 +31,16 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.findByCardHome()
+    let text = "Este é um recurso de navegador voltado para desenvolvedores.";
+    console.log("%cSAI DAQUI!", "color: red; font-size: 35px; font-weight:bold;");
+    console.log("%c" + text, "color:#9c9c9c; font-weight: bold;font-size:18px;")
   }
 
-  findByCardHome(){
-    this.medicamentoService.getMedicamentosDestaque().subscribe((resp: Medicamento[])=>{
+  findByCardHome() {
+    this.medicamentoService.getMedicamentosDestaque().subscribe((resp: Medicamento[]) => {
       this.listaMedicamentosDesc = resp
     })
-    this.medicamentoService.getMedicamentosPromocao().subscribe((resp: Medicamento[])=>{
+    this.medicamentoService.getMedicamentosPromocao().subscribe((resp: Medicamento[]) => {
       this.listaMedicamentosProm = resp
     })
   }
@@ -48,7 +51,7 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  validacaoQTD(){
+  validacaoQTD() {
     if (this.qtd <= 0) {
       return true
     }

@@ -191,6 +191,7 @@
       top: 0px;
       padding: 30px;
       outline: none;
+      transition: 0.25s;
     }
 
     .custom-button:hover{
