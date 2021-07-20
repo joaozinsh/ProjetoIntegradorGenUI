@@ -81,6 +81,12 @@ select:focus {
   transition: 0.5s;
 }
 
+select:hover{
+  border-color: #E94C4C;
+  transition:0.25s;
+}
+
+
 
 .head {
   background-color: #E94C4C;
