@@ -102,7 +102,7 @@
         <tbody>
           <tr *ngFor="let medicamento of listaMedicamento">
             <th scope="row">{{ medicamento.nome }}</th>
-            <td>{{ medicamento.preco }}</td>
+            <td>R$ {{ medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2}) }}</td>
             <td>
               <p *ngFor="let doenca of medicamento.doencas">
                 {{ doenca.nome }}
