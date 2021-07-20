@@ -10,7 +10,7 @@
     <div class="carousel-item active">
       <img class="d-block w-100" src="../../assets/img/carrousel/image01.jpg" alt="Primeiro Slide">
       <div class="carousel-caption d-none d-md-block">
-        <div class="textCarrosel"><h3>Nossos medicadimentos</h3>
+        <div class="textCarrosel"><h3>Nossos medicamentos</h3>
         <p>Confira nossos medicamentos a venda. <a routerLink="/produtos">Veja mais</a></p></div>
       </div>
     </div>
@@ -18,15 +18,15 @@
     <div class="carousel-item">
       <img class="d-block w-100" src="../../assets/img/carrousel/image02.jpg" alt="Segundo Slide">
       <div class="carousel-caption d-none d-md-block">
-        <div class="textCarrosel"><h3>Confira nossas promoções</h3>
-        <p>Veja nossas promoções abaixo, na home page!</p></div>
+        <div class="textCarrosel"><h3>Confira nossos destaques e promoções</h3>
+        <p>Veja abaixo, na página inicial!</p></div>
       </div>
     </div>
     <div class="carousel-item">
       <img class="d-block w-100 height: auto;" src="../../assets/img/carrousel/image03.jpg" alt="Terceiro Slide" />
       <div class="carousel-caption d-none d-md-block">
         <div class="textCarrosel"><h3>A ODS3 e quem somos nós</h3>
-        <p>Nossas missões e valores são baseadas em metas de ONU para Saúde e Bem Estar. Conheça quem somos! <a routerLink="/sobre">Veja mais</a></p></div>
+        <p>Nossas missões e valores são baseadas nas metas da ONU para Saúde e Bem Estar. Conheça quem somos! <a routerLink="/sobre">Veja mais</a></p></div>
       </div>
     </div>
     <div class="carousel-item">
@@ -49,8 +49,8 @@
 
 
 <!--Destaques da semana-->
-<h1 class="font-italic font-weight-bold ml-5 mt-5 mb-3">Destaques da Semana</h1>
-<div class="card-container pt-0 pb-3 mb-5" id="modelo">
+<h1 class="font-italic font-weight-bold ml-5 mt-5 mb-4">Destaques da Semana</h1>
+<div class="card-container d-flex justify-content-between pt-0 pb-3 mb-5" id="modelo">
   <div *ngFor='let medicamento of listaMedicamentosDesc' class="card m-2 " style="width: 13rem;">
     <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}}
         alt="{{medicamento.nome}}">
@@ -85,8 +85,8 @@
 
 
 <!--Promoções da semana-->
-<h1 class="font-italic font-weight-bold ml-5 mt-5 mb-3">Promoções da Semana</h1>
-<div class="card-container pt-0 pb-3 mb-5 lista" id="modelo">
+<h1 class="font-italic font-weight-bold ml-5 mt-5 mb-4">Promoções da Semana</h1>
+<div class="card-container d-flex justify-content-between pt-0 pb-3 mb-5 lista" id="modelo">
   <div *ngFor='let medicamento of listaMedicamentosProm' class="card m-2 " style="width: 13rem;">
     <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}}
         alt="{{medicamento.nome}}">
@@ -167,7 +167,7 @@
                         </div>
                         <hr>
                         <div class="row">
-                            <div class="col-12 text-center">
+                            <div class="col-12 text-justify">
                                 <p>Descrição: {{medicamento.descricao}}</p>
                             </div>
                         </div>
@@ -190,7 +190,7 @@
             </div>
             <div class="row">
                 <div class="col-12 d-flex justify-content-end">
-                    <p class="mb-2 mr-5" *ngIf="validacaoQTD() == true">Precisa de valores a cima de 1</p>
+                    <p class="mb-2 mr-5" *ngIf="validacaoQTD() == true">Insira um valor acima de 1</p>
                 </div>
             </div>
 
