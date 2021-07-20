@@ -51,28 +51,31 @@
 <!--Destaques da semana-->
 <h1 class="font-italic font-weight-bold ml-5 mt-5 mb-3">Destaques da Semana</h1>
 <div class="card-container pt-0 pb-3 mb-5" id="modelo">
-  <div *ngFor='let medicamento of listaMedicamentosDesc' class="card m-2 ">
-    <picture class="d-flex justify-content-center"><img width="250px" height="250px" class="" src={{medicamento.foto}} alt="{{medicamento.nome}}"></picture>
-    <div class="card-body">
-      <h5 class="card-title">{{medicamento.nome}}</h5>
-      <p class="card-text"></p>
-    </div>
-    <div>
-      <div class="p-0">
-        <div class="container-fluid">
-          <div class="row d-flex align-items-stretch">
-            <div class="col-md-6 p-0 align-items-stretch"><button type="button" class="btn btn-block button2">R$
-                {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}}
-              </button>
-            </div>
-            <div data-target="#ModalDetalhes" data-toggle="modal" (click)='findByIdMedicamento(medicamento.id)'
-              class="col-md-6 p-0 align-self-stretch"><button type="button"
-                class="btn btn-block button1">DETALHES</button></div>
-          </div>
-        </div>
+  <div *ngFor='let medicamento of listaMedicamentosDesc' class="card m-2 " style="width: 13rem;">
+    <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}}
+        alt="{{medicamento.nome}}">
+        <div class="card-body pb-0 d-flex align-items-center justify-content-center">
+          <h5 class="card-title text-center">{{medicamento.nome}}</h5>
       </div>
+    <div>
+        <div class="p-0">
+            <div class="container-fluid">
+                <div class="row d-flex align-items-stretch">
+                    <div class="col-md-6 p-0 align-items-stretch"><button type="button"
+                            class="btn btn-block button2">R$
+                            {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}}
+                        </button>
+                    </div>
+                    <div data-target="#ModalDetalhes" data-toggle="modal"
+                        (click)='findByIdMedicamento(medicamento.id)'
+                        class="col-md-6 p-0 align-self-stretch"><button type="button"
+                            class="btn btn-block button1">DETALHES</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
 </div>
 
 
@@ -85,27 +88,30 @@
 <h1 class="font-italic font-weight-bold ml-5 mt-5 mb-3">Promoções da Semana</h1>
 <div class="card-container pt-0 pb-3 mb-5 lista" id="modelo">
   <div *ngFor='let medicamento of listaMedicamentosProm' class="card m-2 " style="width: 13rem;">
-    <picture class="d-flex justify-content-center"><img width="250px" height="250px" class="" src={{medicamento.foto}} alt="{{medicamento.nome}}"></picture>
-    <div class="card-body">
-      <h5 class="card-title">{{medicamento.nome}}</h5>
-      <p class="card-text"></p>
+    <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}}
+        alt="{{medicamento.nome}}">
+    <div class="card-body pb-0 d-flex align-items-center justify-content-center">
+        <h5 class="card-title text-center">{{medicamento.nome}}</h5>
     </div>
     <div>
-      <div class="p-0">
-        <div class="container-fluid">
-          <div class="row d-flex align-items-stretch">
-            <div class="col-md-6 p-0 align-items-stretch"><button type="button" class="btn btn-block button2">R$
-                {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}}
-              </button>
+        <div class="p-0">
+            <div class="container-fluid">
+                <div class="row d-flex align-items-stretch">
+                    <div class="col-md-6 p-0 align-items-stretch"><button type="button"
+                            class="btn btn-block button2">R$
+                            {{medicamento.preco.toLocaleString('pt-br', {minimumFractionDigits: 2})}}
+                        </button>
+                    </div>
+                    <div data-target="#ModalDetalhes" data-toggle="modal"
+                        (click)='findByIdMedicamento(medicamento.id)'
+                        class="col-md-6 p-0 align-self-stretch"><button type="button"
+                            class="btn btn-block button1">DETALHES</button>
+                    </div>
+                </div>
             </div>
-            <div data-target="#ModalDetalhes" data-toggle="modal" (click)='findByIdMedicamento(medicamento.id)'
-              class="col-md-6 p-0 align-self-stretch"><button type="button"
-                class="btn btn-block button1">DETALHES</button></div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 </div>
 
 <!--Jumbotrom 2 / Newsletter-->
@@ -126,12 +132,12 @@
       </div>
       <div class="row d-flex m-2">
         <div class="col-12">
-          <input type="email" class="form-control borda" id="exampleEmail" placeholder="Email" />
+          <input type="email" class="form-control borda" id="exampleEmail" placeholder="E-mail" />
         </div>
       </div>
     </div>
     <div class="col-lg-2 col-sm-6">
-      <button type="submit" class="btn btn-block button-news font-weight-bold">Inscreva-se</button>
+      <button (click)="newsletter()" type="submit" class="btn btn-block button-news font-weight-bold">Inscreva-se</button>
     </div>
   </div>
 </div>

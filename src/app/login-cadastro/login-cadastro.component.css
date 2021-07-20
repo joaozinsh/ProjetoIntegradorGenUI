@@ -37,21 +37,21 @@ button:focus{
     background-color: #E06767;
   }
 
-  #btn-voltar {
+  #btn-home {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 25px;
   }
 
-  #p-voltar {
+  #p-home {
     padding: 0;
     margin: 0;
-    font-size: 24pt;
+    font-size: 20pt;
   }
 
   .fas {
-    font-size: 40px;
+    font-size: 25px;
   }
 
   .card {
@@ -129,7 +129,7 @@ button:focus{
   }
 
   .fas {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .blur {

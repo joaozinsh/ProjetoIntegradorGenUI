@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { NavbarLogadoComponent } from '../navbar-logado/navbar-logado.component';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { AlertasService } from '../service/alertas.service';
 import { CarrinhoService } from '../service/carrinho.service';
 
 @Component({
@@ -18,6 +19,8 @@ export class CarrinhoComponent implements OnInit {
 
   totalMedicamento: number
 
+  clickCep = ""
+
   subtotal: number
   total: number
 
@@ -28,7 +31,8 @@ export class CarrinhoComponent implements OnInit {
     private carrinhoService: CarrinhoService,
     private router: Router,
     private navbar: NavbarComponent,
-    private navbarLogado: NavbarLogadoComponent
+    private navbarLogado: NavbarLogadoComponent,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -44,7 +48,7 @@ export class CarrinhoComponent implements OnInit {
 
   fecharCarrinho(){
     if (environment.token == '') {
-      alert('Você precisa estar logado para continuar!');
+      this.alertas.showAlertInfo('Você precisa estar logado para continuar!');
       this.router.navigate(['/login-cadastro']);
     } else {
       this.router.navigate(['/pagamento']);

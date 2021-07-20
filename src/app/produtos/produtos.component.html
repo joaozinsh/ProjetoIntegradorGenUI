@@ -54,12 +54,11 @@
         </div>
 
         <div class="col-md-9 d-flex flex-wrap ">
-            <div *ngFor='let medicamento of listaMedicamentos' class="card m-2 " style="width: 13rem;">
+            <div *ngFor='let medicamento of listaMedicamentos' class="card m-2 mb-4" style="width: 13rem;">
                 <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}}
                     alt="{{medicamento.nome}}">
-                <div class="card-body">
+                <div class="card-body pb-0 d-flex align-items-center justify-content-center">
                     <h5 class="card-title">{{medicamento.nome}}</h5>
-                    <p class="card-text"></p>
                 </div>
                 <div>
                     <div class="p-0">
@@ -73,18 +72,18 @@
                                 <div data-target="#ModalDetalhes" data-toggle="modal"
                                     (click)='findByIdMedicamento(medicamento.id)'
                                     class="col-md-6 p-0 align-self-stretch"><button type="button"
-                                        class="btn btn-block button1">DETALHES</button></div>
+                                        class="btn btn-block button1">DETALHES</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div *ngFor='let medicamento of doenca.medicamentos' class="card m-2 " style="width: 13rem;">
+            <div *ngFor='let medicamento of doenca.medicamentos' class="card m-2 mb-4" style="width: 13rem;">
                 <img width="200px" height="200px" class="card-img-top" src={{medicamento.foto}}
                     alt="{{medicamento.nome}}">
-                <div class="card-body">
+                <div class="card-body pb-0 d-flex align-items-center justify-content-center">
                     <h5 class="card-title">{{medicamento.nome}}</h5>
-                    <p class="card-text"></p>
                 </div>
                 <div>
                     <div class="p-0">
@@ -98,7 +97,8 @@
                                 <div data-target="#ModalDetalhes" data-toggle="modal"
                                     (click)='findByIdMedicamento(medicamento.id)'
                                     class="col-md-6 p-0 align-self-stretch"><button type="button"
-                                        class="btn btn-block button1">DETALHES</button></div>
+                                        class="btn btn-block button1">DETALHES</button>
+                                </div>
                             </div>
                         </div>
                     </div>

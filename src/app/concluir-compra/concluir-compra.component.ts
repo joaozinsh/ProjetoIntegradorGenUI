@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 import { NavbarLogadoComponent } from '../navbar-logado/navbar-logado.component';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-concluir-compra',
@@ -25,7 +26,6 @@ export class ConcluirCompraComponent implements OnInit {
     this.navbarLogado.cartCounter()
     
     if (environment.token == '') {
-      alert('Faltando Token!');
       this.router.navigate(['/home']);
     }
   }

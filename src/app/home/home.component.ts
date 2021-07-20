@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { MedicamentoItem } from '../model/MedicamentoItem';
 import { CarrinhoService } from '../service/carrinho.service';
 import { Router } from '@angular/router';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-home',
@@ -19,23 +20,27 @@ export class HomeComponent implements OnInit {
 
   qtd: number = 1
   item: MedicamentoItem = new MedicamentoItem()
-  
+
   constructor(
     private medicamentoService: ProdutosService,
     private produtoService: ProdutosService,
     private carrinhoService: CarrinhoService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
     this.findByCardHome()
+    let text = "Este é um recurso de navegador voltado para desenvolvedores.";
+    console.log("%cSAI DAQUI!", "color: red; font-size: 35px; font-weight:bold;");
+    console.log("%c" + text, "color:#9c9c9c; font-weight: bold;font-size:18px;")
   }
 
-  findByCardHome(){
-    this.medicamentoService.getMedicamentosDestaque().subscribe((resp: Medicamento[])=>{
+  findByCardHome() {
+    this.medicamentoService.getMedicamentosDestaque().subscribe((resp: Medicamento[]) => {
       this.listaMedicamentosDesc = resp
     })
-    this.medicamentoService.getMedicamentosPromocao().subscribe((resp: Medicamento[])=>{
+    this.medicamentoService.getMedicamentosPromocao().subscribe((resp: Medicamento[]) => {
       this.listaMedicamentosProm = resp
     })
   }
@@ -46,7 +51,7 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  validacaoQTD(){
+  validacaoQTD() {
     if (this.qtd <= 0) {
       return true
     }
@@ -70,6 +75,10 @@ export class HomeComponent implements OnInit {
         this.router.navigate(['/carrinho'])
       })
     }
+  }
+
+  newsletter() {
+    this.alertas.showAlertSuccess("Inscrição feita com sucesso!")
   }
 
 

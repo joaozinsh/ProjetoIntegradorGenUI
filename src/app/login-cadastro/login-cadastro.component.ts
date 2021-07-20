@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../model/UserLogin';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -20,7 +21,8 @@ export class LoginCadastroComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) {
   }
 
@@ -41,14 +43,14 @@ export class LoginCadastroComponent implements OnInit {
             this.user = new Usuario()
             this.confirmarSenha = ""
             this.isChecked = false
-            alert("Cadastro realizado com sucesso! Faça login ao lado.")
+            this.alertas.showAlertSuccess("Cadastro realizado com sucesso! Faça login ao lado.")
           })
         } else {
-          alert("Por favor, aceite os termos de uso!")
+          this.alertas.showAlertInfo("Por favor, aceite os termos de uso!")
         }
       } else {
         this.confirmarSenha = ""
-        alert("As senhas devem ser iguais!")
+        this.alertas.showAlertInfo("As senhas devem ser iguais!")
       }
     } 
   }
@@ -64,13 +66,13 @@ export class LoginCadastroComponent implements OnInit {
       this.router.navigate(['/home'])
     }, erro => {
       if(erro.status == 401) {
-        alert("Email ou senha invalidos!")
+        this.alertas.showAlertDanger("E-mail ou senha invalidos!")
       }
 
       if (this.userLogin.email == "") {
-        alert("Por favor, digite um email")
+        this.alertas.showAlertInfo("Por favor, digite um e-mail")
       } else if (this.userLogin.senha == "") {
-        alert("Por favor, digite uma senha")
+        this.alertas.showAlertInfo("Por favor, digite uma senha")
       }
     })
   }

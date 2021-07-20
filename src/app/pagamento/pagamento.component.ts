@@ -12,9 +12,12 @@ import { NavbarLogadoComponent } from '../navbar-logado/navbar-logado.component'
 export class PagamentoComponent implements OnInit {
 
   constructor(
-    private navbarLogado: NavbarLogadoComponent
+    private router: Router
   ) { }
 
   ngOnInit(){
+    if (environment.token == '') {
+      this.router.navigate(['/home']);
+    }
   }
 }
