@@ -114,7 +114,7 @@ $ npm install
   
 <h2 align=center id="como-executar">Como Executar: </h2>
   
-1) Inicie a Api e o Banco de Dados (Obs: Esteja ciente que este projeto utiliza uma api propria, então é necessario trocar as rotas)
+1) Inicie a Api e o Banco de Dados (Obs.: Esteja ciente que este projeto utiliza uma api própria, então é necessário trocar as rotas)
   
 2) Execute o comando
 ```
