@@ -45,7 +45,7 @@ Durante o desenvolvimento percebemos a tamanha complexidade e confusão das idei
 <h3 align=center>Imagens</h3>
 <table align=center>
   <tr>
-    <td align="center"><a href="https://saudedobem.netlify.app/#/home"><img style="border-radius: 50%;" src="https://i.imgur.com/OSFGUYX.png" width="700px;" alt=""/><br /></a></td>
+    <td align="center"><a href="https://saudedobem.netlify.app/#/home"><img style="border-radius: 50%;" src="https://i.imgur.com/kQSNX99.png" width="700px;" alt=""/><br /></a></td>
     <td align="center"><a href="https://saudedobem.netlify.app/#/login-cadastro"><img style="border-radius: 50%;" src="https://i.imgur.com/nj2amml.png" width="700px;" alt=""/><br /></a></td>
   </tr>
   <tr>
