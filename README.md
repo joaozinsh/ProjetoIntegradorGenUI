@@ -27,7 +27,9 @@
 <h2 align=center id="sobre">Sobre</h2>
 
 <h3 align=center>Resumo</h3>
-<p>A proposta do projeto integrador do bootcamp da Generation Brasil é auxiliar a conclusão dos Objetivos de Desenvolvimento Sustentável (ODS) que visa auxiliar e resolver diversas questões de nossa sociedade até o ano de 2030, pensando nisso o nosso grupo tem como proposta desenvolver um sistema e-commerce conhecido como Saúde do Bem para vender medicamentos a um preço popular aos menos favorecidos garantindo acessibilidade para todas as pessoas e famílias. 
+<p>A proposta do projeto integrador do bootcamp da Generation Brasil é auxiliar a conclusão dos Objetivos de Desenvolvimento Sustentável (ODS) que visa auxiliar e resolver diversas questões de nossa sociedade até o ano de 2030, pensando nisso o nosso grupo tem como proposta desenvolver um sistema e-commerce conhecido como Saúde do Bem para vender medicamentos a um preço popular aos menos favorecidos garantindo acessibilidade para todas as pessoas e famílias.
+</p>
+<p>
 Durante o desenvolvimento percebemos a tamanha complexidade e confusão das ideias iniciais, contudo afirmamos algumas como features a serem desenvolvidas com a intenção de agregar mais as propostas da ODS e tornar este simples e-commerce em um sistema integral a todos. Dentre estas features temos sistema de comunicação, doação de empresas e usuários, parcerias, maior número no estoque dentre outras funcionalidades e ideias.
 </p>
 
@@ -36,16 +38,16 @@ Durante o desenvolvimento percebemos a tamanha complexidade e confusão das idei
 <h3 align=center>Imagens</h3>
 <table align=center>
   <tr>
-    <td align="center"><img style="border-radius: 50%;" src="https://i.imgur.com/OSFGUYX.png" width="700px;" alt=""/><br /></td>
-    <td align="center"><img style="border-radius: 50%;" src="https://i.imgur.com/nj2amml.png" width="700px;" alt=""/><br /></td>
+    <td align="center"><a href="https://saudedobem.netlify.app/#/home"><img style="border-radius: 50%;" src="https://i.imgur.com/OSFGUYX.png" width="700px;" alt=""/><br /></a></td>
+    <td align="center"><a href="https://saudedobem.netlify.app/#/login-cadastro"><img style="border-radius: 50%;" src="https://i.imgur.com/nj2amml.png" width="700px;" alt=""/><br /></a></td>
   </tr>
   <tr>
-    <td align="center"><img style="border-radius: 50%;" src="https://i.imgur.com/ijK7tvs.png" width="700px;" alt=""/><br /></td>
-    <td align="center"><img style="border-radius: 50%;" src="https://i.imgur.com/aaPxyw9.png" width="700px;" alt=""/><br /></td>
+    <td align="center"><a href="https://saudedobem.netlify.app/#/produtos"><img style="border-radius: 50%;" src="https://i.imgur.com/ijK7tvs.png" width="700px;" alt=""/><br /></a></td>
+    <td align="center"><a href="https://saudedobem.netlify.app/#/home"><img style="border-radius: 50%;" src="https://i.imgur.com/aaPxyw9.png" width="700px;" alt=""/><br /></a></td>
   </tr>
   <tr>
-    <td align="center"><img style="border-radius: 50%;" src="https://i.imgur.com/NmKVfDl.png" width="700px;" alt=""/><br /></td>
-    <td align="center"><img style="border-radius: 50%;" src="https://i.imgur.com/GlvtVQD.png" width="700px;" alt=""/><br /></td>
+    <td align="center"><a href="https://saudedobem.netlify.app/#/home"><img style="border-radius: 50%;" src="https://i.imgur.com/NmKVfDl.png" width="700px;" alt=""/><br /></a></td>
+    <td align="center"><a href="https://saudedobem.netlify.app/#/home"><img style="border-radius: 50%;" src="https://i.imgur.com/GlvtVQD.png" width="700px;" alt=""/><br /></a></td>
   </tr>
 </table>
 
@@ -131,7 +133,6 @@ $ ng serve
   
 </div>  
 
-<br>
 <br>
   
 <h2 align=center id="develop">Desenvolvedores: </h2>
