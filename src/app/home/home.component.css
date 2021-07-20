@@ -53,14 +53,9 @@ button {
   }
 
   .card {
-    min-width: 300px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    transition: 0.2s;
-    margin: 5px;
-    border-end-end-radius: 15px;
-    border-end-start-radius: 15px;
+    min-width: 208px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
   /*Custom scroll*/
@@ -221,7 +216,7 @@ input:hover{
   background-color: #e06767;
   color: white;
   border: none;
-  font-size: 0.70rem;
+  font-size: 0.94rem;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
@@ -246,23 +241,22 @@ input:hover{
   transition: 0.5s;
 }
 
-
-
 .button2 {
   display: block;
   background-color: #33b3dc;
   color: white;
   border: none;
-  font-size: 0.70rem;
+  font-size: 0.94rem;
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
   border-bottom-right-radius: 0px;
-
+  
 }
 
 .button2:hover {
   cursor: default;
 }
+
 
 .form-control {
   box-shadow: none;
