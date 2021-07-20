@@ -8,6 +8,13 @@
   <br>
   
   <p>Projeto Integrador Saúde do Bem - Grupo 03 Generation Brasil 2021</p>
+  
+  <br>
+  <br>
+  
+  <p>https://saudedobem.netlify.app/#/home</p>
+  
+  <hr>
 </div>
 <div align="center">
      <a href="#sobre">Sobre</a> ○
@@ -102,7 +109,7 @@ Durante o desenvolvimento percebemos a tamanha complexidade e confusão das idei
 
 #### 1. Faça um clone do repositório
 ```
-$ git clone https://github.com/miguelaugusto-bot/ProjetoIntegradorGenUI.git
+$ git clone https://github.com/joaozinsh/ProjetoIntegradorGenUI
 ```
 ### 2. Instale a dependência
 ```
@@ -114,7 +121,7 @@ $ npm install
   
 <h2 align=center id="como-executar">Como Executar: </h2>
   
-1) Inicie a Api e o Banco de Dados (Obs.: Esteja ciente que este projeto utiliza uma api própria, então é necessário trocar as rotas)
+1) Inicie a API e o Banco de Dados (Obs.: Esteja ciente que este projeto utiliza uma API própria, então é necessário trocar as rotas)
   
 2) Execute o comando
 ```
@@ -129,7 +136,7 @@ $ ng serve
 <h2 align=center id="api">Api Saúde do Bem</h2>
 <div align=center>
   
-► [Saúde do Bem API](https://github.com/miguelaugusto-bot/ProjetoIntegradorGen) ◄
+► [Saúde do Bem API](https://github.com/gabrgcr/ProjetoIntegradorGen) ◄
   
 </div>  
 
