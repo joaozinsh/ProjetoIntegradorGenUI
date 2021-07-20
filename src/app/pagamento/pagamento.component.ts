@@ -11,9 +11,7 @@ import { NavbarLogadoComponent } from '../navbar-logado/navbar-logado.component'
 })
 export class PagamentoComponent implements OnInit {
 
-  constructor(
-    private navbarLogado: NavbarLogadoComponent
-  ) { }
+  constructor() { }
 
   ngOnInit(){
   }

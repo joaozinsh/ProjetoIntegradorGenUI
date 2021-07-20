@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { MedicamentoItem } from '../model/MedicamentoItem';
 import { CarrinhoService } from '../service/carrinho.service';
 import { Router } from '@angular/router';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +25,8 @@ export class HomeComponent implements OnInit {
     private medicamentoService: ProdutosService,
     private produtoService: ProdutosService,
     private carrinhoService: CarrinhoService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -70,6 +72,10 @@ export class HomeComponent implements OnInit {
         this.router.navigate(['/carrinho'])
       })
     }
+  }
+
+  newsletter() {
+    this.alertas.showAlertSuccess("Inscrição feita com sucesso!")
   }
 
 

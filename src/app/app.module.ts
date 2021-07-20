@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
 import { DoencaAdminComponent } from './admin/doenca-admin/doenca-admin.component';
 import { ProdutoAdminComponent } from './admin/produto-admin/produto-admin.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -42,9 +44,14 @@ import { ProdutoAdminComponent } from './admin/produto-admin/produto-admin.compo
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
+
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
