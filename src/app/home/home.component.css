@@ -59,7 +59,7 @@ button {
 }
 
   /*Custom scroll*/
-  *{
+  * {
     scrollbar-width: thin;
     scrollbar-color: #33B3DC;
 
@@ -142,9 +142,9 @@ input::selection {
   background: #E06767;
 }
 
-input:hover{
+input:hover {
   border-color: #E94C4C;
-  transition:0.25s;
+  transition: 0.25s;
 }
 
 .btn-modal {
@@ -152,19 +152,19 @@ input:hover{
   border: none;
 }
 
-.btn-modal:hover{
+.btn-modal:hover {
   box-shadow: rgb(255, 0, 0) 0px 0px 5px;
   transition: 0.25s;
 }
 
-.btn-modal:active{
+.btn-modal:active {
   box-shadow: #E06767 0px 0px 20px;
   border-color: #E94C4C;
   background-color: #E94C4C;
   transition: 0.5s;
 }
 
-.btn-modal:focus{
+.btn-modal:focus {
   box-shadow: #E06767 0px 0px 20px;
   border-color: #E94C4C;
   background-color: #E94C4C;
@@ -222,19 +222,19 @@ input:hover{
   border-bottom-left-radius: 0px;
 }
 
-.button1:hover{
+.button1:hover {
   box-shadow: rgb(255, 0, 0) 0px 0px 5px;
   transition: 0.25s;
 }
 
-.button1:active{
+.button1:active {
   box-shadow: #E06767 0px 0px 20px;
   border-color: #E94C4C;
   background-color: #E94C4C;
   transition: 0.5s;
 }
 
-.button1:focus{
+.button1:focus {
   box-shadow: #E06767 0px 0px 20px;
   border-color: #E94C4C;
   background-color: #E94C4C;
@@ -260,4 +260,68 @@ input:hover{
 
 .form-control {
   box-shadow: none;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.carousel
+
+/*slider */
+  {
+  position: relative;
+}
+
+.carousel .carousel-indicators
+
+/* indicator wrapper*/
+  {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 100%;
+  margin: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  /* this is for indicators  */
+}
+
+#carroselHome .carousel-indicators li
+
+/* indicators*/
+  {
+  flex-grow: 1;
+  /* make all indicator li similarly stretched */
+  height: 10px;
+  border-radius: 2px;
+}
+
+#carroselHome .carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 100%;
+  height: 40%;
+  margin: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding-bottom:0px;
+  background: linear-gradient(0deg, black 15%, transparent 100%);
+}
+
+.textCarrosel{
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  left: 0;
+  right: 0;
+  padding-bottom:0px;
 }
