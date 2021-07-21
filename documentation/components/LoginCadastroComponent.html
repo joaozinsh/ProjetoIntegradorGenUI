@@ -1,0 +1,966 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>saude-do-bem documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">saude-do-bem documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  LoginCadastroComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/login-cadastro/login-cadastro.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-login-cadastro</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./login-cadastro.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./login-cadastro.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#confirmarSenha" >confirmarSenha</a>
+                            </li>
+                            <li>
+                                <a href="#isChecked" >isChecked</a>
+                            </li>
+                            <li>
+                                <a href="#user" >user</a>
+                            </li>
+                            <li>
+                                <a href="#userLogin" >userLogin</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cadastrar" >cadastrar</a>
+                            </li>
+                            <li>
+                                <a href="#entrar" >entrar</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(auth: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, alertas: <a href="../injectables/AlertasService.html" target="_self">AlertasService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/login-cadastro/login-cadastro.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>auth</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertas</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AlertasService.html" target="_self" >AlertasService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cadastrar"></a>
+                    <span class="name">
+                        <span ><b>cadastrar</b></span>
+                        <a href="#cadastrar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cadastrar()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/app/login-cadastro/login-cadastro.component.ts:33</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="entrar"></a>
+                    <span class="name">
+                        <span ><b>entrar</b></span>
+                        <a href="#entrar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>entrar()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/login-cadastro/login-cadastro.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/login-cadastro/login-cadastro.component.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmarSenha"></a>
+                    <span class="name">
+                        <span ><b>confirmarSenha</b></span>
+                        <a href="#confirmarSenha"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/login-cadastro/login-cadastro.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isChecked"></a>
+                    <span class="name">
+                        <span ><b>isChecked</b></span>
+                        <a href="#isChecked"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/login-cadastro/login-cadastro.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="user"></a>
+                    <span class="name">
+                        <span ><b>user</b></span>
+                        <a href="#user"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Usuario.html" target="_self" >Usuario</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Usuario</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/login-cadastro/login-cadastro.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userLogin"></a>
+                    <span class="name">
+                        <span ><b>userLogin</b></span>
+                        <a href="#userLogin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/UserLogin.html" target="_self" >UserLogin</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new UserLogin</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/login-cadastro/login-cadastro.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { environment } from &#x27;src/environments/environment.prod&#x27;;
+import { UserLogin } from &#x27;../model/UserLogin&#x27;;
+import { Usuario } from &#x27;../model/Usuario&#x27;;
+import { AlertasService } from &#x27;../service/alertas.service&#x27;;
+import { AuthService } from &#x27;../service/auth.service&#x27;;
+
+@Component({
+  selector: &#x27;app-login-cadastro&#x27;,
+  templateUrl: &#x27;./login-cadastro.component.html&#x27;,
+  styleUrls: [&#x27;./login-cadastro.component.css&#x27;]
+})
+export class LoginCadastroComponent implements OnInit {
+
+  user: Usuario &#x3D; new Usuario
+  userLogin: UserLogin &#x3D; new UserLogin
+
+  confirmarSenha: string &#x3D; &quot;&quot;
+  isChecked: boolean
+
+  constructor(
+    private auth: AuthService,
+    private router: Router,
+    private alertas: AlertasService
+  ) {
+  }
+
+  ngOnInit() {
+    window.scroll(0, 0)
+  }
+
+  cadastrar() {
+    this.user.tipo &#x3D; &quot;Cliente&quot;
+
+    if(this.confirmarSenha &#x3D;&#x3D; &quot;&quot;){
+    } else {
+      if (this.user.senha &#x3D;&#x3D; this.confirmarSenha) {
+        if (this.isChecked &#x3D;&#x3D; true) {
+          this.auth.cadastrar(this.user).subscribe((resp: Usuario) &#x3D;&gt; {
+            this.user &#x3D; resp
+  
+            this.user &#x3D; new Usuario()
+            this.confirmarSenha &#x3D; &quot;&quot;
+            this.isChecked &#x3D; false
+            this.alertas.showAlertSuccess(&quot;Cadastro realizado com sucesso! Faça login ao lado.&quot;)
+          })
+        } else {
+          this.alertas.showAlertInfo(&quot;Por favor, aceite os termos de uso!&quot;)
+        }
+      } else {
+        this.confirmarSenha &#x3D; &quot;&quot;
+        this.alertas.showAlertInfo(&quot;As senhas devem ser iguais!&quot;)
+      }
+    } 
+  }
+
+  entrar() {
+    this.auth.entrar(this.userLogin).subscribe((resp: UserLogin) &#x3D;&gt; {
+      this.userLogin &#x3D; resp
+
+      environment.token &#x3D; this.userLogin.token
+      environment.apelido &#x3D; this.userLogin.apelido
+      environment.tipo &#x3D; this.userLogin.tipo
+
+      this.router.navigate([&#x27;/home&#x27;])
+    }, erro &#x3D;&gt; {
+      if(erro.status &#x3D;&#x3D; 401) {
+        this.alertas.showAlertDanger(&quot;E-mail ou senha invalidos!&quot;)
+      }
+
+      if (this.userLogin.email &#x3D;&#x3D; &quot;&quot;) {
+        this.alertas.showAlertInfo(&quot;Por favor, digite um e-mail&quot;)
+      } else if (this.userLogin.senha &#x3D;&#x3D; &quot;&quot;) {
+        this.alertas.showAlertInfo(&quot;Por favor, digite uma senha&quot;)
+      }
+    })
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container-fluid m-0 pb-3 conteudo&quot; id&#x3D;&quot;bg-img&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md-12 px-0 mb-2&quot;&gt;
+            &lt;button routerLink&#x3D;&#x27;/home&#x27; id&#x3D;&quot;btn-home&quot; class&#x3D;&quot;btn px-4 py-2 text-white&quot;&gt;
+                &lt;p class&#x3D;&quot;d-flex align-items-center&quot; id&#x3D;&quot;p-home&quot;&gt;
+                    &lt;i class&#x3D;&quot;fas fa-home pr-3&quot;&gt;&lt;/i&gt;
+                    Página Inicial
+                &lt;/p&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;card bg-light font-size p-3 m-0 mt-5 mx-5&quot;&gt;
+        &lt;div class&#x3D;&quot;row d-flex align-items-center&quot;&gt;
+            &lt;div class&#x3D;&quot;col-md-6 mb-2 cards&quot;&gt;
+
+                &lt;div class&#x3D;&quot;row d-flex justify-content-center&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-md-6 &quot;&gt;
+                        &lt;h1 class&#x3D;&quot;text-center font-weight-bold titulo&quot;&gt;Já Sou Cliente&lt;/h1&gt;
+                        &lt;p class&#x3D;&quot;text-center mb-5&quot;&gt;Acesse agora a sua conta para aproveitar as ofertas&lt;/p&gt;
+
+                        &lt;div class&#x3D;&quot;form-group texts&quot;&gt;
+                            &lt;label class&#x3D;&quot;pl-3&quot; for&#x3D;&quot;email&quot;&gt;E-mail&lt;/label&gt;
+                            &lt;input [(ngModel)]&#x3D;&#x27;userLogin.email&#x27; class&#x3D;&quot;form-control&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;email&quot;
+                                id&#x3D;&quot;email&quot; placeholder&#x3D;&quot;Digite seu e-mail&quot;&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class&#x3D;&quot;form-group texts&quot;&gt;
+                            &lt;label class&#x3D;&quot;pl-3&quot; for&#x3D;&quot;password&quot;&gt;Senha&lt;/label&gt;
+                            &lt;input [(ngModel)]&#x3D;&#x27;userLogin.senha&#x27; class&#x3D;&quot;form-control&quot; type&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot;
+                                id&#x3D;&quot;password&quot; placeholder&#x3D;&quot;Digite sua senha&quot;&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class&#x3D;&quot;d-flex justify-content-center mt-5&quot;&gt;
+                            &lt;button type&#x3D;&quot;submit&quot; (click)&#x3D;&#x27;entrar()&#x27; class&#x3D;&quot;btn btn-lg px-5 text-white&quot;&gt;Enviar&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;col-md-6 mb-2 cards&quot;&gt;
+                &lt;div class&#x3D;&quot;form-row d-flex justify-content-center linha-vertical&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-md-8&quot;&gt;
+                        &lt;h1 class&#x3D;&quot;text-center titulo font-weight-bold py-4&quot;&gt;Sou um Novo Cliente&lt;/h1&gt;
+
+                        &lt;div class&#x3D;&quot;form-group texts&quot;&gt;
+                            &lt;label class&#x3D;&quot;pl-3&quot; for&#x3D;&quot;nome&quot;&gt;Nome Completo&lt;/label&gt;
+                            &lt;input [(ngModel)]&#x3D;&#x27;user.nome&#x27; class&#x3D;&quot;form-control&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;nome&quot; id&#x3D;&quot;nome&quot;
+                                placeholder&#x3D;&quot;Digite seu nome completo&quot;&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class&#x3D;&quot;form-group texts&quot;&gt;
+                            &lt;label class&#x3D;&quot;pl-3&quot; for&#x3D;&quot;apelido&quot;&gt;Apelido&lt;/label&gt;
+                            &lt;input [(ngModel)]&#x3D;&#x27;user.apelido&#x27; class&#x3D;&quot;form-control&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;apelido&quot;
+                                id&#x3D;&quot;apelido&quot; placeholder&#x3D;&quot;Como você quer ser chamado no sistema?&quot;&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class&#x3D;&quot;form-group texts&quot;&gt;
+                            &lt;label class&#x3D;&quot;pl-3&quot; for&#x3D;&quot;cadEmail&quot;&gt;E-mail&lt;/label&gt;
+                            &lt;input [(ngModel)]&#x3D;&#x27;user.email&#x27; class&#x3D;&quot;form-control&quot; type&#x3D;&quot;email&quot; name&#x3D;&quot;email&quot; id&#x3D;&quot;cadEmail&quot;
+                                placeholder&#x3D;&quot;Digite seu e-mail&quot;&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class&#x3D;&quot;form-group texts&quot;&gt;
+                            &lt;label class&#x3D;&quot;pl-3&quot; for&#x3D;&quot;cadPassword&quot;&gt;Senha&lt;/label&gt;
+                            &lt;input [(ngModel)]&#x3D;&#x27;user.senha&#x27; class&#x3D;&quot;form-control&quot; type&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot;
+                                value&#x3D;&quot;&quot; id&#x3D;&quot;cadPassword&quot; placeholder&#x3D;&quot;Digite sua senha&quot;&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class&#x3D;&quot;form-group texts&quot;&gt;
+                            &lt;label class&#x3D;&quot;pl-3&quot; for&#x3D;&quot;confirmPassword&quot;&gt;Confirmar Senha&lt;/label&gt;
+                            &lt;input [(ngModel)]&#x3D;&#x27;confirmarSenha&#x27; class&#x3D;&quot;form-control&quot; type&#x3D;&quot;password&quot;
+                                name&#x3D;&quot;confirmPassword&quot; id&#x3D;&quot;confirmPassword&quot; placeholder&#x3D;&quot;Confirme sua senha&quot;&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class&#x3D;&quot;form-check mb-4 pl-4 d-flex align-items-center texts&quot;&gt;
+                            &lt;input [(ngModel)]&#x3D;&quot;isChecked&quot; class&#x3D;&quot;form-check-input&quot; type&#x3D;&quot;checkbox&quot; value&#x3D;&quot;&quot;
+                                id&#x3D;&quot;defaultCheck1&quot; name&#x3D;&quot;checkbox&quot;&gt;
+                            &lt;label class&#x3D;&quot;form-check-label&quot; for&#x3D;&quot;defaultCheck1&quot;&gt;
+                                Aceito o uso dos meus dados
+                            &lt;/label&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class&#x3D;&quot;d-flex justify-content-center mt-5&quot;&gt;
+                            &lt;button type&#x3D;&quot;submit&quot; (click)&#x3D;&#x27;cadastrar()&#x27;
+                                class&#x3D;&quot;btn btn-lg px-5 text-white&quot;&gt;Cadastrar&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./login-cadastro.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">/*background*/
+#bg-img {
+  background-image: url(../../assets/img/background.png);
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:50% 50%;
+}
+
+button{
+  border-radius: 15px;
+}
+
+button:hover{
+  box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+  transition: 0.25s;
+}
+
+button:active{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+button:focus{
+  box-shadow: #E06767 0px 0px 20px;
+  border-color: #E94C4C;
+  background-color: #E94C4C;
+  transition: 0.5s;
+}
+
+/*desktop*/
+@media screen and (min-width: 767px) and (max-width: 9998px) {
+  .btn {
+    background-color: #E06767;
+  }
+
+  #btn-home {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 25px;
+  }
+
+  #p-home {
+    padding: 0;
+    margin: 0;
+    font-size: 20pt;
+  }
+
+  .fas {
+    font-size: 25px;
+  }
+
+  .card {
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .blur {
+    background-color: rgba(241, 241, 241, 0.888);
+    border: 1px;
+  }
+
+  .linha-vertical {
+    height: 100%;
+    border-left: 3px solid rgba(128, 128, 128, 0.61);
+  }
+
+  .font-size {
+    font-size: 14pt;
+  }
+
+  input {
+    border-radius: 15px;
+    border: 2px solid;
+    border-color: #ABABAB;
+  }
+
+  input:focus{
+    box-shadow: #E06767 0px 0px 20px;
+    border-color: #E94C4C;
+    transition: 0.5s;
+  }
+
+  input::selection {
+    color: white;
+    background: #E06767;
+  }
+
+  input:hover{
+    border-color: #E94C4C;
+    transition:0.25s;
+  }
+
+  /*new class*/
+
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 766px) {
+    .conteudo{
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+  .btn {
+    background-color: #E06767;
+  }
+
+  #btn-voltar {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 25px;
+  }
+
+  #p-voltar {
+    padding: 0;
+    margin: 0;
+    font-size: 24pt;
+  }
+  .card {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .fas {
+    font-size: 30px;
+  }
+
+  .blur {
+    background-color: rgba(241, 241, 241, 0.888);
+    border: 1px;
+  }
+
+  .linha-vertical {
+    margin-top: 25px;
+    border-top: 3px solid grey;
+  }
+
+
+  input {
+    border-radius: 15px;
+    border: 2px solid;
+    border-color: #ABABAB;
+    font-size: 10pt;
+  }
+
+  input:focus{
+    box-shadow: #E06767 0px 0px 20px;
+    border-color: #E94C4C;
+    transition: 0.5s;
+  }
+
+  input::selection {
+    color: white;
+    background: #E06767;
+  }
+
+  input:hover{
+    border-color: #E94C4C;
+    transition:0.25s;
+  }
+
+  /*New class*/
+  .card{
+      padding: 1rem;
+  }
+  .titulo {
+    margin-top: 10px;
+    font-size: 20pt;
+  }
+
+  .texts {
+    font-size: 10pt;
+  }
+
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container-fluid m-0 pb-3 conteudo" id="bg-img">    <div class="row">        <div class="col-md-12 px-0 mb-2">            <button routerLink=\'/home\' id="btn-home" class="btn px-4 py-2 text-white">                <p class="d-flex align-items-center" id="p-home">                    <i class="fas fa-home pr-3"></i>                    Página Inicial                </p>            </button>        </div>    </div>    <div class="card bg-light font-size p-3 m-0 mt-5 mx-5">        <div class="row d-flex align-items-center">            <div class="col-md-6 mb-2 cards">                <div class="row d-flex justify-content-center">                    <div class="col-md-6 ">                        <h1 class="text-center font-weight-bold titulo">Já Sou Cliente</h1>                        <p class="text-center mb-5">Acesse agora a sua conta para aproveitar as ofertas</p>                        <div class="form-group texts">                            <label class="pl-3" for="email">E-mail</label>                            <input [(ngModel)]=\'userLogin.email\' class="form-control" type="text" name="email"                                id="email" placeholder="Digite seu e-mail">                        </div>                        <div class="form-group texts">                            <label class="pl-3" for="password">Senha</label>                            <input [(ngModel)]=\'userLogin.senha\' class="form-control" type="password" name="password"                                id="password" placeholder="Digite sua senha">                        </div>                        <div class="d-flex justify-content-center mt-5">                            <button type="submit" (click)=\'entrar()\' class="btn btn-lg px-5 text-white">Enviar</button>                        </div>                    </div>                </div>            </div>            <div class="col-md-6 mb-2 cards">                <div class="form-row d-flex justify-content-center linha-vertical">                    <div class="col-md-8">                        <h1 class="text-center titulo font-weight-bold py-4">Sou um Novo Cliente</h1>                        <div class="form-group texts">                            <label class="pl-3" for="nome">Nome Completo</label>                            <input [(ngModel)]=\'user.nome\' class="form-control" type="text" name="nome" id="nome"                                placeholder="Digite seu nome completo">                        </div>                        <div class="form-group texts">                            <label class="pl-3" for="apelido">Apelido</label>                            <input [(ngModel)]=\'user.apelido\' class="form-control" type="text" name="apelido"                                id="apelido" placeholder="Como você quer ser chamado no sistema?">                        </div>                        <div class="form-group texts">                            <label class="pl-3" for="cadEmail">E-mail</label>                            <input [(ngModel)]=\'user.email\' class="form-control" type="email" name="email" id="cadEmail"                                placeholder="Digite seu e-mail">                        </div>                        <div class="form-group texts">                            <label class="pl-3" for="cadPassword">Senha</label>                            <input [(ngModel)]=\'user.senha\' class="form-control" type="password" name="password"                                value="" id="cadPassword" placeholder="Digite sua senha">                        </div>                        <div class="form-group texts">                            <label class="pl-3" for="confirmPassword">Confirmar Senha</label>                            <input [(ngModel)]=\'confirmarSenha\' class="form-control" type="password"                                name="confirmPassword" id="confirmPassword" placeholder="Confirme sua senha">                        </div>                        <div class="form-check mb-4 pl-4 d-flex align-items-center texts">                            <input [(ngModel)]="isChecked" class="form-check-input" type="checkbox" value=""                                id="defaultCheck1" name="checkbox">                            <label class="form-check-label" for="defaultCheck1">                                Aceito o uso dos meus dados                            </label>                        </div>                        <div class="d-flex justify-content-center mt-5">                            <button type="submit" (click)=\'cadastrar()\'                                class="btn btn-lg px-5 text-white">Cadastrar</button>                        </div>                    </div>                </div>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'CarrinhoVazioComponent', 'selector': 'app-carrinho-vazio'},{'name': 'ConcluirCompraComponent', 'selector': 'app-concluir-compra'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'DoencaAdminComponent', 'selector': 'app-doenca-admin'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginCadastroComponent', 'selector': 'app-login-cadastro'},{'name': 'MedicamentosAdminComponent', 'selector': 'app-medicamentos-admin'},{'name': 'MedicamentosComponent', 'selector': 'app-medicamentos'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NavbarLogadoComponent', 'selector': 'app-navbar-logado'},{'name': 'PagamentoComponent', 'selector': 'app-pagamento'},{'name': 'RodapeComponent', 'selector': 'app-rodape'},{'name': 'SobreComponent', 'selector': 'app-sobre'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'LoginCadastroComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'LoginCadastroComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
