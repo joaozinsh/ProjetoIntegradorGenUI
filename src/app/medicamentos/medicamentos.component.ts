@@ -1,21 +1,19 @@
-import { NavbarLogadoComponent } from './../navbar-logado/navbar-logado.component';
-import { Doenca } from './../model/Doenca';
-import { DoencaService } from './../service/doenca.service';
+import { Doenca } from '../model/Doenca';
+import { DoencaService } from '../service/doenca.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CarrinhoComponent } from '../carrinho/carrinho.component';
 import { Medicamento } from '../model/Medicamento';
 import { MedicamentoItem } from '../model/MedicamentoItem';
 import { CarrinhoService } from '../service/carrinho.service';
-import { ProdutosService } from '../service/produtos.service';
+import { MedicamentosService } from '../service/medicamentos.service';
 
 
 @Component({
-  selector: 'app-produtos',
-  templateUrl: './produtos.component.html',
-  styleUrls: ['./produtos.component.css']
+  selector: 'app-medicamentos',
+  templateUrl: './medicamentos.component.html',
+  styleUrls: ['./medicamentos.component.css']
 })
-export class ProdutosComponent implements OnInit {
+export class MedicamentosComponent implements OnInit {
 
   medicamento: Medicamento = new Medicamento()
   listaMedicamentos: Medicamento[]
@@ -28,7 +26,7 @@ export class ProdutosComponent implements OnInit {
   status: boolean = false
 
   constructor(
-    private produtoService: ProdutosService,
+    private medicamentoService: MedicamentosService,
     private carrinhoService: CarrinhoService,
     private doencaService: DoencaService,
     private router: Router
@@ -45,7 +43,7 @@ export class ProdutosComponent implements OnInit {
 
   findAllMedicamentos() {
     this.doenca = new Doenca
-    this.produtoService.getAllMedicamentos().subscribe((resp: Medicamento[]) => {
+    this.medicamentoService.getAllMedicamentos().subscribe((resp: Medicamento[]) => {
       this.listaMedicamentos = resp
       this.status = false
     })
@@ -59,26 +57,26 @@ export class ProdutosComponent implements OnInit {
 
   findByTipo(tipo: string) {
     this.doenca = new Doenca
-    this.produtoService.getTipoMedicamento(tipo).subscribe((resp: Medicamento[]) => {
+    this.medicamentoService.getTipoMedicamento(tipo).subscribe((resp: Medicamento[]) => {
       this.listaMedicamentos = resp
     })
   }
 
   findByIdMedicamento(id: number) {
-    this.produtoService.getByIdMedicamento(id).subscribe((resp: Medicamento) => {
+    this.medicamentoService.getByIdMedicamento(id).subscribe((resp: Medicamento) => {
       this.medicamento = resp
     })
   }
 
   listForAsc() {
     this.doenca = new Doenca
-    this.produtoService.getPrecoAsc().subscribe((resp: Medicamento[]) => {
+    this.medicamentoService.getPrecoAsc().subscribe((resp: Medicamento[]) => {
       this.listaMedicamentos = resp
     })
   }
   listForDesc() {
     this.doenca = new Doenca
-    this.produtoService.getPrecoDesc().subscribe((resp: Medicamento[]) => {
+    this.medicamentoService.getPrecoDesc().subscribe((resp: Medicamento[]) => {
       this.listaMedicamentos = resp
     })
   }
@@ -101,7 +99,7 @@ export class ProdutosComponent implements OnInit {
   addCarrinho(id: number) {
     if (this.qtd <= 0) {
     } else {
-      this.produtoService.getByIdMedicamento(id).subscribe((resp: Medicamento) => {
+      this.medicamentoService.getByIdMedicamento(id).subscribe((resp: Medicamento) => {
         this.medicamento = resp
 
         this.item.foto = this.medicamento.foto

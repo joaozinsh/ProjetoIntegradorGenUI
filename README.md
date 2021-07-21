@@ -49,7 +49,7 @@ Durante o desenvolvimento percebemos a tamanha complexidade e confusão das idei
     <td align="center"><a href="https://saudedobem.netlify.app/#/login-cadastro"><img style="border-radius: 50%;" src="https://i.imgur.com/nj2amml.png" width="700px;" alt=""/><br /></a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://saudedobem.netlify.app/#/produtos"><img style="border-radius: 50%;" src="https://i.imgur.com/ijK7tvs.png" width="700px;" alt=""/><br /></a></td>
+    <td align="center"><a href="https://saudedobem.netlify.app/#/medicamentos"><img style="border-radius: 50%;" src="https://i.imgur.com/ijK7tvs.png" width="700px;" alt=""/><br /></a></td>
     <td align="center"><a href="https://saudedobem.netlify.app/#/home"><img style="border-radius: 50%;" src="https://i.imgur.com/aaPxyw9.png" width="700px;" alt=""/><br /></a></td>
   </tr>
   <tr>

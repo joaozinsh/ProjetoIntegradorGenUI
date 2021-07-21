@@ -4,12 +4,12 @@
     <div class="col-md-12 card p-2 px-3">
       <div class="row d-flex">
         <div class="col-md-4">
-          <label for="nome" class="no-gutter m-0">Nome:</label>
+          <label for="nome" class="no-gutter m-0">Nome</label>
           <input [(ngModel)]="doenca.nome" type="text" class="form-control" id="nome" name="nome"
             placeholder="Nome da doença" />
         </div>
         <div class="col-md-4">
-          <label for="descricao" class="no-gutter m-0">Descricao:</label>
+          <label for="descricao" class="no-gutter m-0">Descrição</label>
           <input [(ngModel)]="doenca.descricao" type="text" class="form-control" name="descricao" id="descricao"
             placeholder="Descrição da doença" />
         </div>
@@ -35,7 +35,6 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col" class="text-white head">ID</th>
             <th scope="col" class="text-white head">Nome</th>
             <th scope="col" class="text-white head">Descrição</th>
             <th scope="col" class="text-white head">Transmissivel</th>
@@ -44,8 +43,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let i of listaDoenca">
-            <th scope="row">{{ i.id }}</th>
-            <td>{{ i.nome }}</td>
+            <th scope="row">{{ i.nome }}</th>
             <td>{{ i.descricao }}</td>
             <td>{{ i.transmissivel.toString().replace("true","Sim").replace("false","Não") }}</td>
             <td><a (click)='findByIdDoenca(i.id)' class="text-info cursor" data-toggle="modal" data-target="#ModalEditar">Editar</a></td>
@@ -72,13 +70,13 @@
       <div class="modal-body">
 
         <div class="form-group">
-          <label for="nomeEdit">Nome:</label>
+          <label for="nomeEdit">Nome</label>
           <input [(ngModel)]="doenca.nome" type="text" class="form-control" id="nomeEdit" name="nomeEdit"
             placeholder="Nome da doença">
         </div>
 
         <div class="form-group">
-          <label for="descricaoEdit" class="no-gutter m-0">Descricao:</label>
+          <label for="descricaoEdit" class="no-gutter m-0">Descrição</label>
           <input [(ngModel)]="doenca.descricao" type="text" class="form-control" name="descricaoEdit" id="descricaoEdit"
             placeholder="Descrição da doença" />
         </div>

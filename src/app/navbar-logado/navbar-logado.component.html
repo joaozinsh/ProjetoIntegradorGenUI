@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
         <ul class="navbar-nav ml-auto d-flex align-items-center">
             <li class="nav-item mx-3">
-                <a class="letter" routerLink='/produtos'>Produtos</a>
+                <a class="letter" routerLink='/medicamentos'>Medicamentos</a>
             </li>
             <li class="nav-item mx-3">
                 <a class="letter" routerLink='/sobre'>Sobre</a>
@@ -43,7 +43,7 @@
                         <li class="dropdown-submenu" *ngIf="auth.admin() == true">
                             <a class="dropdown-item dropdown-toggle">Admin</a>
                             <ul class="dropdown-menu custom-subdrop">
-                                <li><a class="dropdown-item" routerLink='/admin-produto'>Medicamento</a></li>
+                                <li><a class="dropdown-item" routerLink='/admin-medicamentos'>Medicamento</a></li>
                                 <li><a class="dropdown-item" routerLink='/admin-doenca'>Doença</a></li>
                             </ul>
                         </li>

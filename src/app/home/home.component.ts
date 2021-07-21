@@ -1,6 +1,5 @@
 import { Medicamento } from 'src/app/model/Medicamento';
-import { ProdutosService } from 'src/app/service/produtos.service';
-import { environment } from './../../environments/environment.prod';
+import { MedicamentosService } from 'src/app/service/medicamentos.service';
 import { Component, OnInit } from '@angular/core';
 import { MedicamentoItem } from '../model/MedicamentoItem';
 import { CarrinhoService } from '../service/carrinho.service';
@@ -22,8 +21,7 @@ export class HomeComponent implements OnInit {
   item: MedicamentoItem = new MedicamentoItem()
 
   constructor(
-    private medicamentoService: ProdutosService,
-    private produtoService: ProdutosService,
+    private medicamentoService: MedicamentosService,
     private carrinhoService: CarrinhoService,
     private router: Router,
     private alertas: AlertasService
@@ -61,7 +59,7 @@ export class HomeComponent implements OnInit {
   addCarrinho(id: number) {
     if (this.qtd <= 0) {
     } else {
-      this.produtoService.getByIdMedicamento(id).subscribe((resp: Medicamento) => {
+      this.medicamentoService.getByIdMedicamento(id).subscribe((resp: Medicamento) => {
         this.medicamento = resp
 
         this.item.foto = this.medicamento.foto

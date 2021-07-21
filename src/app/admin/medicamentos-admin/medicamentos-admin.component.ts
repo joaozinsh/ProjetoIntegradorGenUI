@@ -4,15 +4,15 @@ import { Doenca } from 'src/app/model/Doenca';
 import { Medicamento } from 'src/app/model/Medicamento';
 import { AlertasService } from 'src/app/service/alertas.service';
 import { DoencaService } from 'src/app/service/doenca.service';
-import { ProdutosService } from 'src/app/service/produtos.service';
+import { MedicamentosService } from 'src/app/service/medicamentos.service';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
-  selector: 'app-produto-admin',
-  templateUrl: './produto-admin.component.html',
-  styleUrls: ['./produto-admin.component.css'],
+  selector: 'app-medicamentos-admin',
+  templateUrl: './medicamentos-admin.component.html',
+  styleUrls: ['./medicamentos-admin.component.css'],
 })
-export class ProdutoAdminComponent implements OnInit {
+export class MedicamentosAdminComponent implements OnInit {
   medicamento: Medicamento = new Medicamento();
   listaMedicamento: Medicamento[];
   listaDoenca: Doenca[];
@@ -20,7 +20,7 @@ export class ProdutoAdminComponent implements OnInit {
   medPost: Medicamento;
 
   constructor(
-    private produtoService: ProdutosService,
+    private medicamentosService: MedicamentosService,
     private doencaService: DoencaService,
     private router: Router,
     private alertas: AlertasService
@@ -64,7 +64,7 @@ export class ProdutoAdminComponent implements OnInit {
   }
 
   findAllMedicamentos() {
-    this.produtoService
+    this.medicamentosService
       .getAllMedicamentos()
       .subscribe((resp: Medicamento[]) => {
         this.listaMedicamento = resp;
@@ -75,7 +75,7 @@ export class ProdutoAdminComponent implements OnInit {
   }
 
   findByIdMedicamento(id: number) {
-    this.produtoService.getByIdMedicamento(id).subscribe((resp: Medicamento)=> {
+    this.medicamentosService.getByIdMedicamento(id).subscribe((resp: Medicamento)=> {
       this.medicamento = resp
     })
   }
@@ -91,7 +91,7 @@ export class ProdutoAdminComponent implements OnInit {
     if(this.medicamento.promocao === null){this.medicamento.promocao = false}
     if(this.medicamento.destaque === null){this.medicamento.destaque = false}
     if(this.medicamento.receita === null){this.medicamento.receita = false}
-    this.produtoService
+    this.medicamentosService
       .postMedicamentos(this.medicamento)
       .subscribe((resp: Medicamento) => {
         this.medicamento = resp;
@@ -102,7 +102,7 @@ export class ProdutoAdminComponent implements OnInit {
   }
 
   atualizarMedicamento(medicamento: Medicamento) {
-    this.produtoService.putMedicamento(medicamento).subscribe((resp: Medicamento)=> {
+    this.medicamentosService.putMedicamento(medicamento).subscribe((resp: Medicamento)=> {
       this.medicamento = new Medicamento()
       this.alertas.showAlertSuccess("Medicamento atualizado com sucesso!")
       this.findAllMedicamentos()
@@ -110,7 +110,7 @@ export class ProdutoAdminComponent implements OnInit {
   }
 
   apagarMedicamento(id: number) {
-    this.produtoService.deleteMedicamento(id).subscribe(()=> {
+    this.medicamentosService.deleteMedicamento(id).subscribe(()=> {
       this.alertas.showAlertSuccess("Medicamento apagado com sucesso!")
       this.findAllMedicamentos()
     })

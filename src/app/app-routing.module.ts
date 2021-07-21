@@ -7,10 +7,10 @@ import { ContatoComponent } from './contato/contato.component';
 import { HomeComponent } from './home/home.component';
 import { LoginCadastroComponent } from './login-cadastro/login-cadastro.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
-import { ProdutosComponent } from './produtos/produtos.component';
+import { MedicamentosComponent } from './medicamentos/medicamentos.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { DoencaAdminComponent } from './admin/doenca-admin/doenca-admin.component';
-import { ProdutoAdminComponent } from './admin/produto-admin/produto-admin.component';
+import { MedicamentosAdminComponent } from './admin/medicamentos-admin/medicamentos-admin.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -21,10 +21,10 @@ const routes: Routes = [
   { path: 'carrinho-vazio', component: CarrinhoVazioComponent },
   { path: 'concluir-compra', component: ConcluirCompraComponent },
   { path: 'pagamento', component: PagamentoComponent },
-  { path: 'produtos', component: ProdutosComponent },
+  { path: 'medicamentos', component: MedicamentosComponent },
   { path: 'sobre', component: SobreComponent },
   { path: 'admin-doenca', component: DoencaAdminComponent },
-  { path: 'admin-produto', component: ProdutoAdminComponent }
+  { path: 'admin-medicamentos', component: MedicamentosAdminComponent }
 ];
 
 const routerOptions: ExtraOptions = {

@@ -13,13 +13,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ConcluirCompraComponent } from './concluir-compra/concluir-compra.component';
 import { ContatoComponent } from './contato/contato.component';
 import { CarrinhoVazioComponent } from './carrinho-vazio/carrinho-vazio.component';
-import { ProdutosComponent } from './produtos/produtos.component';
+import { MedicamentosComponent } from './medicamentos/medicamentos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
 import { DoencaAdminComponent } from './admin/doenca-admin/doenca-admin.component';
-import { ProdutoAdminComponent } from './admin/produto-admin/produto-admin.component';
+import { MedicamentosAdminComponent } from './admin/medicamentos-admin/medicamentos-admin.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
@@ -32,13 +32,13 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     NavbarComponent,
     ConcluirCompraComponent,
     CarrinhoVazioComponent,
-    ProdutosComponent,
+    MedicamentosComponent,
     PagamentoComponent,
     SobreComponent,
     CarrinhoComponent,
     NavbarLogadoComponent,
     DoencaAdminComponent,
-    ProdutoAdminComponent
+    MedicamentosAdminComponent
   ],
   imports: [
     BrowserModule,
